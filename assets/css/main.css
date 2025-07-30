@@ -1640,7 +1640,7 @@ button {
 
 /* About Us */
 .about-us {
-    margin-top: 6rem; /* Increased from 4rem for desktop */
+    margin-top: 15rem; /* Increased from 4rem for desktop */
     text-align: center;
 }
     .about-us p {
