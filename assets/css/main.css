@@ -1336,7 +1336,7 @@ button {
             }
         
             #header nav ul li {
-                flex: 1 1 auto !important; /* Equal width distribution */
+                flex: 1 !important; /* Equal width distribution */
             }
         
             #header nav ul li a {
