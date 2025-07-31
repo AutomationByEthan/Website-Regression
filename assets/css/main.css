@@ -1662,6 +1662,14 @@ button {
         .about-us a:hover {
             border-bottom-color: transparent;
         }
+
+        body.is-article-visible .about-us {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transform: scale(0.95) !important;
+            transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out, visibility 0.325s ease-in-out !important;
+        }
+
     @media screen and (max-width: 480px) {
         .about-us {
             margin-top: 1.1rem; /* Increased from 2rem for mobile */
