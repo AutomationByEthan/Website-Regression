@@ -1664,10 +1664,10 @@ button {
         }
     @media screen and (max-width: 480px) {
         .about-us {
-            margin-top: 1.5rem; /* Increased from 2rem for mobile */
+            margin-top: 1.1rem; /* Increased from 2rem for mobile */
         }
         .about-us p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             max-width: 90%;
         }
     }
