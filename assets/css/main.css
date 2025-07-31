@@ -1671,11 +1671,44 @@ button {
         }
 
     @media screen and (max-width: 480px) {
-        .about-us {
-            margin-top: 0.5rem; /* Increased from 2rem for mobile */
-        }
-        .about-us p {
-            font-size: 1rem;
-            max-width: 90%;
-        }
+    #wrapper {
+        padding: 0.5rem !important; /* Reduced from 2rem */
     }
+    #header {
+        padding: 0.5rem 0 !important; /* Minimized */
+    }
+    #header nav ul {
+        margin: 0 !important;
+        padding: 0 !important;
+        -moz-flex-direction: column !important;
+        -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        min-width: 10rem !important;
+        max-width: 100% !important;
+    }
+    #header nav ul li {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-left: 0 !important;
+        border-top: solid 1px #ffffff !important;
+    }
+    #header nav ul li:first-child {
+        border-top: 0 !important;
+    }
+    #header nav ul li a {
+        height: 2.75rem !important;
+        line-height: 2.75rem !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 0 1.25rem !important;
+    }
+    .about-us {
+        margin: 0.5rem 0 0 0 !important; /* Explicit 0.5rem top margin */
+    }
+    .about-us p {
+        font-size: 1rem !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+}
