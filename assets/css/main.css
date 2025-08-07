@@ -1762,7 +1762,7 @@ article#work .button.primary:hover {
         background-color: rgba(27, 31, 34, 0.9); /* Stronger opacity for vibrancy */
     }
     article#work h2.major {
-        font-size: 1.4rem; /* Smaller for mobile */
+        font-size: 1.5rem; /* Smaller for mobile */
         letter-spacing: 0.3rem; /* Reduced spacing */
         width: 100%; /* Ensure full width */
         text-align: center;
@@ -1800,7 +1800,7 @@ article#work .button.primary:hover {
         background-color: rgba(27, 31, 34, 0.9);
     }
     article#work h2.major {
-        font-size: 1.2rem; /* Smaller for narrow screens */
+        font-size: 1.5rem; /* Smaller for narrow screens */
         letter-spacing: 0.2rem;
         width: 100%;
         text-align: center;
@@ -1825,5 +1825,6 @@ article#work .button.primary:hover {
         font-size: 0.85rem;
     }
 }
+
 
 
