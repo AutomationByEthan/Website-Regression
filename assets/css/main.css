@@ -1826,7 +1826,13 @@ article#work .button.primary:hover {
     }
 }
 
-
-
-
-
+pre.code {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    color: #ffffff;
+    margin: 1rem 0;
+}
