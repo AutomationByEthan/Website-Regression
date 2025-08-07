@@ -1215,10 +1215,12 @@ button {
         border-radius: 100%;
     }
 
-        #header .logo .icon:before {
-            font-size: 2.5em; /* Slightly larger for robot icon */
-            color: #ffffff;
-        }
+        #header .logo .icon.fa-robot:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; /* Required for fa-robot */
+    font-size: 2.5em;
+    color: #ffffff;
+}
 
     #header .content {
         border-style: solid;
@@ -2028,4 +2030,5 @@ article#about .feature iframe {
         height: 150px;
     }
 }
+
 
