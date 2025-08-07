@@ -1800,7 +1800,7 @@ article#work .button.primary:hover {
         background-color: rgba(27, 31, 34, 0.9);
     }
     article#work h2.major {
-        font-size: 1rem; /* Smaller for narrow screens */
+        font-size: 1.2rem; /* Smaller for narrow screens */
         letter-spacing: 0.2rem;
         width: 100%;
         text-align: center;
@@ -1825,3 +1825,4 @@ article#work .button.primary:hover {
         font-size: 0.85rem;
     }
 }
+
