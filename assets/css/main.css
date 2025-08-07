@@ -1204,11 +1204,30 @@ button {
         }
 
     #header .logo {
+        transition: transform 0.3s ease-in-out;
         width: 5.5rem;
         height: 5.5rem;
         line-height: 5.5rem;
         border: solid 1px #ffffff;
         border-radius: 100%;
+        animation: logoFadeIn 1s ease-out forwards;
+    }
+
+        @keyframes logoFadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+    #header .logo:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    #header .logo .icon:before {
+        transition: color 0.3s ease-in-out;
+    }
+    
+    #header .logo:hover .icon:before {
+        color: #00bfff; /* Light blue to match brand */
     }
 
         #header .logo .icon.fa-robot:before {
@@ -2026,6 +2045,7 @@ article#about .feature iframe {
         height: 150px;
     }
 }
+
 
 
 
