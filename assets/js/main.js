@@ -362,6 +362,32 @@
 
 			});
 
+		// NEW: Scroll-based events for reveal and parallax.
+            $window.on('scroll', function() {
+                // Existing scroll restoration logic.
+                var oldScrollPos = 0,
+                    scrollPos = 0,
+                    $htmlbody = $('html,body');
+                oldScrollPos = scrollPos;
+                scrollPos = $htmlbody.scrollTop();
+
+                // Fade-in reveal effect.
+                $('.reveal').each(function() {
+                    var top = $(this).offset().top;
+                    var windowBottom = $window.scrollTop() + $window.height();
+                    if (top < windowBottom - 50) {
+                        $(this).addClass('active');
+                    }
+                });
+
+                // Parallax background effect.
+                if ($window.scrollTop() > 50) {
+                    $body.addClass('scrolled');
+                } else {
+                    $body.removeClass('scrolled');
+                }
+            });
+	
 		// Scroll restoration.
 		// This prevents the page from scrolling back to the top on a hashchange.
 			if ('scrollRestoration' in history)
@@ -397,5 +423,6 @@
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
+
 
 })(jQuery);
