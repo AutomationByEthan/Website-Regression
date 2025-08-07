@@ -1714,7 +1714,7 @@ button {
 }
 
 article#work {
-    padding: 4.5rem 2.5rem 1.5rem 2.5rem; /* Matches #main article */
+    padding: 3.5rem 3rem 1rem 3rem; /* Matches #main article */
     background-color: rgba(27, 31, 34, 0.85); /* Matches template */
     border-radius: 4px;
     max-width: 40rem; /* Matches #main article */
@@ -1747,20 +1747,6 @@ article#work .feature h3 {
 article#work .feature p {
     color: rgba(255, 255, 255, 0.75); /* Matches Dimension’s text color */
 }
-@media screen and (max-width: 736px) {
-    article#work {
-        padding: 3.5rem 2rem 0.5rem 2rem; /* Matches #main article */
-    }
-    article#work .feature {
-        margin: 1rem 0;
-        padding: 1rem;
-    }
-}
-@media screen and (max-width: 480px) {
-    article#work {
-        padding: 3rem 1.5rem 0.5rem 1.5rem; /* Matches #main article */
-    }
-}
 article#work .button.primary {
     display: block;
     margin: 2rem auto 1rem auto; /* Center with spacing */
@@ -1769,4 +1755,73 @@ article#work .button.primary {
 article#work .button.primary:hover {
     background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent hover */
     color: #1b1f22 !important;
+}
+@media screen and (max-width: 736px) {
+    article#work {
+        padding: 3.5rem 3rem 1rem 3rem; /* More horizontal padding */
+        background-color: rgba(27, 31, 34, 0.9); /* Stronger opacity for vibrancy */
+    }
+    article#work h2.major {
+        font-size: 1.1rem; /* Smaller for mobile */
+        letter-spacing: 0.3rem; /* Reduced spacing */
+        width: 100%; /* Ensure full width */
+        text-align: center;
+        margin: 0 auto 1.5rem auto;
+    }
+    article#work .feature {
+        margin: 1rem 0;
+        padding: 1.5rem; /* Slightly more padding */
+        background: rgba(255, 255, 255, 0.15); /* Stronger contrast */
+        border: 1px solid rgba(255, 255, 255, 0.35); /* Brighter border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+    article#work .feature i {
+        font-size: 1.8em;
+        color: #ffffff;
+    }
+    article#work .feature h3 {
+        font-size: 1.1rem;
+    }
+    article#work .button.primary {
+        margin: 2.5rem auto 1.5rem auto; /* More spacing */
+        padding: 0.75rem 2rem; /* Larger tap target */
+        font-size: 0.9rem;
+        background-color: #ffffff;
+        color: #1b1f22 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Match .feature shadow */
+    }
+    article#work .button.primary:hover {
+        background-color: #f0f0f0; /* Subtle off-white hover */
+    }
+}
+@media screen and (max-width: 480px) {
+    article#work {
+        padding: 3rem 2.5rem 1rem 2.5rem; /* Balanced padding */
+        background-color: rgba(27, 31, 34, 0.9);
+    }
+    article#work h2.major {
+        font-size: 1rem; /* Smaller for narrow screens */
+        letter-spacing: 0.2rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 1.5rem auto;
+    }
+    article#work .feature {
+        margin: 0.75rem 0;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    article#work .feature i {
+        font-size: 1.6em;
+    }
+    article#work .feature h3 {
+        font-size: 1rem;
+    }
+    article#work .button.primary {
+        margin: 2rem auto 1rem auto;
+        padding: 0.65rem 1.5rem;
+        font-size: 0.85rem;
+    }
 }
