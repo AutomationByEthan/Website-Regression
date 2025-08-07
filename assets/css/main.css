@@ -1762,7 +1762,7 @@ article#work .button.primary:hover {
         background-color: rgba(27, 31, 34, 0.9); /* Stronger opacity for vibrancy */
     }
     article#work h2.major {
-        font-size: 1.1rem; /* Smaller for mobile */
+        font-size: 1.4rem; /* Smaller for mobile */
         letter-spacing: 0.3rem; /* Reduced spacing */
         width: 100%; /* Ensure full width */
         text-align: center;
@@ -1825,4 +1825,5 @@ article#work .button.primary:hover {
         font-size: 0.85rem;
     }
 }
+
 
