@@ -1917,3 +1917,114 @@ article#intro .feature p {
     }
 }
 
+article#about {
+    padding: 3.5rem 3rem 1rem 3rem;
+    background-color: rgba(27, 31, 34, 0.85);
+    border-radius: 4px;
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
+}
+article#about h2.major {
+    border-bottom: solid 1px #ffffff;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 auto 2rem auto;
+}
+article#about .feature {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+article#about .feature h3 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+article#about .feature p {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+article#about .feature a {
+    color: #00bfff;
+    text-decoration: underline;
+}
+article#about .feature a:hover {
+    color: #00ccff;
+}
+article#about .feature pre.code {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin: 1rem 0;
+}
+article#about .feature iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 4px;
+}
+@media screen and (max-width: 736px) {
+    article#about {
+        padding: 3.5rem 3rem 1rem 3rem;
+        background-color: rgba(27, 31, 34, 0.9);
+    }
+    article#about h2.major {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 1.5rem auto;
+    }
+    article#about .feature {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    article#about .feature h3 {
+        font-size: 1.1rem;
+    }
+    article#about .feature pre.code {
+        font-size: 0.85rem;
+    }
+    article#about .feature iframe {
+        height: 180px;
+    }
+}
+@media screen and (max-width: 480px) {
+    article#about {
+        padding: 3rem 2.5rem 1rem 2.5rem;
+        background-color: rgba(27, 31, 34, 0.9);
+    }
+    article#about h2.major {
+        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 1.5rem auto;
+    }
+    article#about .feature {
+        margin: 0.75rem 0;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    article#about .feature h3 {
+        font-size: 1rem;
+    }
+    article#about .feature pre.code {
+        font-size: 0.8rem;
+    }
+    article#about .feature iframe {
+        height: 150px;
+    }
+}
