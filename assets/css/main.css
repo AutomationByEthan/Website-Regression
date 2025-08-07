@@ -1034,21 +1034,9 @@ input[type="reset"],
 input[type="button"],
 button {
     line-height: calc(2.75rem - 2px);
-}/* BG */#bg {
-    -moz-transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-    -ms-transform: scale(1.0);
-    transform: scale(1.0);
-    -webkit-backface-visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
 }
 
-/* Background */
+/* BG */
 #bg {
     position: fixed;
     top: 0;
@@ -1056,6 +1044,8 @@ button {
     width: 100%;
     height: 100vh;
     z-index: 1;
+    transform: scale(1.0);
+    -webkit-backface-visibility: hidden;
 }
 
 #bg:before,
@@ -1111,9 +1101,37 @@ body.is-preload #bg:before {
     transition: background-color 0.5s ease-in-out;
 }
 
-/* Header (minimal update for readability) */
+/* Wrapper */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 4rem 2rem;
+    z-index: 3;
+}
+@media screen and (max-width: 1680px) {
+    #wrapper {
+        padding: 3rem 2rem;
+    }
+}
+@media screen and (max-width: 736px) {
+    #wrapper {
+        padding: 2rem 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #wrapper {
+        padding: 1rem;
+    }
+}
+
+/* Header */
 #header {
-    background: rgba(27, 31, 34, 0.85); /* Semi-transparent backdrop */
+    background: rgba(27, 31, 34, 0.85);
     padding: 2rem;
     border-radius: 4px;
     display: flex;
@@ -1124,16 +1142,172 @@ body.is-preload #bg:before {
     text-align: center;
 }
 
-#header .content .inner h1,
-#header .content .inner p,
-#header nav ul li a {
-    color: #f0f0f0; /* Off-white for softer contrast */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+#header > * {
+    transition: opacity 0.325s ease-in-out;
+    position: relative;
+    margin-top: 3.5rem;
 }
 
-/* About Us (minimal update for readability) */
+#header > *:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(-3.5rem - 1px);
+    left: calc(50% - 1px);
+    width: 1px;
+    height: calc(3.5rem + 1px);
+    background: #ffffff;
+}
+
+#header > :first-child {
+    margin-top: 0;
+}
+
+#header > :first-child:before {
+    display: none;
+}
+
+#header .logo {
+    transition: transform 0.3s ease-in-out;
+    width: 5.5rem;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    animation: logoFadeIn 1s ease-out 0.2s forwards;
+}
+
+@keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+#header .logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+#header .logo .icon:before {
+    transition: color 0.3s ease-in-out;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+#header .logo:hover .icon:before {
+    color: #00bfff;
+}
+
+@media screen and (max-width: 736px) {
+    #header .logo {
+        width: 4.75rem;
+        height: 4.75rem;
+        line-height: 4.75rem;
+    }
+    #header .logo .icon:before {
+        font-size: 1.8em;
+    }
+}
+
+#header .content {
+    border-style: solid;
+    border-color: #ffffff;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    max-width: 100%;
+}
+
+#header .content .inner {
+    transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+    transition-delay: 0.25s;
+    padding: 3rem 2rem;
+    max-height: 40rem;
+    overflow: hidden;
+}
+
+#header .content .inner > :last-child {
+    margin-bottom: 0;
+}
+
+#header .content .inner h1 {
+    font-size: 2.75rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    color: #f0f0f0;
+}
+
+#header .content .inner p {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 2;
+    color: #f0f0f0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#header .content .inner .button.primary {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    padding: 0 2rem;
+    background-color: #00bfff;
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#header .content .inner .button.primary:hover {
+    background-color: #00ccff;
+}
+
+@media screen and (max-width: 736px) {
+    #header > * {
+        margin-top: 2rem;
+    }
+    #header > *:before {
+        top: calc(-2rem - 1px);
+        height: calc(2rem + 1px);
+    }
+    #header .content .inner {
+        padding: 2.5rem 1rem;
+    }
+    #header .content .inner h1 {
+        font-size: 2rem;
+    }
+    #header .content p {
+        line-height: 1.875;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        padding: 1.5rem 0;
+    }
+    #header .content .inner {
+        padding: 2.5rem 0;
+    }
+}
+
+body.is-preload #header {
+    filter: blur(0.125rem);
+}
+
+body.is-preload #header > * {
+    opacity: 1; /* Override to ensure visibility */
+}
+
+body.is-preload #header .content .inner {
+    max-height: 40rem; /* Override to ensure content shows */
+    padding: 3rem 2rem;
+    opacity: 1;
+}
+
+body.is-article-visible #header {
+    transform: scale(0.95);
+    filter: blur(0.1rem);
+    opacity: 0;
+}
+
+/* About Us */
 .about-us {
-    background: rgba(27, 31, 34, 0.85); /* Semi-transparent backdrop */
+    background: rgba(27, 31, 34, 0.85);
     padding: 1.5rem;
     border-radius: 4px;
     margin: 2rem auto;
@@ -1148,6 +1322,7 @@ body.is-preload #bg:before {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     max-width: 100%;
     font-size: 1rem;
+    margin: 0;
 }
 
 @keyframes slideUp {
@@ -1160,33 +1335,16 @@ body.is-preload #bg:before {
         margin: 0.5rem 0;
         max-width: 90%;
     }
+    .about-us p {
+        font-size: 1rem;
+    }
 }
-    #wrapper:before {
-        content: '';
-        display: block;
-    }
 
-    @media screen and (max-width: 1680px) {
-
-        #wrapper {
-            padding: 3rem 2rem;
-        }
-
-    }
-
-    @media screen and (max-width: 736px) {
-
-        #wrapper {
-            padding: 2rem 1rem;
-        }
-
-    }
-
-    @media screen and (max-width: 480px) {
-
-        #wrapper {
-            padding: 1rem;
-        }
+body.is-article-visible .about-us {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+}
 
     }/* Header */#header {
     display: -moz-flex;
@@ -2115,4 +2273,5 @@ article#about .feature iframe {
     #header .content .inner .button.primary:hover {
         background-color: #00ccff;
     }
+
 
