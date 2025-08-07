@@ -1770,7 +1770,7 @@ article#work .button.primary:hover {
     }
     article#work .feature {
         margin: 1rem 0;
-        padding: 1.5rem; /* Slightly more padding */
+        padding: 1.3rem; /* Slightly more padding */
         background: rgba(255, 255, 255, 0.15); /* Stronger contrast */
         border: 1px solid rgba(255, 255, 255, 0.35); /* Brighter border */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -1825,6 +1825,7 @@ article#work .button.primary:hover {
         font-size: 0.85rem;
     }
 }
+
 
 
 
