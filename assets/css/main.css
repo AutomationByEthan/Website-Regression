@@ -1203,39 +1203,47 @@ button {
             display: none;
         }
 
-    #header .logo {
-        transition: transform 0.3s ease-in-out;
-        width: 5.5rem;
-        height: 5.5rem;
-        line-height: 5.5rem;
-        border: solid 1px #ffffff;
-        border-radius: 100%;
-        animation: logoFadeIn 1s ease-out forwards;
-    }
-
+        #header .logo {
+            transition: transform 0.3s ease-in-out;
+            width: 5.5rem;
+            height: 5.5rem;
+            line-height: 5.5rem;
+            border: solid 1px #ffffff;
+            border-radius: 100%;
+            animation: logoFadeIn 1s ease-out forwards;
+        }
+        
         @keyframes logoFadeIn {
             0% { opacity: 0; transform: scale(0.8); }
             100% { opacity: 1; transform: scale(1); }
         }
-
-    #header .logo:hover {
-        transform: scale(1.1) rotate(5deg);
-    }
-
-    #header .logo .icon:before {
-        transition: color 0.3s ease-in-out;
-    }
-    
-    #header .logo:hover .icon:before {
-        color: #00bfff; /* Light blue to match brand */
-    }
-
-        #header .logo .icon.fa-robot:before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900; /* Required for fa-robot */
-    font-size: 2.5em;
-    color: #ffffff;
-}
+        
+        #header .logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        #header .logo .icon:before {
+            transition: color 0.3s ease-in-out;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900; /* Required for fa-robot */
+            font-size: 2.5em;
+            color: #ffffff;
+        }
+        
+        #header .logo:hover .icon:before {
+            color: #00bfff; /* Light blue to match brand */
+        }
+        
+        @media screen and (max-width: 736px) {
+            #header .logo {
+                width: 4.75rem;
+                height: 4.75rem;
+                line-height: 4.75rem;
+            }
+            #header .logo .icon:before {
+                font-size: 1.8em; /* Adjusted for mobile */
+            }
+        }
 
     #header .content {
         border-style: solid;
@@ -2045,6 +2053,7 @@ article#about .feature iframe {
         height: 150px;
     }
 }
+
 
 
 
