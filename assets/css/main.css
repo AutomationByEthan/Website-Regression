@@ -1944,8 +1944,8 @@ article#about .feature h3 {
     color: #ffffff;
 }
 article#about .feature p {
-    color: rgba(255, 255, 255, 0.75);
-    margin: 0;
+    color: #ffffff;
+    margin: 0.5rem 0;
 }
 article#about .feature a {
     color: #00bfff;
@@ -2028,3 +2028,4 @@ article#about .feature iframe {
         height: 150px;
     }
 }
+
