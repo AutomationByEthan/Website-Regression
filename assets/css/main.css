@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+/*@import url(fontawesome-all.min.css);*/
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");/*
     Dimension by HTML5 UP
     html5up.net | @ajlkn
@@ -1711,4 +1711,62 @@ button {
         max-width: 90% !important; 
         margin: 0 auto !important;
     }
+}
+
+article#work {
+    padding: 4.5rem 2.5rem 1.5rem 2.5rem; /* Matches #main article */
+    background-color: rgba(27, 31, 34, 0.85); /* Matches template */
+    border-radius: 4px;
+    max-width: 40rem; /* Matches #main article */
+    width: 100%;
+    margin: 0 auto;
+}
+article#work h2.major {
+    border-bottom: solid 1px #ffffff; /* Matches template’s .major */
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 auto 2rem auto; /* Center heading */
+}
+article#work .feature {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Softer border */
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05); /* Slightly darker for contrast */
+    text-align: center;
+}
+article#work .feature i {
+    font-size: 2em;
+    color: #ffffff; /* Matches Dimension’s light color scheme */
+    margin-bottom: 10px;
+}
+article#work .feature h3 {
+    margin: 10px 0;
+    color: #ffffff;
+}
+article#work .feature p {
+    color: rgba(255, 255, 255, 0.75); /* Matches Dimension’s text color */
+}
+@media screen and (max-width: 736px) {
+    article#work {
+        padding: 3.5rem 2rem 0.5rem 2rem; /* Matches #main article */
+    }
+    article#work .feature {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    article#work {
+        padding: 3rem 1.5rem 0.5rem 1.5rem; /* Matches #main article */
+    }
+}
+article#work .button.primary {
+    display: block;
+    margin: 2rem auto 1rem auto; /* Center with spacing */
+    max-width: 12rem; /* Limit width for balance */
+}
+article#work .button.primary:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent hover */
+    color: #1b1f22 !important;
 }
