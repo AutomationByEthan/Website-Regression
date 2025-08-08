@@ -1087,10 +1087,10 @@ body.is-preload #bg:before {
     content: '';
     display: block;
     position: absolute;
-    top: calc(-2rem - 1px);
+    top: calc(-1.5rem - 1px);
     left: calc(50% - 1px);
     width: 1px;
-    height: calc(2rem + 1px);
+    height: calc(1.5rem + 1px);
     background: #ffffff;
 }
 
@@ -1268,12 +1268,13 @@ body.is-article-visible #header {
 #header nav ul {
     display: flex;
     margin-bottom: 0;
+    justify-content: center; /* Ensure buttons are centered */
     list-style: none;
     padding: 0;
 }
 
 #header nav ul li {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem;
 }
 
 #header nav ul li a {
@@ -1689,6 +1690,7 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
