@@ -1759,6 +1759,50 @@ pre.code {
     margin: 1rem 0;
 }
 
+/* Force visibility for all content */
+html body #wrapper {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+html body.is-preload #wrapper,
+html body.is-preload #header,
+html body.is-preload #main,
+html body.is-preload #footer,
+html body.is-preload .about-us {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+html body.is-preload #main article,
+html body #main article {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+html body.is-article-visible #wrapper,
+html body.is-article-visible #header,
+html body.is-article-visible #main,
+html body.is-article-visible #footer,
+html body.is-article-visible .about-us {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Ensure footer content is visible */
+html body #footer {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 
 
 
