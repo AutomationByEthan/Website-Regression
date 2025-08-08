@@ -1013,6 +1013,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
+    filter: brightness(0.8); /* Darken the image by 20% */
 }
 
 body.scrolled #bg:after {
@@ -1666,3 +1667,4 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
