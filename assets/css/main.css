@@ -1468,11 +1468,25 @@ body.is-article-visible .about-us {
 }
 
 #footer .copyright {
-    letter-spacing: 0.2rem;
-    font-size: 0.6rem;
-    opacity: 0.75;
-    margin-bottom: 0;
-    text-transform: uppercase;
+  color: #b0b0b0; /* Match .about-us p */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Match .about-us p */
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400; /* Match .about-us p */
+  font-size: 0.9rem; /* Match .about-us p */
+  line-height: 1.6; /* Match .about-us p */
+  letter-spacing: 0.2rem; /* Retain for consistency with uppercase style */
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#footer .copyright a {
+  color: #b0b0b0; /* Match .about-us a */
+  text-decoration: none;
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+}
+
+#footer .copyright a:hover {
+  border-bottom-color: transparent;
 }
 
 body.is-article-visible #footer {
@@ -1487,9 +1501,21 @@ body.is-preload #footer {
 
 @media screen and (max-width: 736px) {
   #footer {
-    margin-top: 0.5rem; /* Further reduced for mobile */
+    margin-top: 0.25rem; /* Keep reduced margin */
+  }
+  #footer .copyright {
+    font-size: 0.75rem; /* Slightly smaller than desktop, matching .about-us p mobile */
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Match .about-us p mobile */
+    font-weight: 600; /* Match .about-us p mobile */
+    line-height: 1.6;
+  }
+  #footer .copyright a {
+    color: #b0b0b0;
   }
 }
+
+
 
 /* Article Sections */
 article#work,
@@ -1697,6 +1723,7 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
