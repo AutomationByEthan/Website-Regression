@@ -1324,7 +1324,7 @@ body.is-article-visible #header {
 
 /* About Us */
 .about-us {
-    margin: 1.5rem auto;
+    margin: 1rem auto 0.5rem auto;
     max-width: 80%;
     text-align: center;
 }
@@ -1352,7 +1352,7 @@ body.is-article-visible #header {
 
 @media screen and (max-width: 480px) {
     .about-us {
-        margin: 1rem auto;
+        margin: 0.75rem auto 0.25rem auto;
         max-width: 90%;
     }
     .about-us p {
@@ -1691,6 +1691,7 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
