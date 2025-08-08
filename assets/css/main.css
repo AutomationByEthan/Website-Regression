@@ -1066,41 +1066,6 @@ body.is-preload #bg:before {
     }
 }
 
-#wrapper {
-    display: flex !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-body.is-preload #wrapper,
-body.is-preload #header,
-body.is-preload #main,
-body.is-preload #footer,
-body.is-preload .about-us {
-    display: flex !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-body.is-preload #main article {
-    display: block !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-/* Ensure footer content is visible */
-#footer {
-    display: block !important;
-    opacity: 1 !important;
-}
-
-/* Ensure articles are visible even if not active */
-#main article {
-    display: block !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
-
 /* Header */
 #header {
     display: flex;
@@ -1498,59 +1463,21 @@ body.is-article-visible .about-us {
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     width: 100%;
     max-width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     text-align: center;
-}
-
-#footer .copyright {
-  color: #b0b0b0; /* Match .about-us p */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Match .about-us p */
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400; /* Match .about-us p */
-  font-size: 0.9rem; /* Match .about-us p */
-  line-height: 1.6; /* Match .about-us p */
-  letter-spacing: 0.2rem; /* Retain for consistency with uppercase style */
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-#footer .copyright a {
-  color: #b0b0b0; /* Match .about-us a */
-  text-decoration: none;
-  border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
-}
-
-#footer .copyright a:hover {
-  border-bottom-color: transparent;
-}
-
-body.is-article-visible #footer {
+}#footer .copyright {
+    letter-spacing: 0.2rem;
+    font-size: 0.6rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}body.is-article-visible #footer {
     transform: scale(0.95);
     filter: blur(0.1rem);
     opacity: 0;
-}
-
-body.is-preload #footer {
+}body.is-preload #footer {
     opacity: 1;
 }
-
-@media screen and (max-width: 736px) {
-  #footer {
-    margin-top: 0.25rem; /* Keep reduced margin */
-  }
-  #footer .copyright {
-    font-size: 0.75rem; /* Slightly smaller than desktop, matching .about-us p mobile */
-    color: #b0b0b0;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Match .about-us p mobile */
-    font-weight: 600; /* Match .about-us p mobile */
-    line-height: 1.6;
-  }
-  #footer .copyright a {
-    color: #b0b0b0;
-  }
-}
-
-
 
 /* Article Sections */
 article#work,
@@ -1758,53 +1685,6 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
-
-/* Force visibility for all content */
-html body #wrapper {
-    display: flex !important;
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-}
-
-html body.is-preload #wrapper,
-html body.is-preload #header,
-html body.is-preload #main,
-html body.is-preload #footer,
-html body.is-preload .about-us {
-    display: flex !important;
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-}
-
-html body.is-preload #main article,
-html body #main article {
-    display: block !important;
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-}
-
-html body.is-article-visible #wrapper,
-html body.is-article-visible #header,
-html body.is-article-visible #main,
-html body.is-article-visible #footer,
-html body.is-article-visible .about-us {
-    display: flex !important;
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-}
-
-/* Ensure footer content is visible */
-html body #footer {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-
 
 
 
