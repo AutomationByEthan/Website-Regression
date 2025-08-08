@@ -1066,6 +1066,41 @@ body.is-preload #bg:before {
     }
 }
 
+#wrapper {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+body.is-preload #wrapper,
+body.is-preload #header,
+body.is-preload #main,
+body.is-preload #footer,
+body.is-preload .about-us {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+body.is-preload #main article {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Ensure footer content is visible */
+#footer {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* Ensure articles are visible even if not active */
+#main article {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 /* Header */
 #header {
     display: flex;
@@ -1723,6 +1758,7 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
