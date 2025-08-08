@@ -1463,7 +1463,7 @@ body.is-article-visible .about-us {
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     width: 100%;
     max-width: 100%;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     text-align: center;
 }
 
@@ -1483,6 +1483,12 @@ body.is-article-visible #footer {
 
 body.is-preload #footer {
     opacity: 1;
+}
+
+@media screen and (max-width: 736px) {
+  #footer {
+    margin-top: 0.25rem; /* Further reduced for mobile */
+  }
 }
 
 /* Article Sections */
@@ -1691,16 +1697,6 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
