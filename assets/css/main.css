@@ -1285,6 +1285,8 @@ body.is-article-visible #header {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
+    border: solid 1px #ffffff; /* White outline box */
+    border-radius: 4px; /* Rounded corners */
     border-bottom: 0;
     color: #ffffff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -1294,6 +1296,7 @@ body.is-article-visible #header {
 #header nav ul li a:hover {
     color: #00bfff;
     background-color: rgba(0, 191, 255, 0.1);
+    border-color: #00bfff; /* Blue border on hover */
 }
 
 @media screen and (max-width: 480px) {
@@ -1313,7 +1316,8 @@ body.is-article-visible #header {
         font-size: 0.75rem;
         color: #c0c0c0; /* Darker text on mobile */
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Stronger shadow */
-       font-weight: 600;
+        font-weight: 600;
+        border: solid 1px #ffffff; /* White outline box on mobile */
     }
 }
 
@@ -1686,6 +1690,7 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
