@@ -1071,50 +1071,54 @@ body.is-preload .about-us {
     #main article {
         padding: 3rem 1.5rem 0.5rem 1.5rem;
     }
-}/* Footer */
+}
+
+/* Footer */
 #footer {
-    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    margin-top: 0.5rem;
     width: 100%;
     max-width: 100%;
-    margin-top: 0.5rem;
     text-align: center;
-}#footer .copyright {
-  color: #b0b0b0; /* Match .about-us p */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Match .about-us p */
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400; /* Match .about-us p */
-  font-size: 0.9rem; /* Match .about-us p */
-  line-height: 1.6; /* Match .about-us p */
-  letter-spacing: 0.2rem; /* Retain for consistency with uppercase style */
-  text-transform: uppercase;
-  margin-bottom: 0;
-}#footer .copyright a {
-  color: #b0b0b0; /* Match .about-us a */
-  text-decoration: none;
-  border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
-}#footer .copyright a:hover {
-  border-bottom-color: transparent;
-}body.is-article-visible #footer {
-    transform: scale(0.95);
-    filter: blur(0.1rem);
-    opacity: 0;
-}body.is-preload #footer {
-    opacity: 1;
-}@media screen and (max-width: 736px) {
-  #footer {
-    margin-top: 0.25rem; /* Keep reduced margin */
-  }
-  #footer .copyright {
-    font-size: 0.75rem; /* Slightly smaller than desktop, matching .about-us p mobile */
+}
+
+#footer p.about-us {
     color: #b0b0b0;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Match .about-us p mobile */
-    font-weight: 600; /* Match .about-us p mobile */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    margin: 0 auto 0.5rem auto;
+    font-size: 0.9rem;
     line-height: 1.6;
-  }
-  #footer .copyright a {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+}
+
+#footer p.about-us a {
     color: #b0b0b0;
-  }
-}/* Article Sections */
+    text-decoration: none;
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+}
+
+#footer p.about-us a:hover {
+    border-bottom-color: transparent;
+}
+
+@media screen and (max-width: 736px) {
+    #footer {
+        margin-top: 0.25rem;
+    }
+    #footer p.about-us {
+        max-width: 90%;
+        font-size: 0.75rem;
+        color: #b0b0b0;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+        font-weight: 600;
+    }
+    #footer p.about-us a {
+        color: #b0b0b0;
+    }
+}
+
+/* Article Sections */
 article#work,
 article#intro,
 article#about {
@@ -1290,4 +1294,5 @@ article#about .button.primary:hover {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
