@@ -1083,8 +1083,10 @@ body.is-preload #bg:before {
     margin-top: 2rem;
 }
 
-#header > *:before {
-    display: none; /* Remove vertical line on desktop */
+#header > *:before,
+#header .content:before,
+#header nav:before {
+    display: none !important; /* Remove vertical line on desktop */
 }
 
 #header > :first-child {
@@ -1689,6 +1691,7 @@ pre.code {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
