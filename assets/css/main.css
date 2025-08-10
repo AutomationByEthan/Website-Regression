@@ -1015,6 +1015,7 @@ body.is-preload .about-us {
     max-width: 100%;
     z-index: 3;
     overflow: hidden;
+    min-height: 80vh;
 }#main article {
     transform: translateY(0.25rem);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
@@ -1028,12 +1029,14 @@ body.is-preload .about-us {
     border-radius: 4px;
     opacity: 0;
     display: none;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
 }#main article.active {
     transform: translateY(0);
     opacity: 1;
     display: block;
 }
-
 #main article .close {
     display: block;
     position: absolute;
@@ -1301,6 +1304,7 @@ article#about .button.primary:hover {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
 
