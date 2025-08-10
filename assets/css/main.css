@@ -1014,20 +1014,27 @@ body.is-preload .about-us {
     position: relative;
     max-width: 100%;
     z-index: 3;
+    overflow: hidden;
 }#main article {
     transform: translateY(0.25rem);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
     padding: 4.5rem 2.5rem 1.5rem 2.5rem;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 40rem;
     max-width: 100%;
     background-color: rgba(27, 31, 34, 0.85);
     border-radius: 4px;
     opacity: 0;
+    display: none;
 }#main article.active {
     transform: translateY(0);
     opacity: 1;
-}#main article .close {
+    display: block;
+}
+
+#main article .close {
     display: block;
     position: absolute;
     top: 0;
@@ -1294,5 +1301,6 @@ article#about .button.primary:hover {
     color: #ffffff;
     margin: 1rem 0;
 }
+
 
 
