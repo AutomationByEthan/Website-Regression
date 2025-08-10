@@ -53,7 +53,6 @@
         <div id="main">
             <!-- What We Offer -->
             <article id="intro" role="region" aria-labelledby="intro-title">
-                <span class="close">Close</span>
                 <h2 id="intro-title" class="major">What We Offer: UI Automation</h2>
                 <div class="feature">
                     <h3>Selenium-Based Automation Suite</h3>
@@ -84,7 +83,6 @@
 
             <!-- Why Choose Us -->
             <article id="work" class="style1" role="region" aria-labelledby="work-title">
-                <span class="close">Close</span>
                 <h2 id="work-title" class="major">Why Elgin Automation?</h2>
                 <div class="feature">
                     <i class="fas fa-lightbulb" aria-label="Simple Solutions icon"></i>
@@ -111,7 +109,6 @@
 
             <!-- Demo -->
             <article id="about" role="region" aria-labelledby="about-title">
-                <span class="close">Close</span>
                 <h2 id="about-title" class="major">Automation in Action</h2>
                 <div class="feature">
                     <h3>Live Demonstration</h3>
@@ -135,7 +132,6 @@ WebUI.takeScreenshot('LoginPage.jpg')
 
             <!-- Contact -->
             <article id="contact" role="region" aria-labelledby="contact-title">
-                <span class="close">Close</span>
                 <h2 id="contact-title" class="major">Contact</h2>
                 <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
                 <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title">
@@ -169,7 +165,15 @@ WebUI.takeScreenshot('LoginPage.jpg')
 
         <!-- Footer -->
         <footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
-            <p class="about-us">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions. | © Elgin Automation. All rights reserved. | <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | Follow us: <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a> <a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></p>
+            <div class="about-us" aria-describedby="about-us-desc">
+                <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+            </div>
+            <p class="copyright">
+                © Elgin Automation. All rights reserved. | 
+                <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+                Follow us: 
+                <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+            </p>
         </footer>
     </div>
 
@@ -177,11 +181,9 @@ WebUI.takeScreenshot('LoginPage.jpg')
     <div id="bg"></div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
