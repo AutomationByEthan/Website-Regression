@@ -1006,10 +1006,12 @@ body.is-preload .about-us {
     position: relative;
     max-width: 100%;
     z-index: 3;
-    overflow: hidden;
     min-height: 80vh;
     height: 100%;
-}#main article {
+    overflow: visible; /* Changed to allow content to expand */
+}
+
+#main article {
     transform: translateY(0.25rem);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
     padding: 4.5rem 2.5rem 1.5rem 2.5rem;
@@ -1018,18 +1020,21 @@ body.is-preload .about-us {
     left: 0;
     width: 40rem;
     max-width: 100%;
-    height: 100%; /* Fill #main */
+    height: 100%;
     background-color: rgba(27, 31, 34, 0.85);
     border-radius: 4px;
     opacity: 0;
     display: none;
-    overflow-y: auto; /* Allow scrolling for long content */
+    overflow-y: auto;
     box-sizing: border-box;
-}#main article.active {
+}
+
+#main article.active {
     transform: translateY(0);
     opacity: 1;
     display: block;
 }
+
 #main article .close {
     display: block;
     position: absolute;
@@ -1041,7 +1046,9 @@ body.is-preload .about-us {
     text-indent: 4rem;
     overflow: hidden;
     white-space: nowrap;
-}#main article .close:before {
+}
+
+#main article .close:before {
     transition: background-color 0.2s ease-in-out;
     content: '';
     display: block;
@@ -1055,25 +1062,14 @@ body.is-preload .about-us {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
     background-size: 20px 20px;
     background-repeat: no-repeat;
-}#main article .close:hover:before {
+}
+
+#main article .close:hover:before {
     background-color: rgba(255, 255, 255, 0.075);
-}#main article .close:active:before {
+}
+
+#main article .close:active:before {
     background-color: rgba(255, 255, 255, 0.175);
-}@media screen and (max-width: 736px) {
-    #main article {
-        padding: 3.5rem 2rem 0.5rem 2rem;
-    }
-    #main article .close:before {
-        top: 0.875rem;
-        left: 0.875rem;
-        width: 2.25rem;
-        height: 2.25rem;
-        background-size: 14px 14px;
-    }
-}@media screen and (max-width: 480px) {
-    #main article {
-        padding: 3rem 1.5rem 0.5rem 1.5rem;
-    }
 }
 
 #main article .feature {
@@ -1144,6 +1140,18 @@ body.is-preload .about-us {
 }
 
 @media screen and (max-width: 736px) {
+    #main article {
+        padding: 3.5rem 2rem 0.5rem 2rem;
+    }
+
+    #main article .close:before {
+        top: 0.875rem;
+        left: 0.875rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        background-size: 14px 14px;
+    }
+
     #main article .feature {
         margin: 1rem 0;
         padding: 1.5rem;
@@ -1255,3 +1263,4 @@ body.is-preload .about-us {
         color: #b0b0b0;
     }
 }
+
