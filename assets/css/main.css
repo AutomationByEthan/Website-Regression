@@ -1,193 +1,3702 @@
-<!DOCTYPE HTML>
+/* Dimension by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output,
+ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}body {
+    line-height: 1;
+}ol, ul {
+    list-style: none;
+}blockquote, q {
+    quotes: none;
+}blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}body {
+    -webkit-text-size-adjust: none;
+}mark {
+    background-color: transparent;
+    color: inherit;
+}input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}input, select, textarea {
+    appearance: none;
+}/* Basic */
+@-ms-viewport {
+    width: device-width;
+}@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+    }
+}html {
+    box-sizing: border-box;
+}*, *:before, *:after {
+    box-sizing: inherit;
+}body {
+    background: #1b1f22;
+}body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+    animation: none !important;
+    transition: none !important;
+}/* Type */
+html {
+    font-size: 16pt;
+}@media screen and (max-width: 1680px) {
+    html {
+        font-size: 12pt;
+    }
+}@media screen and (max-width: 736px) {
+    html {
+        font-size: 12pt;
+    }
+}@media screen and (max-width: 360px) {
+    html {
+        font-size: 11pt;
+    }
+}body, input, select, textarea {
+    color: #ffffff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.65;
+}a {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    color: inherit;
+}a:hover {
+    border-bottom-color: transparent;
+}strong, b {
+    color: #ffffff;
+    font-weight: 600;
+}em, i {
+    font-style: italic;
+}p {
+    margin: 0 0 2rem 0;
+}h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+}h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+    border-bottom: solid 1px #ffffff;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 0 2rem 0;
+}h1 {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    letter-spacing: 0.3rem;
+}h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}h3 {
+    font-size: 1rem;
+}h4 {
+    font-size: 0.8rem;
+}h5 {
+    font-size: 0.7rem;
+}h6 {
+    font-size: 0.6rem;
+}@media screen and (max-width: 736px) {
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.4;
+    }
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+}sub {
+    font-size: 0.8rem;
+    position: relative;
+    top: 0.5rem;
+}sup {
+    font-size: 0.8rem;
+    position: relative;
+    top: -0.5rem;
+}blockquote {
+    border-left: solid 4px #ffffff;
+    font-style: italic;
+    margin: 0 0 2rem 0;
+    padding: 0.5rem 0 0.5rem 2rem;
+}code {
+    background: rgba(255, 255, 255, 0.075);
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    margin: 0 0.25rem;
+    padding: 0.25rem 0.65rem;
+}pre {
+    -webkit-overflow-scrolling: touch;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    margin: 0 0 2rem 0;
+}pre code {
+    display: block;
+    line-height: 1.75;
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+}hr {
+    border: 0;
+    border-bottom: solid 1px #ffffff;
+    margin: 2.75rem 0;
+}.align-left {
+    text-align: left;
+}.align-center {
+    text-align: center;
+}.align-right {
+    text-align: right;
+}/* Form */
+form {
+    margin: 0 0 2rem 0;
+}form > :last-child {
+    margin-bottom: 0;
+}form > .fields {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 3rem);
+    margin: -1.5rem 0 2rem -1.5rem;
+}form > .fields > .field {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 1.5rem 0 0 1.5rem;
+    width: calc(100% - 1.5rem);
+}form > .fields > .field.half {
+    width: calc(50% - 0.75rem);
+}form > .fields > .field.third {
+    width: calc(100%/3 - 0.5rem);
+}form > .fields > .field.quarter {
+    width: calc(25% - 0.375rem);
+}@media screen and (max-width: 480px) {
+    form > .fields {
+        width: calc(100% + 3rem);
+        margin: -1.5rem 0 2rem -1.5rem;
+    }
+    form > .fields > .field {
+        padding: 1.5rem 0 0 1.5rem;
+        width: calc(100% - 1.5rem);
+    }
+    form > .fields > .field.half {
+        width: calc(100% - 1.5rem);
+    }
+    form > .fields > .field.third {
+        width: calc(100% - 1.5rem);
+    }
+    form > .fields > .field.quarter {
+        width: calc(100% - 1.5rem);
+    }
+}label {
+    color: #ffffff;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1rem;
+    text-decoration: none;
+    width: 100%;
+}input[type="text"]:invalid,
+input[type="password"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+select:invalid,
+textarea:invalid {
+    box-shadow: none;
+}input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 1px #ffffff;
+}select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23ffffff' /%3E%3C/svg%3E");
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+    height: 2.75rem;
+    padding-right: 2.75rem;
+    text-overflow: ellipsis;
+}select option {
+    color: #ffffff;
+    background: #1b1f22;
+}select:focus::-ms-value {
+    background-color: transparent;
+}select::-ms-expand {
+    display: none;
+}input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    height: 2.75rem;
+}textarea {
+    padding: 0.75rem 1rem;
+}input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    display: block;
+    float: left;
+    margin-right: -2rem;
+    opacity: 0;
+    width: 1rem;
+    z-index: -1;
+}input[type="checkbox"] + label,
+input[type="radio"] + label {
+    text-decoration: none;
+    user-select: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0 0 0.5rem 0;
+    padding-left: 2.65rem;
+    padding-right: 0.75rem;
+    position: relative;
+}input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    content: '';
+    display: inline-block;
+    height: 1.65rem;
+    left: 0;
+    line-height: 1.65rem;
+    position: absolute;
+    text-align: center;
+    top: -0.15rem;
+    width: 1.65rem;
+}input[type="checkbox"]:checked + label:before,
+input[type="radio"]:checked + label:before {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #1b1f22;
+    content: '\f00c';
+}input[type="checkbox"]:focus + label:before,
+input[type="radio"]:focus + label:before {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 1px #ffffff;
+}input[type="checkbox"] + label:before {
+    border-radius: 4px;
+}input[type="radio"] + label:before {
+    border-radius: 100%;
+}::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+.formerize-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1.0;
+}/* Box */
+.box {
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    margin-bottom: 2rem;
+    padding: 1.5em;
+}.box > :last-child,
+.box > :last-child > :last-child,
+.box > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
+}.box.alt {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}/* Icon */
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}.icon:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none !important;
+}.icon > .label {
+    display: none;
+}.icon:before {
+    line-height: inherit;
+}.icon.solid:before {
+    font-weight: 900;
+}.icon.brands:before {
+    font-family: 'Font Awesome 5 Brands';
+}/* Image */
+.image {
+    border-radius: 4px;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}.image:before {
+    pointer-events: none;
+    background-image: url("../../images/overlay.png");
+    background-color: rgba(19, 21, 25, 0.5);
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}.image img {
+    border-radius: 4px;
+    display: block;
+}.image.left, .image.right {
+    max-width: 40%;
+}.image.left img, .image.right img {
+    width: 100%;
+}.image.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em;
+}.image.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em;
+}.image.fit {
+    display: block;
+    margin: 0 0 2rem 0;
+    width: 100%;
+}.image.fit img {
+    width: 100%;
+}.image.main {
+    display: block;
+    margin: 2.5rem 0;
+    width: 100%;
+}.image.main img {
+    width: 100%;
+}@media screen and (max-width: 736px) {
+    .image.main {
+        margin: 2rem 0;
+    }
+}@media screen and (max-width: 480px) {
+    .image.main {
+        margin: 1.5rem 0;
+    }
+}/* List */
+ol {
+    list-style: decimal;
+    margin: 0 0 2rem 0;
+    padding-left: 1.25em;
+}ol li {
+    padding-left: 0.25em;
+}ul {
+    list-style: disc;
+    margin: 0 0 2rem 0;
+    padding-left: 1em;
+}ul li {
+    padding-left: 0.5em;
+}ul.alt {
+    list-style: none;
+    padding-left: 0;
+}ul.alt li {
+    border-top: solid 1px #ffffff;
+    padding: 0.5em 0;
+}ul.alt li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}dl {
+    margin: 0 0 2rem 0;
+}dl dt {
+    display: block;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}dl dd {
+    margin-left: 2rem;
+}/* Actions */
+ul.actions {
+    display: flex;
+    cursor: default;
+    list-style: none;
+    margin-left: -1rem;
+    padding-left: 0;
+}ul.actions li {
+    padding: 0 0 0 1rem;
+    vertical-align: middle;
+}ul.actions.special {
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+}ul.actions.special li:first-child {
+    padding-left: 0;
+}ul.actions.stacked {
+    flex-direction: column;
+    margin-left: 0;
+}ul.actions.stacked li {
+    padding: 1.3rem 0 0 0;
+}ul.actions.stacked li:first-child {
+    padding-top: 0;
+}ul.actions.fit {
+    width: calc(100% + 1rem);
+}ul.actions.fit li {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+}ul.actions.fit li > * {
+    width: 100%;
+}ul.actions.fit.stacked {
+    width: 100%;
+}@media screen and (max-width: 480px) {
+    ul.actions:not(.fixed) {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100% !important;
+    }
+    ul.actions:not(.fixed) li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 1rem 0 0 0;
+        text-align: center;
+        width: 100%;
+    }
+    ul.actions:not(.fixed) li > * {
+        width: 100%;
+    }
+    ul.actions:not(.fixed) li:first-child {
+        padding-top: 0;
+    }
+    ul.actions:not(.fixed) li input[type="submit"],
+    ul.actions:not(.fixed) li input[type="reset"],
+    ul.actions:not(.fixed) li input[type="button"],
+    ul.actions:not(.fixed) li button,
+    ul.actions:not(.fixed) li .button {
+        width: 100%;
+    }
+    ul.actions:not(.fixed) li input[type="submit"].icon:before,
+    ul.actions:not(.fixed) li input[type="reset"].icon:before,
+    ul.actions:not(.fixed) li input[type="button"].icon:before,
+    ul.actions:not(.fixed) li button.icon:before,
+    ul.actions:not(.fixed) li .button.icon:before {
+        margin-left: -0.5em;
+    }
+}/* Icons */
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}ul.icons li {
+    display: inline-block;
+    padding: 0 0.75em 0 0;
+}ul.icons li:last-child {
+    padding-right: 0;
+}ul.icons li a {
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    display: inline-block;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    width: 2.25rem;
+}ul.icons li a:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}ul.icons li a:active {
+    background-color: rgba(255, 255, 255, 0.175);
+}/* Table */
+.table-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}table {
+    margin: 0 0 2rem 0;
+    width: 100%;
+}table tbody tr {
+    border: solid 1px #ffffff;
+    border-left: 0;
+    border-right: 0;
+}table tbody tr:nth-child(2n + 1) {
+    background-color: rgba(255, 255, 255, 0.075);
+}table td {
+    padding: 0.75em 0.75em;
+}table th {
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0 0.75em 0.75em 0.75em;
+    text-align: left;
+}table thead {
+    border-bottom: solid 2px #ffffff;
+}table tfoot {
+    border-top: solid 2px #ffffff;
+}table.alt {
+    border-collapse: separate;
+}table.alt tbody tr td {
+    border: solid 1px #ffffff;
+    border-left-width: 0;
+    border-top-width: 0;
+}table.alt tbody tr td:first-child {
+    border-left-width: 1px;
+}table.alt tbody tr:first-child td {
+    border-top-width: 1px;
+}table.alt thead {
+    border-bottom: 0;
+}table.alt tfoot {
+    border-top: 0;
+}/* Button */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px #ffffff;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    height: 2.75rem;
+    letter-spacing: 0.2rem;
+    line-height: 2.75rem;
+    outline: 0;
+    padding: 0 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+button:active,
+.button:active {
+    background-color: rgba(255, 255, 255, 0.175);
+}input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+    margin-right: 0.5em;
+}input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+    width: 100%;
+}input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+    font-size: 0.6rem;
+    height: 2.0625rem;
+    line-height: 2.0625rem;
+}input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+    background-color: #00bfff;
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: none;
+}input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+    background-color: #00ccff;
+}input[type="submit"].disabled, input[type="submit"]:disabled,
+input[type="reset"].disabled, input[type="reset"]:disabled,
+input[type="button"].disabled, input[type="button"]:disabled,
+button.disabled, button:disabled,
+.button.disabled, .button:disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.25;
+}input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    line-height: calc(2.75rem - 2px);
+}/* BG */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    transform: scale(1.0);
+    -webkit-backface-visibility: hidden;
+}#bg:before,
+#bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+}#bg:before {
+    background-image: linear-gradient(
+        45deg,
+        rgba(19, 21, 25, 0.85),
+        rgba(0, 191, 255, 0.1),
+        rgba(19, 21, 25, 0.85)
+    ), url("../../images/overlay.png");
+    background-size: auto, 256px 256px;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    z-index: 2;
+    animation: gradientShift 20s ease-in-out infinite;
+}@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}#bg:after {
+    background-image: url("../../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    filter: brightness(0.8); /* Darken the image by 20% */
+}body.scrolled #bg:after {
+    transform: translateY(8%) scale(1.05);
+}body.is-article-visible #bg:after {
+    transform: scale(1.0825);
+    filter: blur(0.2rem);
+}body.is-preload #bg:before {
+    background-color: #000000;
+    transition: background-color 0.5s ease-in-out;
+}/* Wrapper */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    z-index: 3;
+}#wrapper:before {
+    content: '';
+    display: block;
+}@media screen and (max-width: 1680px) {
+    #wrapper {
+        padding: 2rem 1.25rem;
+    }
+}@media screen and (max-width: 736px) {
+    #wrapper {
+        padding: 1.25rem 1rem;
+    }
+}@media screen and (max-width: 480px) {
+    #wrapper {
+        padding: 0.75rem;
+    }
+}/* Header */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}#header > * {
+    transition: opacity 0.325s ease-in-out;
+    position: relative;
+    margin-top: 2rem;
+}#header > *:before,
+#header .content:before,
+#header nav:before {
+    display: none !important; /* Remove vertical line on desktop */
+}#header > :first-child {
+    margin-top: 0;
+}#header > :first-child:before {
+    display: none;
+}#header .logo {
+    transition: transform 0.3s ease-in-out;
+    width: 5.5rem;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    animation: logoFadeIn 1s ease-out 0.2s forwards;
+}@keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}#header .logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}#header .logo .icon:before {
+    transition: color 0.3s ease-in-out;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 2.5em;
+    color: #ffffff;
+}#header .logo:hover .icon:before {
+    color: #00bfff;
+}@media screen and (max-width: 736px) {
+    #header .logo {
+        width: 4.75rem;
+        height: 4.75rem;
+        line-height: 4.75rem;
+    }
+    #header .logo .icon:before {
+        font-size: 1.8em;
+    }
+}#header .content {
+    border-style: solid;
+    border-color: #ffffff;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    max-width: 100%;
+}#header .content .inner {
+    transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+    padding: 1.5rem 1rem;
+    max-height: 40rem;
+    overflow: hidden;
+}#header .content .inner > :last-child {
+    margin-bottom: 0;
+}#header .content .inner h1 {
+    font-size: 2.25rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    letter-spacing: 0.3rem;
+}#header .content .inner p {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #c0c0c0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+}#header .content .inner .button.primary {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    padding: 0 1.25rem;
+    background-color: #00bfff;
+    color: #ffffff !important;
+    border-radius: 4px;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    box-shadow: none;
+}#header .content .inner .button.primary:hover {
+    background-color: #00ccff;
+}@media screen and (max-width: 736px) {
+    #header {
+        max-width: 95%;
+    }
+    #header > * {
+        margin-top: 1.5rem;
+    }
+    #header > *:before {
+        content: '';
+        display: block; /* Restore vertical line on mobile */
+        position: absolute;
+        top: calc(-1.5rem - 1px);
+        left: calc(50% - 1px);
+        width: 1px;
+        height: calc(1.5rem + 1px);
+        background: #ffffff;
+    }
+    #header .content .inner {
+        padding: 1rem 0.75rem;
+    }
+    #header .content .inner h1 {
+        font-size: 1.75rem;
+        letter-spacing: 0.2rem;
+    }
+    #header .content .inner p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        color: #d0d0d0; /* Darker text on mobile */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+    }
+    #header .content .inner .button.primary {
+        margin-top: 0.75rem;
+        padding: 0 1rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+}@media screen and (max-width: 480px) {
+    #header {
+        padding: 0.5rem;
+        max-width: 100%;
+    }
+    #header .content .inner {
+        padding: 0.75rem 0.5rem;
+    }   #header .content .inner p {
+        font-size: 0.75rem;
+        color: #d0d0d0; /* Consistent darker text */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    }
+}body.is-preload #header {
+    filter: none;
+}body.is-preload #header > * {
+    opacity: 1;
+}body.is-preload #header .content .inner {
+    max-height: 40rem;
+    padding: 1.5rem 1rem;
+    opacity: 1;
+}body.is-article-visible #header {
+    transform: scale(0.95);
+    filter: blur(0.1rem);
+    opacity: 0;
+}/* Navigation */
+#header nav ul {
+    display: flex;
+    margin-bottom: 0;
+    justify-content: center; /* Ensure buttons are centered */
+    list-style: none;
+    padding: 0;
+}#header nav ul li {
+    padding: 0 0.5rem;
+}#header nav ul li a {
+    display: block;
+    min-width: 9rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.85rem;
+    border: solid 1px #ffffff; /* White outline box */
+    border-radius: 4px; /* Rounded corners */
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}#header nav ul li a:hover {
+    color: #00bfff;
+    background-color: rgba(0, 191, 255, 0.1);
+    border-color: #00bfff; /* Blue border on hover */
+}@media screen and (max-width: 480px) {
+    #header nav ul {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    #header nav ul li {
+        padding: 0.25rem 0;
+    }
+    #header nav ul li a {
+        min-width: 0;
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        color: #c0c0c0; /* Darker text on mobile */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+        font-weight: 600;
+        border: solid 1px #ffffff; /* White outline box on mobile */
+    }
+}/* About Us */
+.about-us {
+    margin: 1.5rem auto;
+    max-width: 80%;
+    text-align: center;
+}.about-us p {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+}.about-us a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+}.about-us a:hover {
+    border-bottom-color: transparent;
+}@media screen and (max-width: 480px) {
+    .about-us {
+        margin: 1rem auto;
+        max-width: 90%;
+    }
+    .about-us p {
+        font-size: 0.75rem;
+        color: #c0c0c0; /* Darker text on mobile */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+       font-weight: 600;
+    }
+    .about-us a {
+        color: #c0c0c0; /* Match p color */
+    }
+}body.is-article-visible .about-us {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+}/* Main */
+#main {
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    z-index: 3;
+}#main article {
+    transform: translateY(0.25rem);
+    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+    padding: 4.5rem 2.5rem 1.5rem 2.5rem;
+    position: relative;
+    width: 40rem;
+    max-width: 100%;
+    background-color: rgba(27, 31, 34, 0.85);
+    border-radius: 4px;
+    opacity: 0;
+}#main article.active {
+    transform: translateY(0);
+    opacity: 1;
+}#main article .close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    text-indent: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+}#main article .close:before {
+    transition: background-color 0.2s ease-in-out;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    background-position: center;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}#main article .close:hover:before {
+    background-color: rgba(255, 255, 255, 0.075);
+}#main article .close:active:before {
+    background-color: rgba(255, 255, 255, 0.175);
+}@media screen and (max-width: 736px) {
+    #main article {
+        padding: 3.5rem 2rem 0.5rem 2rem;
+    }
+    #main article .close:before {
+        top: 0.875rem;
+        left: 0.875rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        background-size: 14px 14px;
+    }
+}@media screen and (max-width: 480px) {
+    #main article {
+        padding: 3rem 1.5rem 0.5rem 1.5rem;
+    }
+}/* Footer */
+#footer {
+    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}#footer .copyright {
+    letter-spacing: 0.2rem;
+    font-size: 0.6rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}body.is-article-visible #footer {
+    transform: scale(0.95);
+    filter: blur(0.1rem);
+    opacity: 0;
+}body.is-preload #footer {
+    opacity: 1;
+}/* Article Sections */
+article#work,
+article#intro,
+article#about {
+    padding: 3.5rem 3rem 1rem 3rem;
+    background-color: rgba(27, 31, 34, 0.85);
+    border-radius: 4px;
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
+}article#work h2.major,
+article#intro h2.major,
+article#about h2.major {
+    border-bottom: solid 1px #ffffff;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 auto 2rem auto;
+}article#work .feature,
+article#intro .feature,
+article#about .feature {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: left;
+}article#work .feature h3,
+article#intro .feature h3,
+article#about .feature h3 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}article#work .feature p,
+article#intro .feature p {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}article#about .feature p {
+    color: #ffffff;
+    margin: 0.5rem 0;
+}article#about .feature a {
+    color: #00bfff;
+    text-decoration: underline;
+}article#about .feature a:hover {
+    color: #00ccff;
+}article#work .feature i,
+article#intro .feature i {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}article#work .button.primary,
+article#intro .button.primary,
+article#about .button.primary {
+    display: block;
+    margin: 2rem auto 1rem auto;
+    max-width: 12rem;
+}article#work .button.primary:hover,
+article#intro .button.primary:hover,
+article#about .button.primary:hover {
+    background-color: #00ccff;
+}article#about .feature pre.code {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin: 1rem 0;
+}article#about .feature iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 4px;
+}@media screen and (max-width: 736px) {
+    article#work,
+    article#intro,
+    article#about {
+        padding: 3.5rem 3rem 1rem 3rem;
+        background-color: rgba(27, 31, 34, 0.9);
+    }
+    article#work h2.major,
+    article#intro h2.major,
+    article#about h2.major {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 1.5rem auto;
+    }
+    article#work .feature,
+    article#intro .feature,
+    article#about .feature {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    article#work .feature h3,
+    article#intro .feature h3,
+    article#about .feature h3 {
+        font-size: 1.1rem;
+    }
+    article#work .feature i,
+    article#intro .feature i {
+        font-size: 1.8em;
+    }
+    article#work .button.primary,
+    article#intro .button.primary,
+    article#about .button.primary {
+        margin: 2.5rem auto 1.5rem auto;
+        padding: 0.75rem 2rem;
+        font-size: 0.9rem;
+    }
+    article#about .feature pre.code {
+        font-size: 0.85rem;
+    }
+    article#about .feature iframe {
+        height: 180px;
+    }
+}@media screen and (max-width: 480px) {
+    article#work,
+    article#intro,
+    article#about {
+        padding: 3rem 2.5rem 1rem 2.5rem;
+        background-color: rgba(27, 31, 34, 0.9);
+    }
+    article#work h2.major,
+    article#intro h2.major,
+    article#about h2.major {
+        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 1.5rem auto;
+    }
+    article#work .feature,
+    article#intro .feature,
+    article#about .feature {
+        margin: 0.75rem 0;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    article#work .feature h3,
+    article#intro .feature h3,
+    article#about .feature h3 {
+        font-size: 1rem;
+    }
+    article#work .feature i,
+    article#intro .feature i {
+        font-size: 1.6em;
+    }
+    article#work .button.primary,
+    article#intro .button.primary,
+    article#about .button.primary {
+        margin: 2rem auto 1rem auto;
+        padding: 0.65rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    article#about .feature pre.code {
+        font-size: 0.8rem;
+    }
+    article#about .feature iframe {
+        height: 150px;
+    }
+}pre.code {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+To improve text readability, you have two good options: darkening the text or slightly darkening the background image. Since your text is currently white (#ffffff) or light gray (#c0c0c0, #d0d0d0) with a semi-transparent dark background and a gradient overlay, darkening the text might reduce contrast too much against the dark background. Instead, darkening the background image slightly is likely the better choice, as it will make the light text pop more without altering the site's aesthetic too drastically.Recommended Solution: Darken the Background ImageYou can adjust the filter: brightness() value applied to the #bg:after selector, which controls the background image. Currently, it's set to brightness(0.8) (80% brightness). Reducing this to brightness(0.7) or brightness(0.65) will darken the background image slightly, improving text contrast.Here's the change:css
+
+#bg:after {
+    background-image: url("../../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    filter: brightness(0.7); /* Reduced from 0.8 to 0.7 for a slightly darker background */
+}
+
+Alternative Solution: Darken the TextIf you prefer to darken the text instead, you can adjust the text colors across various elements. Currently, most text uses #ffffff (white) or lighter shades like #c0c0c0 and #d0d0d0. You can darken these to a medium gray, such as #b0b0b0 or #a0a0a0, to maintain contrast against the dark background while improving readability.Here’s how you can modify key text elements:Body and General Text:
+
+css
+
+body, input, select, textarea {
+    color: #b0b0b0; /* Changed from #ffffff */
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+Headings:
+
+css
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b0b0b0; /* Changed from #ffffff */
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+Header Content Paragraphs:
+
+css
+
+#header .content .inner p {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #b0b0b0; /* Changed from #c0c0c0 */
+    text-shadow: 0 1px 2px rgba-recognition(0, 0, 0, 0.5);
+    font-weight: 600;
+}
+
+About Us Section:
+
+css
+
+.about-us p {
+    color: #b0b0b0; /* Changed from #ffffff */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+}
+
+Mobile-Specific Text:
+
+css
+
+@media screen and (max-width: 480px) {
+    .about-us p {
+        font-size: 0.75rem;
+        color: #b0b0b0; /* Changed from #c0c0c0 */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        font-weight: 600;
+    }
+    .about-us a {
+        color: #b0b0b0; /* Changed from #c0c0c0 */
+    }
+    #header .content .inner p {
+        font-size: 0.75rem;
+        color: #b0b0b0; /* Changed from #d0d0d0 */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    }
+    #header nav ul li a {
+        min-width: 0;
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        color: #b0b0b0; /* Changed from #c0c0c0 */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        font-weight: 600;
+        border: solid 1px #ffffff;
+    }
+}
+
+RecommendationI recommend starting with the background image adjustment (filter: brightness(0.7)) because it’s a simpler change and preserves the light text aesthetic, which aligns with your design’s sleek, modern look. If you find the background darkening insufficient, you can combine it with the text darkening changes for specific elements (e.g., #header .content .inner p and .about-us p) to fine-tune readability.If you want to test both approaches, apply the background change first, view the site, and then selectively apply the text color changes if needed. Let me know if you need help testing or further tweaking!
+
+Here is the html. Really the only thing that is easy to read is the Elgin Automation:<!DOCTYPE HTML>
 <!--
     Dimension by HTML5 UP (html5up.net | @ajlkn)
     Modified for Elgin Automation
     Free for personal and commercial use under the Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
-    Credit: This website uses a modified version of the Dimension template by HTML5 UP.
+    Credit: This website uses a modified version of the Dimension template by HTML5 UP.	
 -->
 <html>
-<head>
-    <title>Elgin Automation | UI Automation Experts</title>
-    <meta charset="utf-8" />
+    <head>
+        <title>Elgin Automation | UI Automation Experts</title>
+        <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Elgin Automation offers expert UI automation testing with Katalon Studio and Selenium. Streamline your testing process with customized solutions." />
-    <meta name="keywords" content="Elgin Automation, UI automation, Katalon Studio, Selenium, regression testing, user acceptance testing" />
-    <meta name="author" content="Elgin Automation" />
-    <meta property="og:title" content="Elgin Automation | UI Automation Experts" />
-    <meta property="og:description" content="Elgin Automation provides expert UI automation testing with Katalon Studio and Selenium. Contact us for a free consultation." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://automationbyethan.github.io/ethanelginautomation.github.io/" />
-    <meta property="og:image" content="https://automationbyethan.github.io/ethanelginautomation.github.io/images/ui-image-01.jpg" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-        <!-- Header -->
-        <header id="header">
-            <div class="logo">
-                <span class="icon fa-robot" aria-label="Elgin Automation logo"></span>
-            </div>
-            <div class="content">
-                <div class="inner">
-                    <h1>Elgin Automation</h1>
-                    <p>Fast, Reliable UI Automation for Your Business<br />
-                    Streamline testing with precision and clarity</p>
-                    <a href="#contact" class="button primary">Get a Free Consultation</a>
-                </div>
-            </div>
-            <nav role="navigation" aria-label="Main navigation for Elgin Automation">
-                <ul>
-                    <li><a href="#intro" aria-label="Learn about Elgin Automation's UI automation services">What We Offer</a></li>
-                    <li><a href="#work" aria-label="Reasons to choose Elgin Automation for UI automation">Why Choose Us</a></li>
-                    <li><a href="#about" aria-label="View a demo of Elgin Automation's UI automation">Demo</a></li>
-                    <li><a href="#contact" aria-label="Contact Elgin Automation for UI automation inquiries">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <meta name="description" content="Elgin Automation offers expert UI automation testing with Katalon Studio and Selenium. Streamline your testing process with customized solutions.">
+    <meta name="keywords" content="Elgin Automation, UI automation, Katalon Studio, Selenium, regression testing, user acceptance testing">
+    <meta name="author" content="Elgin Automation">
+    <meta property="og:title" content="Elgin Automation | UI Automation Experts">
+    <meta property="og:description" content="Elgin Automation provides expert UI automation testing with Katalon Studio and Selenium. Contact us for a free consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://automationbyethan.github.io/ethanelginautomation.github.io/">
+    <meta property="og:image" content="https://automationbyethan.github.io/ethanelginautomation.github.io/images/ui-image-01.jpg">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+                <!-- Header -->
+                    <header id="header">
+                        <div class="logo">
+                            <span class="icon fa-robot" aria-label="Elgin Automation logo"></span>
+                        </div>
+                        <div class="content">
+                            <div class="inner">
+                                <h1>Elgin Automation</h1>
+                                <p>Fast, Reliable UI Automation for Your Business<br />
+                                Streamline testing with precision and clarity</p>
+                                <a href="#contact" class="button primary">Get a Free Consultation</a>
+                            </div>
+                        </div>
+                        <nav role="navigation" aria-label="Main navigation for Elgin Automation">
+                            <ul>
+                                <li><a href="#intro" aria-label="Learn about Elgin Automation's UI automation services">What We Offer</a></li>
+                                <li><a href="#work" aria-label="Reasons to choose Elgin Automation for UI automation">Why Choose Us</a></li>
+                                <li><a href="#about" aria-label="View a demo of Elgin Automation's UI automation">Demo</a></li>
+                                <li><a href="#contact" aria-label="Contact Elgin Automation for UI automation inquiries">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                <!-- About Us -->
+                    <div class="about-us" aria-describedby="about-us-desc">
+                        <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+                    </div>
+                <!-- Main -->
+                        <div id="main">
 
-        <!-- Main -->
-        <div id="main">
             <!-- What We Offer -->
-            <article id="intro" role="region" aria-labelledby="intro-title">
-                <div class="close">Close</div>
-                <h2 id="intro-title" class="major">What We Offer: UI Automation</h2>
-                <div class="feature">
-                    <h3>Selenium-Based Automation Suite</h3>
-                    <p>Leverage our robust Selenium framework for:<br />
-                    - <em>User Acceptance Testing (UAT)</em>: Ensure your software meets end-user needs with precise validations (boolean, calculations, loops).<br />
-                    - <em>Regression Testing</em>: Verify functionality across Chrome, Firefox, and Edge with comprehensive test suites.</p>
-                </div>
-                <div class="feature">
-                    <h3>Detailed Reporting</h3>
-                    <p>Gain actionable insights with:<br />
-                    - <em>Client-Reviewed Screenshots</em>: Visual proof in CSV reports for transparent test results.<br />
-                    - <em>Data-Driven Validations</em>: In-depth CSV reports with pass/fail metrics, tailored to your business needs.<br />
-                    - <em>Cumulative Suite Report</em>: Quick analysis to streamline decision-making.</p>
-                </div>
-                <div class="feature">
-                    <h3>Robust Customization</h3>
-                    <p>Adapt our solutions to your needs with:<br />
-                    - <em>Browser Diversity</em>: Seamless testing across multiple browsers.<br />
-                    - <em>User-Specific Scripts</em>: Flexible scripts tailored to different user roles for maximum versatility.</p>
-                </div>
-                <div class="feature">
-                    <h3>User-Friendly Tools</h3>
-                    <p>Empower your team with Katalon’s intuitive platform:<br />
-                    - Clean, maintainable Groovy scripts require minimal training.<br />
-                    - Take control of our scripts, enabling easy reviews and updates by your team.</p>
-                </div>
-            </article>
+                <article id="intro" role="region" aria-labelledby="intro-title">
+                    <span class="close">Close</span>
+                    <h2 id="intro-title" class="major">What We Offer: UI Automation</h2>
+                    <div class="feature">
+                        <h3>Selenium-Based Automation Suite</h3>
+                        <p>Leverage our robust Selenium framework for:<br />
+                        - <em>User Acceptance Testing (UAT)</em>: Ensure your software meets end-user needs with precise validations (boolean, calculations, loops).<br />
+                        - <em>Regression Testing</em>: Verify functionality across Chrome, Firefox, and Edge with comprehensive test suites.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Detailed Reporting</h3>
+                        <p>Gain actionable insights with:<br />
+                        - <em>Client-Reviewed Screenshots</em>: Visual proof in CSV reports for transparent test results.<br />
+                        - <em>Data-Driven Validations</em>: In-depth CSV reports with pass/fail metrics, tailored to your business needs.<br />
+                        - <em>Cumulative Suite Report</em>: Quick analysis to streamline decision-making.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Robust Customization</h3>
+                        <p>Adapt our solutions to your needs with:<br />
+                        - <em>Browser Diversity</em>: Seamless testing across multiple browsers.<br />
+                        - <em>User-Specific Scripts</em>: Flexible scripts tailored to different user roles for maximum versatility.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>User-Friendly Tools</h3>
+                        <p>Empower your team with Katalon’s intuitive platform:<br />
+                        - Clean, maintainable Groovy scripts require minimal training.<br />
+                        - Take control of our scripts, enabling easy reviews and updates by your team.</p>
+                    </div>
+                </article>
 
             <!-- Why Choose Us -->
-            <article id="work" role="region" aria-labelledby="work-title">
-                <div class="close">Close</div>
-                <h2 id="work-title" class="major">Why Elgin Automation?</h2>
-                <div class="feature">
-                    <i class="fas fa-lightbulb" aria-label="Simple Solutions icon"></i>
-                    <h3>Simple Solutions</h3>
-                    <p>We simplify IT processes with clear explanations and scripts tailored to your team’s user roles, ensuring easy adoption and alignment with your goals.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-rocket" aria-label="Fast Results icon"></i>
-                    <h3>Fast Results</h3>
-                    <p>Our scripts cut manual testing by up to 50% with precise validations and cross-browser test suites, delivering reliable results from day one.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-file-csv" aria-label="Clear Reporting icon"></i>
-                    <h3>Clear Reporting</h3>
-                    <p>Our CSV reports, with screenshots and data-driven validations, provide complete clarity, empowering manual testers with actionable insights.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-users" aria-label="Reliable Tools icon"></i>
-                    <h3>Reliable Tools</h3>
-                    <p>We build low-maintenance Katalon Studio scripts with robust designs and reusable objects, making test updates effortless for your team.</p>
-                </div>
-                <a href="#contact" class="button primary">Schedule Your Free Demo Today</a>
-            </article>
-
+                <article id="work" class="style1" role="region" aria-labelledby="work-title">
+                    <span class="close">Close</span>
+                    <h2 class="major" id="work-title">Why Elgin Automation?</h2>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb" aria-label="Simple Solutions icon"></i>
+                        <h3>Simple Solutions</h3>
+                        <p>We simplify IT processes with clear explanations and scripts tailored to your team’s user roles, ensuring easy adoption and alignment with your goals.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket" aria-label="Fast Results icon"></i>
+                        <h3>Fast Results</h3>
+                        <p>Our scripts cut manual testing by up to 50% with precise validations and cross-browser test suites, delivering reliable results from day one.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-file-csv" aria-label="Clear Reporting icon"></i>
+                        <h3>Clear Reporting</h3>
+                        <p>Our CSV reports, with screenshots and data-driven validations, provide complete clarity, empowering manual testers with actionable insights.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users" aria-label="Reliable Tools icon"></i>
+                        <h3>Reliable Tools</h3>
+                        <p>We build low-maintenance Katalon Studio scripts with robust designs and reusable objects, making test updates effortless for your team.</p>
+                    </div>
+                    <a href="#contact" class="button primary">Schedule Your Free Demo Today</a>
+                </article>
+                
             <!-- Demo -->
-            <article id="about" role="region" aria-labelledby="about-title">
-                <div class="close">Close</div>
-                <h2 id="about-title" class="major">Automation in Action</h2>
-                <div class="feature">
-                    <h3>Live Demonstration</h3>
-                    <p>Explore our UI automation with clean Katalon Studio scripts, cross-browser testing, and detailed CSV reports with screenshots.</p>
-                    <p><strong>Script Access:</strong> View a sample script below or on <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">GitHub</a>.</p>
-                    <p><strong>Demo Request:</strong> <a href="#contact" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo or Request a Detailed Script</a>.</p>
-                </div>
-                <div class="feature">
-                    <h3>Sample Script</h3>
-                    <pre class="code"><code>// Sample Katalon Studio script excerpt
+                <article id="about" role="region" aria-labelledby="about-title">
+                    <span class="close">Close</span>
+                    <h2 id="about-title" class="major">Automation in Action</h2>
+                    <div class="feature">
+                        <h3>Live Demonstration</h3>
+                        <p>Explore our UI automation with clean Katalon Studio scripts, cross-browser testing, and detailed CSV reports with screenshots.</p>
+                        <p><strong>Script Access:</strong> View a sample script below or on <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">GitHub</a>.</p>
+                        <p><strong>Demo Request:</strong> <a href="#contact" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo or Request a Detailed Script</a>.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Sample Script</h3>
+                        <pre class="code"><code>// Sample Katalon Studio script excerpt
 WebUI.openBrowser('https://app.todoist.com')
 WebUI.setText(findTestObject('Username Field'), 'testuser@example.com')
 WebUI.takeScreenshot('LoginPage.jpg')
-                    </code></pre>
-                </div>
-                <div class="feature">
-                    <h3>Demo Video: Simple Login and Logout</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tBq4G5SoeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </article>
-
-            <!-- Contact -->
-            <article id="contact" role="region" aria-labelledby="contact-title">
-                <div class="close">Close</div>
-                <h2 id="contact-title" class="major">Contact</h2>
-                <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
-                <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" required aria-required="true" />
+                            </code></pre>
                         </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required aria-required="true" />
+                        <div class="feature">
+                            <h3>Demo Video: Simple Login and Logout</h3>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/tBq4G5SoeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4" required aria-required="true" placeholder="E.g., Request a demo or sample script"></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" aria-label="Send contact message to Elgin Automation" /></li>
-                        <li><input type="reset" value="Reset" aria-label="Reset Elgin Automation contact form" /></li>
+                    </article>                <!-- Contact -->
+                    <article id="contact" role="region" aria-labelledby="contact-title">
+                        <h2 id="contact-title" class="major">Contact</h2>
+                        <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
+                        <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" required aria-required="true" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" required aria-required="true" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="4" required aria-required="true" placeholder="E.g., Request a demo or sample script"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" aria-label="Send contact message to Elgin Automation" /></li>
+                                <li><input type="reset" value="Reset" aria-label="Reset Elgin Automation contact form" /></li>
+                            </ul>
+                            <input type="hidden" name="_subject" value="New Contact from Elgin Automation">
+                            <input type="text" name="_honey" style="display:none" disabled>
+                        </form>
+                        <ul class="icons">
+                            <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </article>
+                <!-- Contact Article -->
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
                     </ul>
-                    <input type="hidden" name="_subject" value="New Contact from Elgin Automation" />
-                    <input type="text" name="_honey" style="display:none" disabled />
-                </form>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
-                </ul>
-            </article>
-        </div>
+                                </article>
+
+                <!-- Elements
+                        <h2 class="major">Elements</h2>
+                        <section>
+                            <h3 class="major">Text</h3>
+                            <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+                            This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                            This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+                            <hr />
+                            <h2>Heading Level 2</h2>
+                            <h3>Heading Level 3</h3>
+                            <h4>Heading Level 4</h4>
+                            <h5>Heading Level 5</h5>
+                            <h6>Heading Level 6</h6>
+                            <hr />
+                            <h4>Blockquote</h4>
+                            <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+                            <h4>Preformatted</h4>
+                            <pre><code>i = 0;while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;}print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                                </section>                            <section>
+                                <h3 class="major">Lists</h3>                            <h4>Unordered</h4>
+                            <ul>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Sagittis adipiscing.</li>
+                                <li>Felis enim feugiat.</li>
+                            </ul>
+
+                            <h4>Alternate</h4>
+                            <ul class="alt">
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Sagittis adipiscing.</li>
+                                <li>Felis enim feugiat.</li>
+                            </ul>
+
+                            <h4>Ordered</h4>
+                            <ol>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Etiam vel felis viverra.</li>
+                                <li>Felis enim feugiat.</li>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Etiam vel felis lorem.</li>
+                                <li>Felis enim et feugiat.</li>
+                            </ol>
+                            <h4>Icons</h4>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                            </ul>
+
+                            <h4>Actions</h4>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary">Default</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                            <ul class="actions stacked">
+                                <li><a href="#" class="button primary">Default</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Table</h3>
+                            <h4>Default</h4>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item One</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Two</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Three</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Four</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Five</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>100.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <h4>Alternate</h4>
+                            <div class="table-wrapper">
+                                <table class="alt">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item One</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Two</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Three</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Four</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Five</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>100.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Buttons</h3>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary">Primary</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><a href="#" class="button">Default</a></li>
+                                <li><a href="#" class="button small">Small</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                                <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><span class="button primary disabled">Disabled</span></li>
+                                <li><span class="button disabled">Disabled</span></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Form</h3>
+                            <form method="post" action="#">
+                                <div class="fields">
+                                    <div class="field half">
+                                        <label for="demo-name">Name</label>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+                                    </div>
+                                    <div class="field half">
+                                        <label for="demo-email">Email</label>
+                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+                                    </div>
+                                    <div class="field">
+                                        <label for="demo-category">Category</label>
+                                        <select name="demo-category" id="demo-category">
+                                            <option value="">-</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                        <label for="demo-priority-low">Low</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="radio" id="demo-priority-high" name="demo-priority">
+                                        <label for="demo-priority-high">High</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="checkbox" id="demo-copy" name="demo-copy">
+                                        <label for="demo-copy">Email me a copy</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                        <label for="demo-human">Not a robot</label>
+                                    </div>
+                                    <div class="field">
+                                        <label for="demo-message">Message</label>
+                                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                    </div>
+                                </div>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                                    <li><input type="reset" value="Reset" /></li>
+                                </ul>
+                            </form>
+                        </section>
+
+                    </article>
+         -->
+            </div>
 
         <!-- Footer -->
-        <footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
-            <div class="about-us" aria-describedby="about-us-desc">
-                <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
-            </div>
-            <p class="copyright">
-                © Elgin Automation. All rights reserved. | 
-                <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
-                Follow us: 
-                <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
-            </p>
-        </footer>
+    <footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+        <p>
+            © Elgin Automation. All rights reserved. | 
+            <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+            Follow us: 
+            <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+        </p>
+    </footer>		
     </div>
-
-    <!-- Background -->
+    <!-- BG -->
     <div id="bg"></div>
-
-    <!-- Scripts -->
+<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-</html>
+
+</body></html>
+
+Given that only the "Elgin Automation" text (the <h1> in the header) is easily readable, and considering the HTML and CSS provided, the issue likely stems from insufficient contrast between the text and the background for most elements. The "Elgin Automation" <h1> is readable because it uses a bold, large font (2.25rem, font-weight: 600) with a strong text shadow (0 1px 2px rgba(0, 0, 0, 0.5)) against the semi-transparent background overlay (#bg:before). Other text, such as paragraphs and navigation links, uses lighter colors (#c0c0c0, #d0d0d0) or lower font weights, which reduces their visibility against the gradient and background image.Since darkening the background image is a simpler and less invasive change that preserves your site’s aesthetic, I recommend starting with that approach. If needed, we can also tweak specific text elements to enhance readability further. Below, I’ll provide the CSS adjustment to darken the background image and, as a fallback, targeted text color changes for key sections that are hard to read (e.g., the .about-us paragraph, navigation links, and article content).Recommended Solution: Darken the Background ImageThe background image is controlled by the #bg:after selector, which currently has filter: brightness(0.8). Reducing this to filter: brightness(0.65) will darken the image slightly, increasing contrast for all text without altering the gradient overlay (#bg:before) that gives your site its stylized look.CSS Change:css
+
+#bg:after {
+    background-image: url("../../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    filter: brightness(0.65); /* Reduced from 0.8 to 0.65 for better text contrast */
+}
+
+This change should make all text, including the <p> in .about-us, navigation links in #header nav ul li a, and article content in #main article, more readable by reducing the brightness of the background image, allowing the white and light gray text to stand out more.Alternative Solution: Darken Specific Text ElementsIf darkening the background image alone doesn’t sufficiently improve readability for certain elements (e.g., the .about-us paragraph, navigation links, or article paragraphs), you can darken their text colors and enhance their text shadows for better contrast. Below are targeted changes for the least readable sections based on your HTML:About Us Paragraph:
+The .about-us p currently uses color: #ffffff on desktop and color: #c0c0c0 on mobile, which may blend into the background. Darkening it to a medium gray (#b0b0b0) and strengthening the text shadow can help.css
+
+.about-us p {
+    color: #b0b0b0; /* Changed from #ffffff */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400; /* Slightly bolder for clarity */
+}
+
+@media screen and (max-width: 480px) {
+    .about-us p {
+        font-size: 0.75rem;
+        color: #b0b0b0; /* Changed from #c0c0c0 */
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Even stronger shadow on mobile */
+        font-weight: 600;
+    }
+    .about-us a {
+        color: #b0b0b0; /* Match p color, changed from #c0c0c0 */
+    }
+}
+
+Navigation Links:
+The navigation links (#header nav ul li a) use color: #ffffff on desktop and color: #c0c0c0 on mobile. Darkening them to #b0b0b0 and increasing font weight can improve visibility.css
+
+#header nav ul li a {
+    display: block;
+    min-width: 9rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.85rem;
+    border: solid 1px #ffffff;
+    border-radius: 4px;
+    color: #b0b0b0; /* Changed from #ffffff */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    font-weight: 400; /* Slightly bolder */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+    #header nav ul li a {
+        min-width: 0;
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        color: #b0b0b0; /* Changed from #c0c0c0 */
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+        font-weight: 600;
+        border: solid 1px #ffffff;
+    }
+}
+
+Article Paragraphs:
+Paragraphs in articles (e.g., #intro, #work, #about, #contact) often use color: rgba(255, 255, 255, 0.75) or color: #ffffff. Darkening these to #b0b0b0 and adding a stronger text shadow can improve readability, especially since articles have a semi-transparent background (rgba(27, 31, 34, 0.85)).css
+
+article#work .feature p,
+article#intro .feature p,
+article#about .feature p,
+article#contact p {
+    color: #b0b0b0; /* Changed from rgba(255, 255, 255, 0.75) or #ffffff */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    margin: 0.5rem 0;
+    font-weight: 400; /* Slightly bolder */
+}
+
+@media screen and (max-width: 736px) {
+    article#work .feature p,
+    article#intro .feature p,
+    article#about .feature p,
+    article#contact p {
+        color: #b0b0b0; /* Consistent color */
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Stronger shadow on mobile */
+        font-weight: 600;
+    }
+}
+
+Header Paragraph:
+The header paragraph (#header .content .inner p) uses color: #c0c0c0 on desktop and #d0d0d0 on mobile, which may be too light. Darkening it to #b0b0b0 and enhancing the text shadow can help.css
+
+#header .content .inner p {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #b0b0b0; /* Changed from #c0c0c0 */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    font-weight: 600;
+}
+
+@media screen and (max-width: 736px) {
+    #header .content .inner p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        color: #b0b0b0; /* Changed from #d0d0d0 */
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+    }
+}
+
+RecommendationStart by applying the background image adjustment (filter: brightness(0.65)) to #bg:after. This should improve the readability of all text elements, including the .about-us paragraph, navigation links, and article content, by increasing the contrast against the darker background. Test this change on both desktop and mobile to ensure it enhances visibility without compromising the design.If certain elements (e.g., the .about-us paragraph or navigation links) still appear hard to read, selectively apply the text color changes above, starting with the .about-us p and #header nav ul li a sections. These targeted adjustments will enhance readability while maintaining the site’s sleek, modern aesthetic centered around the readable "Elgin Automation" <h1>.If you want to test these changes or need help with implementation (e.g., updating the CSS file or previewing the results), let me know! I can also assist with checking the contrast ratios to ensure accessibility compliance (e.g., WCAG 2.1 standards) if desired.
+
+that worked. okay lets focus on the "about us" section at the bottom of the home page. It looks out of place but I am not sure what to do with it. It is needed for SEO, I thiink. Do you have any suggestions?
+
+The "About Us" section at the bottom of your homepage (the <div class="about-us"> with a paragraph describing Elgin Automation) is indeed valuable for SEO, as it provides crawlable content with relevant keywords like "UI automation," "client-focused," and "data-driven solutions." However, if it feels out of place, it’s likely due to its positioning, styling, or lack of integration with the rest of the page’s design. Based on your HTML and CSS, the section is a single paragraph centered below the header and above the main content, which may make it feel disconnected from the sleek, structured aesthetic of the rest of the site (e.g., the prominent "Elgin Automation" header and the article-based sections).Here are some suggestions to make the "About Us" section feel more integrated while preserving its SEO value and aligning with your site’s modern, clean design:1. Reposition the "About Us" SectionThe current placement of the .about-us div between the header and main content might make it feel like an awkward spacer. Moving it to a more natural location could improve flow. Here are two options:Move to Footer: Place the "About Us" content within or just above the footer to create a cohesive endpoint for the page. This keeps it accessible for SEO while integrating it into a less prominent, more expected location for summary text.HTML Change:
+Move the <div class="about-us"> inside or just before the <footer id="footer">:html
+
+<!-- Main -->
+<div id="main">
+  <!-- ... existing article sections ... -->
+</div>
+
+<!-- About Us -->
+<div class="about-us" aria-describedby="about-us-desc">
+  <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+</div>
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+  <p>
+    © Elgin Automation. All rights reserved. | 
+    <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+    Follow us: 
+    <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+  </p>
+</footer>
+
+CSS Adjustment:
+Update the .about-us styling to match the footer’s aesthetic:css
+
+.about-us {
+  margin: 1rem auto;
+  max-width: 80%;
+  text-align: center;
+}
+
+.about-us p {
+  color: #b0b0b0; /* Match previous readability fix */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  font-size: 0.8rem; /* Slightly smaller to align with footer */
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  .about-us {
+    margin: 0.75rem auto;
+    max-width: 90%;
+  }
+  .about-us p {
+    font-size: 0.7rem;
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+}
+
+Incorporate into Header: Alternatively, integrate the "About Us" text into the header’s .content .inner section, below the existing <p> and button, to make it part of the main introduction. This keeps it prominent for SEO while blending it with the primary content.HTML Change:
+Move the <div class="about-us"> inside #header .content .inner:html
+
+<header id="header">
+  <div class="logo">
+    <span class="icon fa-robot" aria-label="Elgin Automation logo"></span>
+  </div>
+  <div class="content">
+    <div class="inner">
+      <h1>Elgin Automation</h1>
+      <p>Fast, Reliable UI Automation for Your Business<br />
+      Streamline testing with precision and clarity</p>
+      <a href="#contact" class="button primary">Get a Free Consultation</a>
+      <div class="about-us" aria-describedby="about-us-desc">
+        <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+      </div>
+    </div>
+  </div>
+  <nav role="navigation" aria-label="Main navigation for Elgin Automation">
+    <!-- ... navigation links ... -->
+  </nav>
+</header>
+
+CSS Adjustment:
+Ensure the .about-us styling fits within the header:css
+
+.about-us {
+  margin: 1.5rem 0 0 0; /* Adjusted margin for header context */
+  max-width: 100%;
+  text-align: center;
+}
+
+.about-us p {
+  color: #b0b0b0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  font-size: 0.85rem; /* Slightly smaller than header’s main p */
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 736px) {
+  .about-us {
+    margin: 1rem 0 0 0;
+  }
+  .about-us p {
+    font-size: 0.75rem;
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+}
+
+Recommendation: Moving the "About Us" to the footer is likely the best option, as it keeps the section visible for SEO but places it in a less intrusive spot, aligning with the page’s flow and preventing it from disrupting the transition between the header and main content.2. Style It to Match the ArticlesThe "About Us" section currently lacks the visual structure of the #main article sections (e.g., #intro, #work), which have a semi-transparent background (rgba(27, 31, 34, 0.85)) and rounded borders. Styling it similarly can make it feel more integrated.CSS Change:css
+
+.about-us {
+  margin: 2rem auto;
+  max-width: 40rem; /* Match article width */
+  text-align: center;
+  background-color: rgba(27, 31, 34, 0.85); /* Match article background */
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.about-us p {
+  color: #b0b0b0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 736px) {
+  .about-us {
+    margin: 1.5rem auto;
+    max-width: 90%;
+    padding: 1rem;
+  }
+  .about-us p {
+    font-size: 0.75rem;
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+}
+
+This gives the "About Us" section a card-like appearance, similar to the articles, making it feel like a natural part of the page.3. Enhance Content for SEO and Visual AppealTo boost SEO further and make the section more engaging, consider expanding the content slightly (while keeping it concise) and adding a heading or call-to-action. This reinforces its purpose and integrates it better visually.HTML Change:html
+
+<div class="about-us" aria-describedby="about-us-desc">
+  <h2 class="major">About Elgin Automation</h2>
+  <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions using Katalon Studio and Selenium.</p>
+  <a href="#contact" class="button primary">Learn More</a>
+</div>
+
+CSS Adjustment:
+Ensure the heading matches the article styling:css
+
+.about-us h2.major {
+  border-bottom: solid 1px #ffffff;
+  width: max-content;
+  padding-bottom: 0.5rem;
+  margin: 0 auto 1.5rem auto;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
+
+.about-us .button.primary {
+  margin: 1rem auto 0;
+  max-width: 12rem;
+  display: block;
+}
+
+@media screen and (max-width: 736px) {
+  .about-us h2.major {
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+  }
+}
+
+This adds a heading for hierarchy and a button to encourage engagement, while the additional keywords ("Katalon Studio," "Selenium") enhance SEO.4. Make It a Collapsible ArticleTo align with the interactive nature of your #main articles, you could turn the "About Us" section into a collapsible article like #intro or #work. This keeps it accessible for SEO (search engines can still crawl the content) but allows users to expand it only if interested, reducing visual clutter.HTML Change:
+Move the "About Us" into the #main section as an article:html
+
+<div id="main">
+  <!-- Existing articles -->
+  <article id="intro" role="region" aria-labelledby="intro-title">
+    <!-- ... -->
+  </article>
+  <article id="work" class="style1" role="region" aria-labelledby="work-title">
+    <!-- ... -->
+  </article>
+  <article id="about-us" role="region" aria-labelledby="about-us-title">
+    <span class="close">Close</span>
+    <h2 id="about-us-title" class="major">About Elgin Automation</h2>
+    <p>We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions using Katalon Studio and Selenium.</p>
+    <a href="#contact" class="button primary">Contact Us</a>
+  </article>
+  <!-- Other articles -->
+</div>
+
+Add Navigation Link:
+Update the header navigation to include a link to the new article:html
+
+<nav role="navigation" aria-label="Main navigation for Elgin Automation">
+  <ul>
+    <li><a href="#intro" aria-label="Learn about Elgin Automation's UI automation services">What We Offer</a></li>
+    <li><a href="#work" aria-label="Reasons to choose Elgin Automation for UI automation">Why Choose Us</a></li>
+    <li><a href="#about-us" aria-label="Learn more about Elgin Automation">About Us</a></li>
+    <li><a href="#about" aria-label="View a demo of Elgin Automation's UI automation">Demo</a></li>
+    <li><a href="#contact" aria-label="Contact Elgin Automation for UI automation inquiries">Contact</a></li>
+  </ul>
+</nav>
+
+CSS:
+Apply article styling to #about-us:css
+
+article#about-us {
+  padding: 3.5rem 3rem 1rem 3rem;
+  background-color: rgba(27, 31, 34, 0.85);
+  border-radius: 4px;
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+article#about-us p {
+  color: #b0b0b0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+article#about-us .button.primary {
+  margin: 2rem auto 1rem auto;
+  max-width: 12rem;
+  display: block;
+}
+
+@media screen and (max-width: 736px) {
+  article#about-us {
+    padding: 3rem 2rem 0.5rem 2rem;
+  }
+  article#about-us p {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+}
+
+JavaScript Note: Ensure your main.js script handles the new #about-us article for the show/hide functionality, similar to other articles. The existing script likely uses a pattern to toggle articles based on their IDs, so adding #about-us to the navigation should work automatically if the script is set up generically.RecommendationThe best approach depends on your priorities:For SEO and subtlety: Move the "About Us" section to the footer (Option 1). This keeps it visible to search engines, reduces visual clutter, and integrates it naturally at the page’s end.
+For design consistency: Style it like an article (Option 2) or make it a collapsible article (Option 4) to match the site’s aesthetic and interactive feel.
+For SEO and prominence: Incorporate it into the header (Option 1 alternative) or enhance it with a heading and button (Option 3) to make it a focal point.
+
+I recommend Option 1 (Move to Footer) as the simplest and most effective way to make the section feel less out of place while maintaining its SEO value. It aligns with the page’s flow and keeps the focus on the interactive articles. If you want to emphasize the "About Us" content more, consider Option 3 (Enhance Content) or Option 4 (Collapsible Article) to give it a structured, interactive presence.Let me know if you want to implement one of these options, need help with the JavaScript for Option 4, or want to discuss further tweaks (e.g., font size, padding, or additional SEO keywords)!
+
+okay next topic: there is too much space between the about us section and the footer. Help me dfis that on both desktop and mobile
+
+Since you’ve confirmed that darkening the background image worked for readability and you’re now focusing on the "About Us" section, I’ll address the issue of excessive space between the .about-us section and the #footer on both desktop and mobile. Based on your HTML and CSS, the .about-us section is positioned between the #main articles and the #footer, and the current spacing is likely caused by the margins and padding defined in the .about-us and #footer selectors, combined with the flexbox layout of the #wrapper.The .about-us section has margin: 1.5rem auto (desktop) and margin: 1rem auto (mobile), while the #footer has margin-top: 2rem. Additionally, the #wrapper uses padding: 2.5rem 1.5rem (desktop) and smaller values on mobile, which may contribute to the perceived gap. The flexbox justify-content: space-between on #wrapper also pushes the footer to the bottom of the viewport, potentially exaggerating the space if the content is short.Here are steps to reduce the space between the .about-us section and the #footer on both desktop and mobile, ensuring the layout remains balanced and the SEO value of the "About Us" section is preserved.Solution: Adjust Margins and PaddingTo reduce the space, we’ll tweak the margins of the .about-us and #footer sections and ensure the #wrapper’s padding doesn’t add unnecessary gaps. Below are the CSS changes:1. Adjust .about-us MarginReduce the bottom margin of the .about-us section to bring it closer to the footer.css
+
+.about-us {
+  margin: 1rem auto 0.5rem auto; /* Reduced bottom margin from 1.5rem to 0.5rem */
+  max-width: 80%;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .about-us {
+    margin: 0.75rem auto 0.25rem auto; /* Reduced bottom margin from 1rem to 0.25rem */
+    max-width: 90%;
+  }
+}
+
+2. Adjust #footer MarginReduce the margin-top of the #footer to minimize the gap above it.css
+
+#footer {
+  margin-top: 0.5rem; /* Reduced from 2rem */
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+  #footer {
+    margin-top: 0.25rem; /* Further reduced for mobile */
+  }
+}
+
+3. Fine-Tune #wrapper PaddingThe #wrapper’s padding may contribute to the overall spacing. Reducing the bottom padding can help close the gap without affecting the rest of the layout.css
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2.5rem 1.5rem 1rem 1.5rem; /* Reduced bottom padding from 2.5rem to 1rem */
+  z-index: 3;
+}
+
+@media screen and (max-width: 1680px) {
+  #wrapper {
+    padding: 2rem 1.25rem 0.75rem 1.25rem; /* Reduced bottom padding */
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #wrapper {
+    padding: 1.25rem 1rem 0.5rem 1rem; /* Reduced bottom padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #wrapper {
+    padding: 0.75rem 0.75rem 0.25rem 0.75rem; /* Reduced bottom padding */
+  }
+}
+
+Alternative: Reposition "About Us" into FooterIf the space still feels excessive or the .about-us section looks disconnected, consider moving it inside the #footer (as suggested in the previous response) to eliminate the gap entirely and make it part of the footer’s content. This also aligns with common website patterns where "About" summaries appear in footers.HTML Change:
+Move the .about-us div inside the #footer:html
+
+<!-- Main -->
+<div id="main">
+  <!-- ... existing articles ... -->
+</div>
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+  <div class="about-us" aria-describedby="about-us-desc">
+    <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+  </div>
+  <p>
+    © Elgin Automation. All rights reserved. | 
+    <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+    Follow us: 
+    <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+  </p>
+</footer>
+
+CSS Adjustment:
+Style the .about-us section to blend seamlessly with the footer:css
+
+.about-us {
+  margin: 0 auto 0.5rem auto; /* Minimal bottom margin to separate from footer links */
+  max-width: 80%;
+  text-align: center;
+}
+
+.about-us p {
+  color: #b0b0b0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  font-size: 0.8rem; /* Smaller to match footer text */
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  .about-us {
+    margin: 0 auto 0.25rem auto;
+    max-width: 90%;
+  }
+  .about-us p {
+    font-size: 0.7rem;
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+}
+
+#footer {
+  margin-top: 0.5rem; /* Reduced margin */
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+  #footer {
+    margin-top: 0.25rem;
+  }
+}
+
+RecommendationStart with the margin and padding adjustments (first solution) to reduce the space between .about-us and #footer. This is the simplest fix and should address the issue without restructuring the HTML. Apply the CSS changes for .about-us, #footer, and #wrapper as shown above, then test on both desktop and mobile to ensure the gap is minimized while maintaining a balanced look.If the space still feels off or the .about-us section continues to look out of place, consider moving it into the footer (alternative solution). This eliminates the gap entirely, integrates the section more naturally, and aligns with common website layouts, while keeping the content crawlable for SEO.To implement, update your main.css file with the margin and padding changes first. If you opt for the footer integration, also update the HTML as shown. Let me know if you need help testing these changes, want to see a mockup of how it’ll look, or need assistance with any other tweaks (e.g., adjusting font size or adding a heading to the "About Us" section for better integration)!
+
+okay I combined the about me section straight into the footer. Now lets make another adjustment on the same note; on desktop I liked the font size and style you used on the about me section. Can you make the foot in that same style?
+
+Since you’ve combined the "About Us" section into the footer and want the footer’s text (specifically the copyright and links in the #footer p element) to match the font size and style of the .about-us p section on desktop, I’ll align the footer’s styling accordingly. Based on your CSS, the .about-us p on desktop uses:Font size: 0.9rem
+Font family: "Source Sans Pro", sans-serif
+Font weight: 400
+Color: #b0b0b0 (from the readability fix)
+Text shadow: 0 1px 3px rgba(0, 0, 0, 0.7)
+Line height: 1.6
+
+The current footer (#footer .copyright) has a smaller font size (0.6rem), a lighter opacity (0.75), and a different font weight (300 implicitly from the base body styling). We’ll update the footer’s text to match the .about-us p styling on desktop while ensuring it remains balanced on mobile.CSS ChangesHere’s how to update the #footer and #footer .copyright to match the .about-us p styling on desktop, with appropriate adjustments for mobile to maintain readability and consistency:css
+
+#footer {
+  margin-top: 0.5rem; /* Keep reduced margin from previous fix */
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+#footer .copyright {
+  color: #b0b0b0; /* Match .about-us p */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Match .about-us p */
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400; /* Match .about-us p */
+  font-size: 0.9rem; /* Match .about-us p */
+  line-height: 1.6; /* Match .about-us p */
+  letter-spacing: 0.2rem; /* Retain for consistency with uppercase style */
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#footer .copyright a {
+  color: #b0b0b0; /* Match .about-us a */
+  text-decoration: none;
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+}
+
+#footer .copyright a:hover {
+  border-bottom-color: transparent;
+}
+
+@media screen and (max-width: 736px) {
+  #footer {
+    margin-top: 0.25rem; /* Keep reduced margin */
+  }
+  #footer .copyright {
+    font-size: 0.75rem; /* Slightly smaller than desktop, matching .about-us p mobile */
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8); /* Match .about-us p mobile */
+    font-weight: 600; /* Match .about-us p mobile */
+    line-height: 1.6;
+  }
+  #footer .copyright a {
+    color: #b0b0b0;
+  }
+}
+
+ExplanationDesktop Alignment: The #footer .copyright now uses the same font-size: 0.9rem, font-weight: 400, color: #b0b0b0, text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), and line-height: 1.6 as the .about-us p on desktop, ensuring visual consistency. The letter-spacing: 0.2rem and text-transform: uppercase are retained to match the footer’s original style and the site’s overall aesthetic.
+Links Styling: The footer links (#footer .copyright a) are styled to match the .about-us a links, using the same color (#b0b0b0) and dotted border for hover effects.
+Mobile Adjustment: On mobile (≤736px), the font size is reduced to 0.75rem to match the .about-us p mobile styling, with a stronger text shadow (0 1px 4px rgba(0, 0, 0, 0.8)) and font-weight: 600 for readability, consistent with the mobile .about-us settings.
+Existing Structure: The changes assume your footer HTML now includes the .about-us content, like this:html
+
+<footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+  <div class="about-us" aria-describedby="about-us-desc">
+    <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+  </div>
+  <p class="copyright">
+    © Elgin Automation. All rights reserved. | 
+    <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+    Follow us: 
+    <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+  </p>
+</footer>
+
+Ensuring ConsistencyTo ensure the .about-us p and #footer .copyright look cohesive within the footer, verify that the .about-us p retains its current desktop styling:css
+
+.about-us p {
+  color: #b0b0b0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+If you want to differentiate the .about-us p slightly (e.g., make it stand out as a summary), you could add a heading or adjust its margin:css
+
+.about-us {
+  margin: 0 auto 0.5rem auto; /* Minimal spacing below */
+  max-width: 80%;
+  text-align: center;
+}
+
+.about-us p {
+  /* Existing styles as above */
+}
+
+RecommendationApply the CSS changes for #footer .copyright and #footer .copyright a as shown above to align the footer’s text with the .about-us p styling on desktop. This will create a unified look within the footer, with both the "About Us" paragraph and the copyright/links sharing the same font size (0.9rem), weight (400), color (#b0b0b0), and text shadow on desktop. The mobile adjustments ensure readability without overwhelming the smaller screen.Update your main.css file with these changes and test on both desktop and mobile to confirm the footer feels cohesive. If the .about-us p and .copyright text look too similar and you want to visually separate them (e.g., with a heading for "About Us" or different spacing), let me know, and I can provide additional tweaks. Also, if you need help with the HTML structure or want to ensure the footer remains SEO-friendly, I can assist further!
+
+something happened that the site is not showing anything except the background
+
+If your site is only showing the background (controlled by #bg in your CSS) and none of the content (header, "About Us," footer, etc.) is visible, there’s likely an issue with the HTML structure, CSS rules, or JavaScript that’s affecting the rendering of the #wrapper or its child elements. This could be due to recent changes (e.g., moving the "About Us" section into the footer or adjusting CSS margins/padding) or an error in the JavaScript (main.js) that handles the page’s preload or article display logic. Below, I’ll guide you through diagnosing and fixing the issue to restore the visibility of your site’s content.Step 1: Diagnose the IssueThe background is visible, which means the #bg element (with background-image: url("../../images/bg.jpg") and the gradient overlay in #bg:before) is rendering correctly. The problem lies with the #wrapper (containing #header, .about-us, #main, and #footer), which is not displaying. Here are the likely causes:CSS Issue:The #wrapper or its children might have display: none, opacity: 0, or a transform that hides them.
+The body.is-preload class (used during page load) might be stuck, hiding content with opacity: 0 or animation: none.
+Recent CSS changes (e.g., margins, padding, or footer styling) might have introduced a rule that inadvertently hides elements.
+
+JavaScript Issue:The main.js script likely controls the preload animation (via body.is-preload) or article transitions (e.g., for #main article). If there’s an error in this script or it fails to remove the is-preload class, the content may remain hidden.
+A misconfigured event listener or article toggle (e.g., for #about-us if you made it a collapsible article) could be setting display: none or opacity: 0.
+
+HTML Issue:Moving the .about-us section into the footer might have caused a syntax error (e.g., unclosed tags) that breaks the DOM rendering.
+A mismatch in the HTML structure (e.g., nested elements incorrectly) could prevent the #wrapper from rendering.
+
+File Path or Resource Issue:If main.js or other scripts (jquery.min.js, etc.) fail to load (e.g., due to incorrect file paths), the JavaScript that reveals content after preload might not execute.
+A corrupted or missing CSS file (main.css) could prevent styling from applying correctly.
+
+Step 2: Quick Fixes to Restore ContentLet’s apply targeted fixes based on the most likely causes, focusing on CSS and JavaScript, since the background is rendering but the #wrapper content is not.1. Check and Override body.is-preload StylesThe body.is-preload class hides content during loading with rules like body.is-preload * { animation: none !important; transition: none !important; } and specific opacity/transform settings. If the is-preload class isn’t removed by main.js, the content stays hidden.Temporary CSS Fix:
+Add this to your main.css to force content visibility, bypassing preload issues:css
+
+#wrapper {
+  display: flex !important; /* Ensure wrapper is visible */
+  opacity: 1 !important; /* Override any opacity: 0 */
+  transform: none !important; /* Override any transform */
+}
+
+body.is-preload #wrapper,
+body.is-preload #header,
+body.is-preload .about-us,
+body.is-preload #main,
+body.is-preload #footer {
+  display: flex !important; /* Force display */
+  opacity: 1 !important; /* Force visibility */
+  transform: none !important; /* Remove transforms */
+}
+
+Action: Add this CSS to the bottom of main.css and reload the site. If the content appears, the issue is likely JavaScript failing to remove the is-preload class.2. Verify JavaScript ExecutionThe main.js script (from the HTML5 UP Dimension template) typically removes the is-preload class after the page loads and handles article toggling. If it’s not executing, the content may stay hidden.Steps:Check Console Errors: Open your browser’s Developer Tools (F12, then Console tab) and look for errors like "Uncaught ReferenceError: jQuery is not defined" or "main.js failed to load." This could indicate a missing or incorrect script path.
+Verify Script Paths: Ensure all scripts in your HTML are loading correctly:html
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+Confirm that the assets/js/ folder exists and contains these files. If you’re hosting on GitHub Pages (as suggested by your og:url), ensure the paths are correct relative to your repository structure (e.g., /ethanelginautomation.github.io/assets/js/).
+Test Without JavaScript: Temporarily comment out the script tags in your HTML and reload the page:html
+
+<!-- <script src="assets/js/jquery.min.js"></script> -->
+<!-- <script src="assets/js/browser.min.js"></script> -->
+<!-- <script src="assets/js/breakpoints.min.js"></script> -->
+<!-- <script src="assets/js/util.js"></script> -->
+<!-- <script src="assets/js/main.js"></script> -->
+
+If the content appears, the issue is in main.js or its dependencies. You may need to debug or replace main.js with a working version from the HTML5 UP template.
+
+3. Validate HTML StructureMoving the .about-us section into the footer might have introduced a syntax error. Let’s ensure the HTML is correct.Current Footer HTML (based on your last update):html
+
+<footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+  <div class="about-us" aria-describedby="about-us-desc">
+    <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+  </div>
+  <p class="copyright">
+    © Elgin Automation. All rights reserved. | 
+    <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+    Follow us: 
+    <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+  </p>
+</footer>
+
+Action:Use an HTML validator (e.g., W3C Markup Validator) to check for unclosed tags or errors. Common issues include missing closing </div> or </footer> tags.
+Ensure the #wrapper div properly encloses all content:html
+
+<div id="wrapper">
+  <header id="header">
+    <!-- ... header content ... -->
+  </header>
+  <div id="main">
+    <!-- ... articles ... -->
+  </div>
+  <footer id="footer">
+    <div class="about-us">
+      <p id="about-us-desc">...</p>
+    </div>
+    <p class="copyright">...</p>
+  </footer>
+</
+
+Hhere is the html:<!DOCTYPE HTML>
+<!--
+    Dimension by HTML5 UP (html5up.net | @ajlkn)
+    Modified for Elgin Automation
+    Free for personal and commercial use under the Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
+    Credit: This website uses a modified version of the Dimension template by HTML5 UP.	
+-->
+<html>
+    <head>
+        <title>Elgin Automation | UI Automation Experts</title>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="description" content="Elgin Automation offers expert UI automation testing with Katalon Studio and Selenium. Streamline your testing process with customized solutions.">
+    <meta name="keywords" content="Elgin Automation, UI automation, Katalon Studio, Selenium, regression testing, user acceptance testing">
+    <meta name="author" content="Elgin Automation">
+    <meta property="og:title" content="Elgin Automation | UI Automation Experts">
+    <meta property="og:description" content="Elgin Automation provides expert UI automation testing with Katalon Studio and Selenium. Contact us for a free consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://automationbyethan.github.io/ethanelginautomation.github.io/">
+    <meta property="og:image" content="https://automationbyethan.github.io/ethanelginautomation.github.io/images/ui-image-01.jpg">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+                <!-- Header -->
+                    <header id="header">
+                        <div class="logo">
+                            <span class="icon fa-robot" aria-label="Elgin Automation logo"></span>
+                        </div>
+                        <div class="content">
+                            <div class="inner">
+                                <h1>Elgin Automation</h1>
+                                <p>Fast, Reliable UI Automation for Your Business<br />
+                                Streamline testing with precision and clarity</p>
+                                <a href="#contact" class="button primary">Get a Free Consultation</a>
+                            </div>
+                        </div>
+                        <nav role="navigation" aria-label="Main navigation for Elgin Automation">
+                            <ul>
+                                <li><a href="#intro" aria-label="Learn about Elgin Automation's UI automation services">What We Offer</a></li>
+                                <li><a href="#work" aria-label="Reasons to choose Elgin Automation for UI automation">Why Choose Us</a></li>
+                                <li><a href="#about" aria-label="View a demo of Elgin Automation's UI automation">Demo</a></li>
+                                <li><a href="#contact" aria-label="Contact Elgin Automation for UI automation inquiries">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                
+            <!-- Main -->
+                    <div id="main">
+
+            <!-- What We Offer -->
+                <article id="intro" role="region" aria-labelledby="intro-title">
+                    <span class="close">Close</span>
+                    <h2 id="intro-title" class="major">What We Offer: UI Automation</h2>
+                    <div class="feature">
+                        <h3>Selenium-Based Automation Suite</h3>
+                        <p>Leverage our robust Selenium framework for:<br />
+                        - <em>User Acceptance Testing (UAT)</em>: Ensure your software meets end-user needs with precise validations (boolean, calculations, loops).<br />
+                        - <em>Regression Testing</em>: Verify functionality across Chrome, Firefox, and Edge with comprehensive test suites.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Detailed Reporting</h3>
+                        <p>Gain actionable insights with:<br />
+                        - <em>Client-Reviewed Screenshots</em>: Visual proof in CSV reports for transparent test results.<br />
+                        - <em>Data-Driven Validations</em>: In-depth CSV reports with pass/fail metrics, tailored to your business needs.<br />
+                        - <em>Cumulative Suite Report</em>: Quick analysis to streamline decision-making.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Robust Customization</h3>
+                        <p>Adapt our solutions to your needs with:<br />
+                        - <em>Browser Diversity</em>: Seamless testing across multiple browsers.<br />
+                        - <em>User-Specific Scripts</em>: Flexible scripts tailored to different user roles for maximum versatility.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>User-Friendly Tools</h3>
+                        <p>Empower your team with Katalon’s intuitive platform:<br />
+                        - Clean, maintainable Groovy scripts require minimal training.<br />
+                        - Take control of our scripts, enabling easy reviews and updates by your team.</p>
+                    </div>
+                </article>
+
+            <!-- Why Choose Us -->
+                <article id="work" class="style1" role="region" aria-labelledby="work-title">
+                    <span class="close">Close</span>
+                    <h2 class="major" id="work-title">Why Elgin Automation?</h2>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb" aria-label="Simple Solutions icon"></i>
+                        <h3>Simple Solutions</h3>
+                        <p>We simplify IT processes with clear explanations and scripts tailored to your team’s user roles, ensuring easy adoption and alignment with your goals.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket" aria-label="Fast Results icon"></i>
+                        <h3>Fast Results</h3>
+                        <p>Our scripts cut manual testing by up to 50% with precise validations and cross-browser test suites, delivering reliable results from day one.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-file-csv" aria-label="Clear Reporting icon"></i>
+                        <h3>Clear Reporting</h3>
+                        <p>Our CSV reports, with screenshots and data-driven validations, provide complete clarity, empowering manual testers with actionable insights.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users" aria-label="Reliable Tools icon"></i>
+                        <h3>Reliable Tools</h3>
+                        <p>We build low-maintenance Katalon Studio scripts with robust designs and reusable objects, making test updates effortless for your team.</p>
+                    </div>
+                    <a href="#contact" class="button primary">Schedule Your Free Demo Today</a>
+                </article>
+                
+            <!-- Demo -->
+                <article id="about" role="region" aria-labelledby="about-title">
+                    <span class="close">Close</span>
+                    <h2 id="about-title" class="major">Automation in Action</h2>
+                    <div class="feature">
+                        <h3>Live Demonstration</h3>
+                        <p>Explore our UI automation with clean Katalon Studio scripts, cross-browser testing, and detailed CSV reports with screenshots.</p>
+                        <p><strong>Script Access:</strong> View a sample script below or on <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">GitHub</a>.</p>
+                        <p><strong>Demo Request:</strong> <a href="#contact" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo or Request a Detailed Script</a>.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Sample Script</h3>
+                        <pre class="code"><code>// Sample Katalon Studio script excerpt
+WebUI.openBrowser('https://app.todoist.com')
+WebUI.setText(findTestObject('Username Field'), 'testuser@example.com')
+WebUI.takeScreenshot('LoginPage.jpg')
+                            </code></pre>
+                        </div>
+                        <div class="feature">
+                            <h3>Demo Video: Simple Login and Logout</h3>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/tBq4G5SoeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </article>                <!-- Contact -->
+                    <article id="contact" role="region" aria-labelledby="contact-title">
+                        <h2 id="contact-title" class="major">Contact</h2>
+                        <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
+                        <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" required aria-required="true" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" required aria-required="true" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="4" required aria-required="true" placeholder="E.g., Request a demo or sample script"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" aria-label="Send contact message to Elgin Automation" /></li>
+                                <li><input type="reset" value="Reset" aria-label="Reset Elgin Automation contact form" /></li>
+                            </ul>
+                            <input type="hidden" name="_subject" value="New Contact from Elgin Automation">
+                            <input type="text" name="_honey" style="display:none" disabled>
+                        </form>
+                        <ul class="icons">
+                            <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </article>
+                <!-- Contact Article -->
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </article>
+
+                <!-- Elements -->
+                        <h2 class="major">Elements</h2>
+                        <section>
+                            <h3 class="major">Text</h3>
+                            <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+                            This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                            This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+                            <hr />
+                            <h2>Heading Level 2</h2>
+                            <h3>Heading Level 3</h3>
+                            <h4>Heading Level 4</h4>
+                            <h5>Heading Level 5</h5>
+                            <h6>Heading Level 6</h6>
+                            <hr />
+                            <h4>Blockquote</h4>
+                            <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+                            <h4>Preformatted</h4>
+                            <pre><code>i = 0;while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;}print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                                </section>                            <section>
+                                <h3 class="major">Lists</h3>                            <h4>Unordered</h4>
+                            <ul>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Sagittis adipiscing.</li>
+                                <li>Felis enim feugiat.</li>
+                            </ul>
+
+                            <h4>Alternate</h4>
+                            <ul class="alt">
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Sagittis adipiscing.</li>
+                                <li>Felis enim feugiat.</li>
+                            </ul>
+
+                            <h4>Ordered</h4>
+                            <ol>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Etiam vel felis viverra.</li>
+                                <li>Felis enim feugiat.</li>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Etiam vel felis lorem.</li>
+                                <li>Felis enim et feugiat.</li>
+                            </ol>
+                            <h4>Icons</h4>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                            </ul>
+
+                            <h4>Actions</h4>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary">Default</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                            <ul class="actions stacked">
+                                <li><a href="#" class="button primary">Default</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Table</h3>
+                            <h4>Default</h4>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item One</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Two</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Three</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Four</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Five</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>100.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <h4>Alternate</h4>
+                            <div class="table-wrapper">
+                                <table class="alt">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item One</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Two</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Three</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Four</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Five</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>100.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Buttons</h3>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary">Primary</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><a href="#" class="button">Default</a></li>
+                                <li><a href="#" class="button small">Small</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                                <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><span class="button primary disabled">Disabled</span></li>
+                                <li><span class="button disabled">Disabled</span></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Form</h3>
+                            <form method="post" action="#">
+                                <div class="fields">
+                                    <div class="field half">
+                                        <label for="demo-name">Name</label>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+                                    </div>
+                                    <div class="field half">
+                                        <label for="demo-email">Email</label>
+                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+                                    </div>
+                                    <div class="field">
+                                        <label for="demo-category">Category</label>
+                                        <select name="demo-category" id="demo-category">
+                                            <option value="">-</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                        <label for="demo-priority-low">Low</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="radio" id="demo-priority-high" name="demo-priority">
+                                        <label for="demo-priority-high">High</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="checkbox" id="demo-copy" name="demo-copy">
+                                        <label for="demo-copy">Email me a copy</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                        <label for="demo-human">Not a robot</label>
+                                    </div>
+                                    <div class="field">
+                                        <label for="demo-message">Message</label>
+                                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                    </div>
+                                </div>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                                    <li><input type="reset" value="Reset" /></li>
+                                </ul>
+                            </form>
+                        </section>
+                    </article>
+            </div>
+                
+        <!-- Footer -->
+            <footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+              <div class="about-us" aria-describedby="about-us-desc">
+                <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+              </div>
+              <p>
+                © Elgin Automation. All rights reserved. | 
+                <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+                Follow us: 
+                <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+              </p>
+            </footer>
+    
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body></html>
+
+Thank you for sharing the updated HTML. The issue where your site only shows the background (#bg) and no content (header, main, footer, etc.) is likely caused by a problem with the rendering of the #wrapper element, which contains all the visible content. Based on the provided HTML and the previous CSS, the most probable causes are:JavaScript Error: The main.js script (from the HTML5 UP Dimension template) controls the removal of the body.is-preload class and the visibility of articles. If it fails to execute (e.g., due to a script path error or jQuery issue), the content may remain hidden with opacity: 0 or display: none.
+CSS Hiding Content: The body.is-preload styles or recent CSS changes (e.g., moving .about-us to the footer) might inadvertently hide the #wrapper or its children.
+HTML Structure Error: The HTML has an issue with an unclosed </article> tag and an extra </article> in the #main section, which could break the DOM rendering.
+Resource Loading Issue: Incorrect paths for main.css, main.js, or other scripts could prevent styles or functionality from applying.
+
+Let’s fix this step-by-step, starting with the most likely issues (JavaScript and HTML structure), then addressing CSS and resource paths.Step 1: Fix HTML StructureYour HTML has a syntax error in the #main section. There’s an extra </article> tag after the <ul class="icons"> (LinkedIn and GitHub links), and the "Elements" section is incorrectly nested outside an <article> tag, causing a mismatch. This could break the DOM, preventing content from rendering.Corrected HTML for #main Section:
+Replace the problematic part of the #main section (from <ul class="icons"> to the end of #main) with the following, removing the stray </article> and wrapping the "Elements" content in a proper <article>:html
+
+<!-- Contact Article -->
+<ul class="icons">
+    <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+    <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
+</ul>
+<!-- Elements -->
+<article id="elements" role="region" aria-labelledby="elements-title">
+    <h2 id="elements-title" class="major">Elements</h2>
+    <section>
+        <h3 class="major">Text</h3>
+        <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+        This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+        This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+        <hr />
+        <h2>Heading Level 2</h2>
+        <h3>Heading Level 3</h3>
+        <h4>Heading Level 4</h4>
+        <h5>Heading Level 5</h5>
+        <h6>Heading Level 6</h6>
+        <hr />
+        <h4>Blockquote</h4>
+        <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+        <h4>Preformatted</h4>
+        <pre><code>i = 0;while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+    </section>
+    <section>
+        <h3 class="major">Lists</h3>
+        <h4>Unordered</h4>
+        <ul>
+            <li>Dolor pulvinar etiam.</li>
+            <li>Sagittis adipiscing.</li>
+            <li>Felis enim feugiat.</li>
+        </ul>
+        <h4>Alternate</h4>
+        <ul class="alt">
+            <li>Dolor pulvinar etiam.</li>
+            <li>Sagittis adipiscing.</li>
+            <li>Felis enim feugiat.</li>
+        </ul>
+        <h4>Ordered</h4>
+        <ol>
+            <li>Dolor pulvinar etiam.</li>
+            <li>Etiam vel felis viverra.</li>
+            <li>Felis enim feugiat.</li>
+            <li>Dolor pulvinar etiam.</li>
+            <li>Etiam vel felis lorem.</li>
+            <li>Felis enim et feugiat.</li>
+        </ol>
+        <h4>Icons</h4>
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+        </ul>
+        <h4>Actions</h4>
+        <ul class="actions">
+            <li><a href="#" class="button primary">Default</a></li>
+            <li><a href="#" class="button">Default</a></li>
+        </ul>
+        <ul class="actions stacked">
+            <li><a href="#" class="button primary">Default</a></li>
+            <li><a href="#" class="button">Default</a></li>
+        </ul>
+    </section>
+    <section>
+        <h3 class="major">Table</h3>
+        <h4>Default</h4>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Item One</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Two</td>
+                        <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Three</td>
+                        <td> Morbi faucibus arcu accumsan lorem.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Four</td>
+                        <td>Vitae integer tempus condimentum.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Five</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>100.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <h4>Alternate</h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Item One</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Two</td>
+                        <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Three</td>
+                        <td> Morbi faucibus arcu accumsan lorem.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Four</td>
+                        <td>Vitae integer tempus condimentum.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item Five</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>100.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <section>
+        <h3 class="major">Buttons</h3>
+        <ul class="actions">
+            <li><a href="#" class="button primary">Primary</a></li>
+            <li><a href="#" class="button">Default</a></li>
+        </ul>
+        <ul class="actions">
+            <li><a href="#" class="button">Default</a></li>
+            <li><a href="#" class="button small">Small</a></li>
+        </ul>
+        <ul class="actions">
+            <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+            <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+        </ul>
+        <ul class="actions">
+            <li><span class="button primary disabled">Disabled</span></li>
+            <li><span class="button disabled">Disabled</span></li>
+        </ul>
+    </section>
+    <section>
+        <h3 class="major">Form</h3>
+        <form method="post" action="#">
+            <div class="fields">
+                <div class="field half">
+                    <label for="demo-name">Name</label>
+                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+                </div>
+                <div class="field half">
+                    <label for="demo-email">Email</label>
+                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+                </div>
+                <div class="field">
+                    <label for="demo-category">Category</label>
+                    <select name="demo-category" id="demo-category">
+                        <option value="">-</option>
+                        <option value="1">Manufacturing</option>
+                        <option value="1">Shipping</option>
+                        <option value="1">Administration</option>
+                        <option value="1">Human Resources</option>
+                    </select>
+                </div>
+                <div class="field half">
+                    <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                    <label for="demo-priority-low">Low</label>
+                </div>
+                <div class="field half">
+                    <input type="radio" id="demo-priority-high" name="demo-priority">
+                    <label for="demo-priority-high">High</label>
+                </div>
+                <div class="field half">
+                    <input type="checkbox" id="demo-copy" name="demo-copy">
+                    <label for="demo-copy">Email me a copy</label>
+                </div>
+                <div class="field half">
+                    <input type="checkbox" id="demo-human" name="demo-human" checked>
+                    <label for="demo-human">Not a robot</label>
+                </div>
+                <div class="field">
+                    <label for="demo-message">Message</label>
+                    <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+            </ul>
+        </form>
+    </section>
+</article>
+</div>
+
+Action: Update your HTML file with this corrected #main section. This fixes the unclosed <article> and ensures the "Elements" content is properly nested, which should prevent DOM rendering issues.Step 2: Override body.is-preload StylesThe body.is-preload class likely hides content with opacity: 0 or display: none until main.js removes it. If JavaScript fails, the content stays hidden. Let’s add temporary CSS to force visibility and confirm if this is the issue.CSS Fix:
+Add this to the bottom of main.css:css
+
+#wrapper {
+  display: flex !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+body.is-preload #wrapper,
+body.is-preload #header,
+body.is-preload .about-us,
+body.is-preload #main,
+body.is-preload #footer {
+  display: flex !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+body.is-preload #main article {
+  display: block !important; /* Ensure articles are visible */
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+Action: Save this to main.css and reload the site. If the content appears, the issue is with main.js not removing the is-preload class.Step 3: Check JavaScript ExecutionThe main.js script is responsible for removing the is-preload class and handling article toggling (e.g., showing #intro, #work, etc.). If it’s not running, the content remains hidden.Steps:Open Developer Tools:Press F12 in your browser (Chrome, Firefox, etc.) and go to the Console tab.
+Look for errors like:Failed to load resource: assets/js/main.js
+Uncaught ReferenceError: jQuery is not defined
+Uncaught TypeError: $(...) is not a function
+
+Verify Script Paths:
+Ensure all scripts are loading correctly. Your HTML includes:html
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+If you’re testing locally, ensure the assets/js/ folder contains these files.
+If hosted on GitHub Pages (https://automationbyethan.github.io/ethanelginautomation.github.io/), verify the paths are correct relative to the repository root. GitHub Pages is case-sensitive, so check that file names match exactly (e.g., jquery.min.js vs. JQuery.min.js).
+
+Test JavaScript:
+Temporarily add a simple script to confirm JavaScript is running:html
+
+<script>
+  console.log("JavaScript is running!");
+  document.body.classList.remove("is-preload");
+</script>
+
+Place this just before the closing </body> tag. Reload the site and check the Console (F12 > Console) for the message. If the content appears, main.js is likely failing.
+
+Action: If errors appear in the Console, note them and share them with me. If the test script works, we’ll need to debug main.js.Step 4: Verify CSS LoadingIf the HTML and JavaScript fixes don’t work, the main.css file might not be loading, causing the #wrapper to lack proper styling.Steps:Check CSS Path:Ensure assets/css/main.css exists in your project folder.
+In Developer Tools (F12 > Network tab), filter by main.css and reload the page. If it shows a 404 error, the path is incorrect.
+For GitHub Pages, the path should be assets/css/main.css relative to the repository root.
+
+Test CSS:
+Add a simple rule to main.css to confirm it’s loading:css
+
+body {
+  border: 5px solid red !important; /* Temporary for testing */
+}
+
+Reload the site. If a red border appears, main.css is loading.
+
+Action: If main.css isn’t loading, update the path in the HTML:html
+
+<link rel="stylesheet" href="/ethanelginautomation.github.io/assets/css/main.css" />
+
+Adjust the path based on your repository structure.Step 5: Check Recent ChangesSince the issue started after moving the .about-us section to the footer and adjusting CSS, let’s ensure those changes didn’t introduce errors.Footer HTML:
+Your footer looks correct:html
+
+<footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+  <div class="about-us" aria-describedby="about-us-desc">
+    <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+  </div>
+  <p>
+    © Elgin Automation. All rights reserved. | 
+    <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+    Follow us: 
+    <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+  </p>
+</footer>
+
+CSS for Footer:
+Ensure the footer CSS isn’t hiding content. Replace the #footer and .about-us rules in main.css with:css
+
+#footer {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: block !important; /* Force visibility */
+  opacity: 1 !important;
+}
+
+.about-us {
+  margin: 0 auto 0.5rem auto;
+  max-width: 80%;
+  text-align: center;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.about-us p {
+  color: #b0b0b0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 736px) {
+  #footer {
+    margin-top: 0.25rem;
+  }
+  .about-us {
+    margin: 0 auto 0.25rem auto;
+    max-width: 90%;
+  }
+  .about-us p {
+    font-size: 0.75rem;
+    color: #b0b0b0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+}
+
+Action: Update main.css with these rules to ensure the footer and .about-us are visible.RecommendationFix HTML: Update the #main section with the corrected HTML to fix the unclosed <article> and "Elements" nesting.
+Apply CSS Override: Add the body.is-preload override to main.css to force content visibility.
+Check Console: Open Developer Tools (F12 > Console) and note any errors related to main.js, jQuery, or main.css.
+Test Locally: If possible, test the site locally using a simple server (e.g., python -m http.server in the project folder) to rule out GitHub Pages issues.
+Push to GitHub: If testing locally works, push the changes to your GitHub repository and check https://automationbyethan.github.io/ethanelginautomation.github.io/.
+
+If the content still doesn’t appear, please share:Any Console errors from Developer Tools.
+The contents of main.js (or confirm it’s the default from HTML5 UP Dimension).
+Whether you’re testing locally or on GitHub Pages.
+
+This will help pinpoint the issue (e.g., a JavaScript error or GitHub Pages path problem). I can also assist with debugging main.js or setting up a local test environment if needed!
+
+like this?<!DOCTYPE HTML>
+<!--
+    Dimension by HTML5 UP (html5up.net | @ajlkn)
+    Modified for Elgin Automation
+    Free for personal and commercial use under the Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
+    Credit: This website uses a modified version of the Dimension template by HTML5 UP.	
+-->
+<html>
+    <head>
+        <title>Elgin Automation | UI Automation Experts</title>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="description" content="Elgin Automation offers expert UI automation testing with Katalon Studio and Selenium. Streamline your testing process with customized solutions.">
+    <meta name="keywords" content="Elgin Automation, UI automation, Katalon Studio, Selenium, regression testing, user acceptance testing">
+    <meta name="author" content="Elgin Automation">
+    <meta property="og:title" content="Elgin Automation | UI Automation Experts">
+    <meta property="og:description" content="Elgin Automation provides expert UI automation testing with Katalon Studio and Selenium. Contact us for a free consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://automationbyethan.github.io/ethanelginautomation.github.io/">
+    <meta property="og:image" content="https://automationbyethan.github.io/ethanelginautomation.github.io/images/ui-image-01.jpg">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+                <!-- Header -->
+                    <header id="header">
+                        <div class="logo">
+                            <span class="icon fa-robot" aria-label="Elgin Automation logo"></span>
+                        </div>
+                        <div class="content">
+                            <div class="inner">
+                                <h1>Elgin Automation</h1>
+                                <p>Fast, Reliable UI Automation for Your Business<br />
+                                Streamline testing with precision and clarity</p>
+                                <a href="#contact" class="button primary">Get a Free Consultation</a>
+                            </div>
+                        </div>
+                        <nav role="navigation" aria-label="Main navigation for Elgin Automation">
+                            <ul>
+                                <li><a href="#intro" aria-label="Learn about Elgin Automation's UI automation services">What We Offer</a></li>
+                                <li><a href="#work" aria-label="Reasons to choose Elgin Automation for UI automation">Why Choose Us</a></li>
+                                <li><a href="#about" aria-label="View a demo of Elgin Automation's UI automation">Demo</a></li>
+                                <li><a href="#contact" aria-label="Contact Elgin Automation for UI automation inquiries">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                
+            <!-- Main -->
+                    <div id="main">
+
+            <!-- What We Offer -->
+                <article id="intro" role="region" aria-labelledby="intro-title">
+                    <span class="close">Close</span>
+                    <h2 id="intro-title" class="major">What We Offer: UI Automation</h2>
+                    <div class="feature">
+                        <h3>Selenium-Based Automation Suite</h3>
+                        <p>Leverage our robust Selenium framework for:<br />
+                        - <em>User Acceptance Testing (UAT)</em>: Ensure your software meets end-user needs with precise validations (boolean, calculations, loops).<br />
+                        - <em>Regression Testing</em>: Verify functionality across Chrome, Firefox, and Edge with comprehensive test suites.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Detailed Reporting</h3>
+                        <p>Gain actionable insights with:<br />
+                        - <em>Client-Reviewed Screenshots</em>: Visual proof in CSV reports for transparent test results.<br />
+                        - <em>Data-Driven Validations</em>: In-depth CSV reports with pass/fail metrics, tailored to your business needs.<br />
+                        - <em>Cumulative Suite Report</em>: Quick analysis to streamline decision-making.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Robust Customization</h3>
+                        <p>Adapt our solutions to your needs with:<br />
+                        - <em>Browser Diversity</em>: Seamless testing across multiple browsers.<br />
+                        - <em>User-Specific Scripts</em>: Flexible scripts tailored to different user roles for maximum versatility.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>User-Friendly Tools</h3>
+                        <p>Empower your team with Katalon’s intuitive platform:<br />
+                        - Clean, maintainable Groovy scripts require minimal training.<br />
+                        - Take control of our scripts, enabling easy reviews and updates by your team.</p>
+                    </div>
+                </article>
+
+            <!-- Why Choose Us -->
+                <article id="work" class="style1" role="region" aria-labelledby="work-title">
+                    <span class="close">Close</span>
+                    <h2 class="major" id="work-title">Why Elgin Automation?</h2>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb" aria-label="Simple Solutions icon"></i>
+                        <h3>Simple Solutions</h3>
+                        <p>We simplify IT processes with clear explanations and scripts tailored to your team’s user roles, ensuring easy adoption and alignment with your goals.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket" aria-label="Fast Results icon"></i>
+                        <h3>Fast Results</h3>
+                        <p>Our scripts cut manual testing by up to 50% with precise validations and cross-browser test suites, delivering reliable results from day one.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-file-csv" aria-label="Clear Reporting icon"></i>
+                        <h3>Clear Reporting</h3>
+                        <p>Our CSV reports, with screenshots and data-driven validations, provide complete clarity, empowering manual testers with actionable insights.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users" aria-label="Reliable Tools icon"></i>
+                        <h3>Reliable Tools</h3>
+                        <p>We build low-maintenance Katalon Studio scripts with robust designs and reusable objects, making test updates effortless for your team.</p>
+                    </div>
+                    <a href="#contact" class="button primary">Schedule Your Free Demo Today</a>
+                </article>
+                
+            <!-- Demo -->
+                <article id="about" role="region" aria-labelledby="about-title">
+                    <span class="close">Close</span>
+                    <h2 id="about-title" class="major">Automation in Action</h2>
+                    <div class="feature">
+                        <h3>Live Demonstration</h3>
+                        <p>Explore our UI automation with clean Katalon Studio scripts, cross-browser testing, and detailed CSV reports with screenshots.</p>
+                        <p><strong>Script Access:</strong> View a sample script below or on <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">GitHub</a>.</p>
+                        <p><strong>Demo Request:</strong> <a href="#contact" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo or Request a Detailed Script</a>.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Sample Script</h3>
+                        <pre class="code"><code>// Sample Katalon Studio script excerpt
+WebUI.openBrowser('https://app.todoist.com')
+WebUI.setText(findTestObject('Username Field'), 'testuser@example.com')
+WebUI.takeScreenshot('LoginPage.jpg')
+                            </code></pre>
+                        </div>
+                        <div class="feature">
+                            <h3>Demo Video: Simple Login and Logout</h3>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/tBq4G5SoeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </article>                <!-- Contact -->
+                    <article id="contact" role="region" aria-labelledby="contact-title">
+                        <h2 id="contact-title" class="major">Contact</h2>
+                        <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
+                        <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" required aria-required="true" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" required aria-required="true" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="4" required aria-required="true" placeholder="E.g., Request a demo or sample script"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" aria-label="Send contact message to Elgin Automation" /></li>
+                                <li><input type="reset" value="Reset" aria-label="Reset Elgin Automation contact form" /></li>
+                            </ul>
+                            <input type="hidden" name="_subject" value="New Contact from Elgin Automation">
+                            <input type="text" name="_honey" style="display:none" disabled>
+                        </form>
+                        <ul class="icons">
+                            <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </article>
+                        
+                <!-- Contact Article -->
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/elginethan/" class="icon brands fa-linkedin" aria-label="Follow Elgin Automation on LinkedIn"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a></li>
+                    </ul>
+                
+                <!-- Elements -->
+                        <article id="elements" role="region" aria-labelledby="elements-title">
+                        <h2 class="major">Elements</h2>
+                        <section>
+                            <h3 class="major">Text</h3>
+                            <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+                            This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                            This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+                            <hr />
+                            <h2>Heading Level 2</h2>
+                            <h3>Heading Level 3</h3>
+                            <h4>Heading Level 4</h4>
+                            <h5>Heading Level 5</h5>
+                            <h6>Heading Level 6</h6>
+                            <hr />
+                            <h4>Blockquote</h4>
+                            <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+                            <h4>Preformatted</h4>
+                            <pre><code>i = 0;while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;}print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                                </section>                            <section>
+                                <h3 class="major">Lists</h3>                            <h4>Unordered</h4>
+                            <ul>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Sagittis adipiscing.</li>
+                                <li>Felis enim feugiat.</li>
+                            </ul>
+
+                            <h4>Alternate</h4>
+                            <ul class="alt">
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Sagittis adipiscing.</li>
+                                <li>Felis enim feugiat.</li>
+                            </ul>
+
+                            <h4>Ordered</h4>
+                            <ol>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Etiam vel felis viverra.</li>
+                                <li>Felis enim feugiat.</li>
+                                <li>Dolor pulvinar etiam.</li>
+                                <li>Etiam vel felis lorem.</li>
+                                <li>Felis enim et feugiat.</li>
+                            </ol>
+                            <h4>Icons</h4>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                            </ul>
+
+                            <h4>Actions</h4>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary">Default</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                            <ul class="actions stacked">
+                                <li><a href="#" class="button primary">Default</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Table</h3>
+                            <h4>Default</h4>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item One</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Two</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Three</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Four</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Five</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>100.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <h4>Alternate</h4>
+                            <div class="table-wrapper">
+                                <table class="alt">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Item One</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Two</td>
+                                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Three</td>
+                                            <td> Morbi faucibus arcu accumsan lorem.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Four</td>
+                                            <td>Vitae integer tempus condimentum.</td>
+                                            <td>19.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Item Five</td>
+                                            <td>Ante turpis integer aliquet porttitor.</td>
+                                            <td>29.99</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>100.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Buttons</h3>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary">Primary</a></li>
+                                <li><a href="#" class="button">Default</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><a href="#" class="button">Default</a></li>
+                                <li><a href="#" class="button small">Small</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                                <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+                            </ul>
+                            <ul class="actions">
+                                <li><span class="button primary disabled">Disabled</span></li>
+                                <li><span class="button disabled">Disabled</span></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3 class="major">Form</h3>
+                            <form method="post" action="#">
+                                <div class="fields">
+                                    <div class="field half">
+                                        <label for="demo-name">Name</label>
+                                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+                                    </div>
+                                    <div class="field half">
+                                        <label for="demo-email">Email</label>
+                                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+                                    </div>
+                                    <div class="field">
+                                        <label for="demo-category">Category</label>
+                                        <select name="demo-category" id="demo-category">
+                                            <option value="">-</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                        <label for="demo-priority-low">Low</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="radio" id="demo-priority-high" name="demo-priority">
+                                        <label for="demo-priority-high">High</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="checkbox" id="demo-copy" name="demo-copy">
+                                        <label for="demo-copy">Email me a copy</label>
+                                    </div>
+                                    <div class="field half">
+                                        <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                        <label for="demo-human">Not a robot</label>
+                                    </div>
+                                    <div class="field">
+                                        <label for="demo-message">Message</label>
+                                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                    </div>
+                                </div>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                                    <li><input type="reset" value="Reset" /></li>
+                                </ul>
+                            </form>
+                        </section>
+                    </article>
+            </div>
+                
+        <!-- Footer -->
+            <footer id="footer" role="contentinfo" aria-label="Elgin Automation footer">
+              <div class="about-us" aria-describedby="about-us-desc">
+                <p id="about-us-desc">We are a client-focused team, delivering robust UI automation with a hands-on, collaborative approach. We simplify complex processes and empower you with reliable, data-driven solutions.</p>
+              </div>
+              <p>
+                © Elgin Automation. All rights reserved. | 
+                <a href="#contact" aria-label="Contact Elgin Automation">Contact Us</a> | 
+                Follow us: 
+                <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Elgin Automation on GitHub"><span class="label">GitHub</span></a>
+              </p>
+            </footer>
+    
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body></html>
+
