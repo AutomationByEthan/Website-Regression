@@ -1115,193 +1115,25 @@ body.is-article-visible #header {
 
 body.is-preload #header > * {
     opacity: 0;
-    transform: translateY(10px); /* Slide down for unfolding */
+    transform: translateY(10px);
 }
 
 body.is-preload #header .logo {
-    transition-delay: 0.1s; /* First */
+    transition-delay: 0.1s;
 }
 
 body.is-preload #header .content {
-    transition-delay: 0.3s; /* Second */
+    transition-delay: 0.3s;
 }
 
 body.is-preload #header nav {
-    transition-delay: 0.5s; /* Third */
+    transition-delay: 0.5s;
 }
 
 @media screen and (max-width: 480px) {
     body.is-preload #header > * {
-        transform: translateY(5px); /* Smaller slide for mobile */
-        transition-delay: 0.1s, 0.2s, 0.3s; /* Faster stagger */
-    }
-}
-
-#header > :first-child {
-    margin-top: 0;
-}
-
-#header .logo {
-    width: 5.5rem;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    border: solid 1px #ffffff;
-    border-radius: 100%;
-    opacity: 1;
-    transition: transform 0.3s ease-in-out;
-}
-
-@keyframes logoFadeIn {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-#header .logo:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-#header .logo .icon:before {
-    transition: color 0.3s ease-in-out;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: 2.5em;
-    color: #ffffff;
-}
-
-#header .logo:hover .icon:before {
-    color: #00bfff;
-}
-
-@media screen and (max-width: 736px) {
-    #header {
-        max-width: 95%;
-    }
-    #header > * {
-        margin-top: 1.5rem;
-    }
-    #header > *:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: calc(-1.5rem - 1px);
-        left: calc(50% - 1px);
-        width: 1px;
-        height: calc(1.5rem + 1px);
-        background: #ffffff;
-    }
-    #header .logo {
-        width: 4.75rem;
-        height: 4.75rem;
-        line-height: 4.75rem;
-    }
-    #header .logo .icon:before {
-        font-size: 1.8em;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #header {
-        padding: 0.5rem;
-        max-width: 100%;
-    }
-}
-
-#header .content {
-    border-style: solid;
-    border-color: #ffffff;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    max-width: 100%;
-}
-
-#header .content .inner {
-    transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.5s ease-in-out;
-    padding: 1.5rem 1rem;
-    max-height: 40rem;
-    overflow: hidden;
-}
-
-body.is-preload #header .content .inner {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    transition-delay: 0.3s;
-}
-
-@media screen and (max-width: 480px) {
-    body.is-preload #header .content .inner {
         transform: translateY(5px);
-        transition-delay: 0.2s;
-    }
-}
-
-#header .content .inner > :last-child {
-    margin-bottom: 0;
-}
-
-#header .content .inner h1 {
-    font-size: 2.25rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    letter-spacing: 0.3rem;
-}
-
-#header .content .inner p {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: #b0b0b0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-    font-weight: 600;
-}
-
-#header .content .inner .button.primary {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    padding: 0 1.25rem;
-    background-color: #00bfff;
-    color: #ffffff !important;
-    border-radius: 4px;
-    height: 2.25rem;
-    line-height: 2.25rem;
-    box-shadow: none;
-}
-
-#header .content .inner .button.primary:hover {
-    background-color: #00ccff;
-}
-
-@media screen and (max-width: 736px) {
-    #header .content .inner {
-        padding: 1rem 0.75rem;
-    }
-    #header .content .inner h1 {
-        font-size: 1.75rem;
-        letter-spacing: 0.2rem;
-    }
-    #header .content .inner p {
-        font-size: 0.8rem;
-        line-height: 1.6;
-        color: #b0b0b0;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-    }
-    #header .content .inner .button.primary {
-        margin-top: 0.75rem;
-        padding: 0 1rem;
-        height: 2rem;
-        line-height: 2rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #header .content .inner {
-        padding: 0.75rem 0.5rem;
-    }
-    #header .content .inner p {
-        font-size: 0.75rem;
-        color: #b0b0b0;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+        transition-delay: 0.1s, 0.2s, 0.3s;
     }
 }
 
@@ -1605,6 +1437,7 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
 
 
 
