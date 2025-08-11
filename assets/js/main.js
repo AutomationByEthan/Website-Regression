@@ -146,7 +146,8 @@
     $main_articles.each(function() {
         const $this = $(this);
         $('<span class="close">Close</span>').appendTo($this).on('click', () => {
-            location.hash = '';
+            console.log(`Close button clicked for article: ${$this.attr('id')}`); // Debug
+            $main._hide(true);
         });
         $this.on('click', (event) => event.stopPropagation());
     });
@@ -221,3 +222,4 @@
     }
 
 })(jQuery);
+
