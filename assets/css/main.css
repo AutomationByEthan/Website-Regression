@@ -858,7 +858,7 @@ button {
     #header .content .inner p {
         font-size: 0.8rem;
         line-height: 1.6;
-        color: #ffffff; 
+        color: #ffffff !important; 
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Stronger shadow */
     }
     #header .content .inner .button.primary {
@@ -3745,6 +3745,7 @@ i++;}print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         <script src="assets/js/main.js"></script>
 
 </body></html>
+
 
 
 
