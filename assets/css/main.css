@@ -1034,18 +1034,27 @@ body.is-preload #bg:before {
     position: relative;
     min-height: auto;
     width: 100%;
-    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    gap: 1.5rem;
     z-index: 3;
     opacity: 1 !important;
 }
 
 body.is-article-visible #wrapper {
     min-height: 100vh; 
+    gap: 0;
 }
 
 @media screen and (max-width: 1680px) {
     #wrapper {
         padding: 2rem 1.25rem 0.75rem 1.25rem;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    #wrapper {
+        padding: 2rem 2rem 1.5rem 2rem; /* Larger padding on desktop */
+        gap: 2rem; /* Larger gap on desktop */
     }
 }
 
@@ -1659,4 +1668,5 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
 
