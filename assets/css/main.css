@@ -1030,13 +1030,17 @@ body.is-preload #bg:before {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     width: 100%;
-    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     z-index: 3;
     opacity: 1 !important;
+}
+
+body.is-article-visible #wrapper {
+    min-height: 100vh; 
 }
 
 @media screen and (max-width: 1680px) {
@@ -1072,7 +1076,13 @@ body.is-preload #bg:before {
 #header > * {
     transition: opacity 0.325s ease-in-out;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 736px) {
+    #header > * {
+        margin-top: 0.75rem; /* Reduced from 1.5rem */
+    }
 }
 
 #header > *:before,
@@ -1649,3 +1659,4 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
