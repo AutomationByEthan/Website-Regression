@@ -3197,9 +3197,8 @@ body.is-preload #footer {
 }
 
 body.is-preload #main article {
-  display: block !important; /* Ensure articles are visible */
-  opacity: 1 !important;
-  transform: none !important;
+  display: none;
+  opacity: 0;
 }
 
 Action: Save this to main.css and reload the site. If the content appears, the issue is with main.js not removing the is-preload class.Step 3: Check JavaScript ExecutionThe main.js script is responsible for removing the is-preload class and handling article toggling (e.g., showing #intro, #work, etc.). If it’s not running, the content remains hidden.Steps:Open Developer Tools:Press F12 in your browser (Chrome, Firefox, etc.) and go to the Console tab.
@@ -3745,6 +3744,7 @@ i++;}print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         <script src="assets/js/main.js"></script>
 
 </body></html>
+
 
 
 
