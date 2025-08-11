@@ -958,7 +958,7 @@ button {
     line-height: calc(2.75rem - 2px);
 }
 
-* Background */
+/* Background */
 #bg {
     position: fixed;
     top: 0;
@@ -1599,6 +1599,7 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
 
 
 
