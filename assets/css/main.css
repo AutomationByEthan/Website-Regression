@@ -1166,18 +1166,22 @@ body.is-article-visible #wrapper {
 }
 
 #header .content .inner h1 {
-    color: #e0e0e0; /* Lighter gray for brightness */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); /* Maintain readability */
+    color: #e0e0e0; /* Keep the bright color */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
     font-size: 2.25rem; /* Default desktop size */
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem; /* Reduced from 0.3rem for less crowding */
+    font-weight: 400; /* Lighter weight for elegance */
+    text-transform: none; /* Remove uppercase for better readability */
+    line-height: 1.4; /* Improved line height */
 }
 
 #header .content .inner p {
-    color: #d0d0d0; /* Lighter text for subheading */
+    color: #d0d0d0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-    font-size: 0.9rem;
+    font-size: 1rem; /* Slightly larger for balance */
     line-height: 1.8;
-    font-weight: 600;
+    font-weight: 400; /* Lighter weight */
+    text-transform: none; /* Remove uppercase */
 }
 
 #header .content .inner .button.primary {
@@ -1217,8 +1221,10 @@ body.is-article-visible #wrapper {
         padding: 1rem 0.75rem;
     }
     #header .content .inner h1 {
-        font-size: 1.9rem;
-        letter-spacing: 0.2rem;
+        font-size: 1.75rem;
+        letter-spacing: 0.2rem; /* Slightly more spacing on mobile */
+        font-weight: 600; /* Bolder for mobile readability */
+        text-transform: uppercase; /* Restore uppercase for mobile consistency */
         color: #e0e0e0;
     }
     #header .content .inner p {
@@ -1676,6 +1682,7 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
 
 
 
