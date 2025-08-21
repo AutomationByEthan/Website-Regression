@@ -1178,10 +1178,10 @@ body.is-article-visible #wrapper {
 #header .content .inner p {
     color: #d0d0d0;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-    letter-spacing: 0.2rem;
-    font-size: 1rem; /* Slightly larger for balance */
+    letter-spacing: 0.15rem;
+    font-size: .9rem; /* Slightly larger for balance */
     line-height: 1.8;
-    font-weight: 600; /* 400 */
+    font-weight: 500; /* 400 */
     text-transform: uppercase;;
 }
 
@@ -1683,6 +1683,7 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
 
 
 
