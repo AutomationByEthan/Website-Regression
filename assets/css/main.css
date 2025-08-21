@@ -1166,19 +1166,17 @@ body.is-article-visible #wrapper {
 }
 
 #header .content .inner h1 {
-    font-size: 2.25rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    color: #ffffff;
+    color: #e0e0e0; /* Lighter gray for brightness */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); /* Maintain readability */
+    font-size: 2.25rem; /* Default desktop size */
     letter-spacing: 0.3rem;
 }
 
 #header .content .inner p {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    color: #d0d0d0; /* Lighter text for subheading */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
     font-size: 0.9rem;
     line-height: 1.8;
-    color: #b0b0b0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     font-weight: 600;
 }
 
@@ -1219,13 +1217,14 @@ body.is-article-visible #wrapper {
         padding: 1rem 0.75rem;
     }
     #header .content .inner h1 {
-        font-size: 1.75rem;
+        font-size: 1.9rem;
         letter-spacing: 0.2rem;
+        color: #e0e0e0;
     }
     #header .content .inner p {
         font-size: 0.8rem;
         line-height: 1.6;
-        color: #b0b0b0;
+        color: #d0d0d0;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
     }
     #header .content .inner .button.primary {
@@ -1248,6 +1247,15 @@ body.is-article-visible #wrapper {
         font-size: 0.75rem;
         color: #b0b0b0;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+   #header .content .inner h1 {
+        font-size: 1.5rem; /* Further reduced for smaller screens */
+        color: #e0e0e0;
+    }
+    #header .content .inner p {
+        font-size: 0.75rem; /* Further reduced */
+        color: #d0d0d0;
     }
 }
 
@@ -1668,5 +1676,6 @@ article#about-us .feature iframe {
         letter-spacing: 0.3rem;
         width: 100%;
         text-align: center
+
 
 
