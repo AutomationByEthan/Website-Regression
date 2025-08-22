@@ -136,9 +136,23 @@
                      <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
                      <p><strong>Example:</strong> <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample XPath script on GitHub">View Stable XPath Script</a>.</p>
                      <pre class="code"><code>// Sample Katalon Studio script excerpt
-WebUI.openBrowser('https://app.todoist.com')
-WebUI.setText(findTestObject('Username Field'), 'testuser@example.com')
-WebUI.takeScreenshot('LoginPage.jpg')
+WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Login.jpg')
+myFile << "\n============================== [ Automation Execution of ${GlobalVariable.Scenario} ] ==============================\n"
+
+myFile << "\n\tScript Purpose: Identify specific test data, edit the task, and validate that the edit was made correctly.\n"
+
+// Login
+WebUI.setText(findTestObject('Object Repository/02_LoginPage/fld_UserName'), GlobalVariable.AdminUser)
+WebUI.setEncryptedText(findTestObject('Object Repository/02_LoginPage/fld_Password'), GlobalVariable.Password)
+WebUI.delay(3)
+WebUI.sendKeys(findTestObject('Object Repository/02_LoginPage/fld_Password'), Keys.chord(Keys.ENTER))
+WebUI.waitForPageLoad(10)
+WebUI.delay(5)
+
+WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Home Page.jpg')
+WebUI.click(findTestObject('Object Repository/03_HomePage/btn_AccountDropdown'))
+String loginUserName = WebUI.getText(findTestObject('Object Repository/03_HomePage/ddl_UserName'))
+myFile << '\n\tUser: ' + loginUserName + '\n'
                         </code></pre>
                      <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
                      </div>
@@ -238,5 +252,6 @@ WebUI.takeScreenshot('LoginPage.jpg')
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
