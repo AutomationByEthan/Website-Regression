@@ -135,6 +135,11 @@
                      <p><strong>Solution:</strong> Developed a Katalon Studio test suite with robust XPath locators and modular Groovy scripts for stability.</ p>
                      <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
                      <p><strong>Example:</strong> <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample XPath script on GitHub">View Stable XPath Script</a>.</p>
+                     <pre class="code"><code>// Sample Katalon Studio script excerpt
+WebUI.openBrowser('https://app.todoist.com')
+WebUI.setText(findTestObject('Username Field'), 'testuser@example.com')
+WebUI.takeScreenshot('LoginPage.jpg')
+                        </code></pre>
                      <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
                      </div>
                      
@@ -169,25 +174,11 @@
                         <h3>Demo: Automation in Action</h3>
                         <p>Explore our UI automation with clean Katalon Studio scripts and cross-browser testing.</p>
                         <p><strong>Sample Script:</strong> <a href="https://github.com/automationbyethan/sample-script" target="_blank">View on GitHub</a>.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Live Demonstration</h3>
-                        <p>Explore our UI automation with clean Katalon Studio scripts, cross-browser testing, and detailed reporting. See how our solutions deliver actionable insights and streamline your testing process.</p>
-                        <p><strong>Script Access:</strong> View a sample script below or on <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">GitHub</a>.</p>
-                        <p><strong>Demo Request:</strong> <a href="#contact" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo or Request a Detailed Script</a>.</p>
-                    </div>
+                    </div>                   
                     <div class="feature">
                         <h3>Katalon Studio After Successful Run</h3>
                         <p>This screenshot captures the Katalon Studio interface after the same script (from the CSV) passes, highlighting a clean and successful execution:</p>
                         <span class="image fit"><img src="images/demo-katalon-passed.jpg" alt="Screenshot of Katalon Studio after a successful script run" /></span>
-                    </div>
-                    <div class="feature">
-                        <h3>Sample Script</h3>
-                        <pre class="code"><code>// Sample Katalon Studio script excerpt
-WebUI.openBrowser('https://app.todoist.com')
-WebUI.setText(findTestObject('Username Field'), 'testuser@example.com')
-WebUI.takeScreenshot('LoginPage.jpg')
-                        </code></pre>
                     </div>
                     <a href="#contact" class="button primary" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo</a>
                 </article>
@@ -247,4 +238,5 @@ WebUI.takeScreenshot('LoginPage.jpg')
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
