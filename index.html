@@ -122,20 +122,21 @@
                 </article>
 
             <!-- Demo -->
-                <article id="portfolio" role="region" aria-labelledby="portfolio-title">
-                     <div class="close">Close</div>
-                     <h2 id="portfolio-title" class="major">Portfolio: Proven Automation Success</h2>
-                     <p>Due to client confidentiality, case studies are anonymized but reflect real project outcomes using Katalon Studio and Selenium.</p>
-                     
-                     <!-- Case Study 1 -->
+                <article id="portfolio" class="style1" role="region" aria-labelledby="portfolio-title">
+                    <div class="close">Close</div>
+                    <h2 id="portfolio-title" class="major">Portfolio: Proven Automation Success</h2>
+                    <p>Due to client confidentiality, case studies are anonymized but reflect real project outcomes using Katalon Studio and Selenium.</p>
+                    
+                    <!-- Case Study 1: Low-Maintenance UI Automation in CI/CD -->
                     <div class="feature">
-                     <h3>Case Study: Low-Maintenance UI Automation in CI/CD</h3>
-                     <span class="image fit"><img src="images/cicd-pipeline.jpg" alt="Diagram of CI/CD pipeline with UI automation" /></span>
-                     <p><strong>Problem:</strong> A web-based enterprise system required frequent UI automation script updates in a CI/CD pipeline, risking delays.</p>
-                     <p><strong>Solution:</strong> Developed a Katalon Studio test suite with robust XPath locators and modular Groovy scripts for stability.</ p>
-                     <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
-                     <p><strong>Example:</strong> <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample XPath script on GitHub">View Stable XPath Script</a>.</p>
-                     <pre class="code"><code>// Sample Katalon Studio script excerpt
+                        <i class="fas fa-cogs" aria-label="CI/CD Automation icon"></i>
+                        <h3>Case Study: Low-Maintenance UI Automation in CI/CD</h3>
+                        <span class="image fit"><img src="images/cicd-pipeline.jpg" alt="Diagram of CI/CD pipeline with UI automation" /></span>
+                        <p><strong>Problem:</strong> A web-based enterprise system required frequent UI automation script updates in a CI/CD pipeline, risking delays.</p>
+                        <p><strong>Solution:</strong> Developed a Katalon Studio test suite with robust XPath locators and modular Groovy scripts for stability.</p>
+                        <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
+                        <p><strong>Example:</strong> A script with stable XPaths tested across Chrome and Firefox with zero breaks over 6 months.</p>
+                        <pre class="code"><code>// Sample Katalon Studio script excerpt
 WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Login.jpg')
 myFile << "\n============================== [ Automation Execution of ${GlobalVariable.Scenario} ] ==============================\n"
 
@@ -153,48 +154,61 @@ WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable
 WebUI.click(findTestObject('Object Repository/03_HomePage/btn_AccountDropdown'))
 String loginUserName = WebUI.getText(findTestObject('Object Repository/03_HomePage/ddl_UserName'))
 myFile << '\n\tUser: ' + loginUserName + '\n'
-                        </code></pre>
-                     <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
-                     </div>
-                     
-                     <!-- Case Study 2 -->
-                    <div class="feature">
-                     <h3>Case Study: Transparent Validation with Detailed Reporting</h3>
-                     <p><strong>Problem:</strong> A business-critical application needed reliable UI automation but lacked trust in automated validations.</p>
-                     <p><strong>Solution:</strong> Built a Selenium-driven test suite with Katalon Studio, generating CSV reports with all validations and linked screenshot evidence.</p>
-                     <p><strong>Outcome:</strong> Provided 100% transparent results, caught 30+ defects per cycle, and cut validation review time by 50%.</p>
-                     <p><strong>Example:</strong> A CSV file listing test case IDs, validation types, results, and screenshot paths. <a href="images/demo-file-path.jpg" target="_blank" aria-label="View sample CSV and evidence">View Sample Report</a>.</p>
-                     <span class="image fit"><img src="images/demo-file-path.jpg" alt="Screenshot of a folder with CSV file and test run images" /></span>
-                     <span class="image fit"><img src="images/demo-csv-report.jpg" alt="Sample CSV report with validation details and screenshot evidence" /></span>
-                     <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
-                     </div>
-                     
-                     <!-- Existing Demo Content -->
-                    <div class="feature">
-                     <h3>Demo: Automation in Action</h3>
-                     <p>Explore our UI automation with clean Katalon Studio scripts and cross-browser testing.</p>
-                     <p><strong>Sample Script:</strong> <a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">View on GitHub</a>.</p>
-                     </div>
-                    <div class="feature">
-                     <h3>Demo Video: Simple Login and Logout</h3>
-                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/tBq4G5SoeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                     </div>
-                    <div class="feature">
-                     <h3>HTML Report Summary</h3>
-                     <p>View a consolidated HTML report summarizing test case results for a clear overview.</p>
-                     <span class="image fit"><img src="images/demo-html-report.jpg" alt="Screenshot of an HTML report summarizing test case results" /></span>
-                     </div>
-                    <div class="feature">
-                        <h3>Demo: Automation in Action</h3>
-                        <p>Explore our UI automation with clean Katalon Studio scripts and cross-browser testing.</p>
-                        <p><strong>Sample Script:</strong> <a href="https://github.com/automationbyethan/sample-script" target="_blank">View on GitHub</a>.</p>
-                    </div>                   
-                    <div class="feature">
-                        <h3>Katalon Studio After Successful Run</h3>
-                        <p>This screenshot captures the Katalon Studio interface after the same script (from the CSV) passes, highlighting a clean and successful execution:</p>
-                        <span class="image fit"><img src="images/demo-katalon-passed.jpg" alt="Screenshot of Katalon Studio after a successful script run" /></span>
+                     </code></pre>
+                        <p><a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample XPath script on GitHub">View Full Script</a>.</p>
+                        <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
                     </div>
-                    <a href="#contact" class="button primary" aria-label="Contact Elgin Automation for a demo or detailed script">Schedule a Demo</a>
+                    
+                    <!-- Case Study 2: Transparent Validation -->
+                    <div class="feature">
+                        <i class="fas fa-file-csv" aria-label="Transparent Reporting icon"></i>
+                        <h3>Case Study: Transparent Validation with Detailed Reporting</h3>
+                        <span class="image fit"><img src="images/demo-csv-report.jpg" alt="Sample CSV report with validation details and screenshot evidence" /></span>
+                        <p><strong>Problem:</strong> A business-critical application needed reliable UI automation but lacked trust in automated validations.</p>
+                        <p><strong>Solution:</strong> Built a Selenium-driven test suite with Katalon Studio, generating CSV reports with all validations and linked screenshot evidence.</p>
+                        <p><strong>Outcome:</strong> Provided 100% transparent results, caught 30+ defects per cycle, and cut validation review time by 50%.</p>
+                        <p><strong>Example:</strong> A CSV file listing test case IDs, validation types, results, and screenshot paths. <a href="images/demo-file-path.jpg" target="_blank" aria-label="View sample CSV folder structure">View Report Folder</a>.</p>
+                        <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
+                    </div>
+                    
+                    <!-- Demo: Sample Script -->
+                    <div class="feature">
+                        <i class="fas fa-code" aria-label="Sample Script icon"></i>
+                        <h3>Demo: Sample Automation Script</h3>
+                        <span class="image fit"><img src="images/demo-katalon-passed.jpg" alt="Screenshot of Katalon Studio after a successful script run" /></span>
+                        <p>Explore our clean Katalon Studio scripts designed for cross-browser testing and maintainability.</p>
+                        <p><a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample automation script on GitHub">View on GitHub</a>.</p>
+                        <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
+                    </div>
+                    
+                    <!-- Demo: Video -->
+                    <div class="feature">
+                        <i class="fas fa-video" aria-label="Demo Video icon"></i>
+                        <h3>Demo: Simple Login and Logout</h3>
+                        <span class="image fit"><iframe width="100%" height="200" src="https://www.youtube.com/embed/tBq4G5SoeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+                        <p>A sample automation script showcasing login/logout functionality on a task management platform.</p>
+                        <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
+                    </div>
+                    
+                    <!-- Demo: HTML Report -->
+                    <div class="feature">
+                        <i class="fas fa-chart-bar" aria-label="HTML Report icon"></i>
+                        <h3>Demo: HTML Report Summary</h3>
+                        <span class="image fit"><img src="images/demo-html-report.jpg" alt="Screenshot of an HTML report summarizing test case results" /></span>
+                        <p>View a consolidated HTML report summarizing test case results for a clear overview of pass/fail metrics.</p>
+                        <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
+                    </div>
+                    
+                    <!-- Demo: File Organization -->
+                    <div class="feature">
+                        <i class="fas fa-folder" aria-label="File Organization icon"></i>
+                        <h3>Demo: Organized Test Outputs</h3>
+                        <span class="image fit"><img src="images/demo-file-path.jpg" alt="Screenshot of a folder with CSV file and test run images" /></span>
+                        <p>Post-script execution, files are saved in an organized folder containing CSV reports and screenshot evidence.</p>
+                        <a href="#contact" class="button" aria-label="Request a custom automation demo">Request a Custom Demo</a>
+                    </div>
+                    
+                    <a href="#contact" class="button primary" aria-label="Contact Elgin Automation for a demo">Schedule a Demo</a>
                 </article>
             
             <!-- Contact -->
@@ -252,6 +266,7 @@ myFile << '\n\tUser: ' + loginUserName + '\n'
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
