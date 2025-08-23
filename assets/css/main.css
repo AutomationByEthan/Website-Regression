@@ -1718,9 +1718,9 @@ body.is-preload #footer {
        article#contact .feature,
        article#elements .feature,
        article#portfolio .feature {
-           padding: 1rem;
+           padding: 0.8rem;
            margin: 1rem 0;
-           width: 100% !important;
+           width: 95% !important;
            box-sizing: border-box;
        }
        article#portfolio .feature i {
@@ -1766,4 +1766,5 @@ body.is-preload #footer {
            height: 120px;
        }
    }
+
 
