@@ -1176,7 +1176,7 @@ body.is-article-visible #wrapper {
 }
 
 #header .content .inner p {
-    color: #d0d0d0;
+    color: #e0e0e0;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     letter-spacing: 0.15rem;
     font-size: .9rem; /* Slightly larger for balance */
@@ -1745,6 +1745,7 @@ article#portfolio .feature iframe {
         height: 150px; /* Adjust for smaller screens */
     }
 }
+
 
 
 
