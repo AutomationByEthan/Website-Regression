@@ -1543,212 +1543,216 @@ body.is-preload #footer {
 }
 
 /* Article Sections */
-article#intro,
-article#work,
-article#about-us,
-article#demo,
-article#contact,
-article#elements, 
-article#portfolio {
-    padding: 3.5rem 3rem 1rem 3rem;
-    background-color: rgba(27, 31, 34, 0.85);
-    border-radius: 4px;
-    max-width: 40rem;
-    width: 100%;
-    margin: 0 auto;
-}
-
-article#intro h2.major,
-article#work h2.major,
-article#about-us h2.major,
-article#demo h2.major,
-article#contact h2.major,
-article#elements h2.major, 
-article#portfolio h2.major {
-    border-bottom: solid 1px #ffffff;
-    width: max-content;
-    padding-bottom: 0.5rem;
-    margin: 0 auto 2rem auto;
-}
-
-article#intro .feature,
-article#work .feature,
-article#about-us .feature,
-article#demo .feature,
-article#contact .feature,
-article#elements .feature,
-article#portfolio .feature {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.05);
-    text-align: left;
-}
-
-article#intro .feature h3,
-article#work .feature h3,
-article#about-us .feature h3,
-article#demo .feature h3,
-article#contact .feature h3,
-article#elements .feature h3, 
-article#portfolio .feature h3 {
-    margin: 0 0 0.5rem 0;
-    color: #b0b0b0;
-}
-
-article#intro .feature p,
-article#work .feature p,
-article#about-us p,
-article#demo .feature p,
-article#contact p,
-article#elements p, 
-article#portfolio p {
-    color: #b0b0b0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-    margin: 0.5rem 0;
-    font-weight: 400;
-}
-
-article#demo .feature a,
-article#about-us a {
-    color: #00bfff;
-    text-decoration: underline;
-}
-
-article#demo .feature a:hover,
-article#about-us a:hover {
-    color: #00ccff;
-}
-
-article#work .feature i,
-article#intro .feature i {
-    font-size: 2em;
-    color: #b0b0b0;
-    margin-bottom: 10px;
-}
-
-article#intro .button.primary,
-article#work .button.primary,
-article#about-us .button.primary,
-article#demo .button.primary,
-article#contact .button.primary,
-article#elements .button.primary, 
-article#portfolio .button.primary {
-    display: block;
-    margin: 2rem auto 1rem auto;
-    max-width: 12rem;
-}
-
-article#intro .button.primary:hover,
-article#work .button.primary:hover,
-article#about-us .button.primary:hover,
-article#demo .button.primary:hover,
-article#contact .button.primary:hover,
-article#elements .button.primary:hover, 
-article#portfolio .button.primary:hover {
-    background-color: #00ccff;
-}
-
-article#demo .feature pre.code,
-article#about-us .feature pre.code {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    padding: 1rem;
-    overflow-x: auto;
-    font-size: 0.9rem;
-    color: #e0e0e0;
-    margin: 1rem 0;
-}
-
-article#demo .feature iframe,
-article#about-us .feature iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    border-radius: 4px;
-}
-
-@media screen and (max-width: 736px) {
-    article#intro,
-    article#work,
-    article#about-us,
-    article#demo,
-    article#contact,
-    article#elements, 
-    article#portfolio {
-        padding: 3.5rem 3rem 1rem 3rem;
-        background-color: rgba(27, 31, 34, 0.9);
-    }
-    article#intro h2.major,
-    article#work h2.major,
-    article#about-us h2.major,
-    article#demo h2.major,
-    article#contact h2.major,
-    article#elements h2.major,  
-    article#portfolio h2.major {
-        font-size: 1.2rem;
-        letter-spacing: 0.3rem;
-        width: 100%;
-        text-align: center
-    }
-
-   /* Add icon styling for Portfolio */
-article#portfolio .feature i {
-    font-size: 2em;
-    color: #b0b0b0;
-    margin-bottom: 10px;
-    display: block; /* Ensure icons stack above titles like in Why Choose Us */
-}
-
-/* Ensure consistent code and iframe styling */
-article#portfolio .feature pre.code {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    padding: 1rem;
-    overflow-x: auto;
-    font-size: 0.9rem;
-    color: #e0e0e0;
-    margin: 1rem 0;
-}
-
-article#portfolio .feature iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    border-radius: 4px;
-}
-
-/* Optional: Define style1 if needed (if Why Choose Us has unique styling) */
-.style1 {
-    background: rgba(255, 255, 255, 0.05); /* Match feature background for subtle contrast */
-}
-
-/* Ensure responsive consistency */
-@media screen and (max-width: 736px) {
-    article#portfolio {
-        padding: 3.5rem 3rem 1rem 3rem;
-        background-color: rgba(27, 31, 34, 0.9);
-    }
-    article#portfolio h2.major {
-        font-size: 1.2rem;
-        letter-spacing: 0.3rem;
-        width: 100%;
-        text-align: center;
-    }
-    article#portfolio .feature {
-        padding: 1rem;
-    }
-    article#portfolio .feature iframe {
-        height: 150px; /* Adjust for smaller screens */
-    }
-}
-
-
-
-
-
-
-
+   article#intro,
+   article#work,
+   article#about-us,
+   article#demo,
+   article#contact,
+   article#elements,
+   article#portfolio {
+       padding: 3.5rem 3rem 1rem 3rem;
+       background-color: rgba(27, 31, 34, 0.85);
+       border-radius: 4px;
+       max-width: 40rem;
+       width: 100%;
+       margin: 0 auto;
+   }
+   
+   article#intro h2.major,
+   article#work h2.major,
+   article#about-us h2.major,
+   article#demo h2.major,
+   article#contact h2.major,
+   article#elements h2.major,
+   article#portfolio h2.major {
+       border-bottom: solid 1px #ffffff;
+       width: max-content;
+       padding-bottom: 0.5rem;
+       margin: 0 auto 2rem auto;
+   }
+   
+   article#intro .feature,
+   article#work .feature,
+   article#about-us .feature,
+   article#demo .feature,
+   article#contact .feature,
+   article#elements .feature,
+   article#portfolio .feature {
+       margin: 1.5rem 0;
+       padding: 1.5rem;
+       border: 1px solid rgba(255, 255, 255, 0.25);
+       border-radius: 4px;
+       background: rgba(255, 255, 255, 0.05);
+       text-align: left;
+   }
+   
+   article#intro .feature h3,
+   article#work .feature h3,
+   article#about-us .feature h3,
+   article#demo .feature h3,
+   article#contact .feature h3,
+   article#elements .feature h3,
+   article#portfolio .feature h3 {
+       margin: 0 0 0.5rem 0;
+       color: #b0b0b0;
+   }
+   
+   article#intro .feature p,
+   article#work .feature p,
+   article#about-us p,
+   article#demo .feature p,
+   article#contact p,
+   article#elements p,
+   article#portfolio .feature p {
+       color: #b0b0b0;
+       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+       margin: 0.5rem 0;
+       font-weight: 400;
+   }
+   
+   article#demo .feature a,
+   article#about-us a,
+   article#portfolio .feature a {
+       color: #00bfff;
+       text-decoration: underline;
+   }
+   
+   article#demo .feature a:hover,
+   article#about-us a:hover,
+   article#portfolio .feature a:hover {
+       color: #00ccff;
+   }
+   
+   article#work .feature i,
+   article#intro .feature i,
+   article#portfolio .feature i {
+       font-size: 2em;
+       color: #b0b0b0;
+       margin-bottom: 10px;
+       display: block;
+   }
+   
+   article#intro .button.primary,
+   article#work .button.primary,
+   article#about-us .button.primary,
+   article#demo .button.primary,
+   article#contact .button.primary,
+   article#elements .button.primary,
+   article#portfolio .button.primary {
+       display: block;
+       margin: 2rem auto 1rem auto;
+       max-width: 12rem;
+   }
+   
+   article#intro .button.primary:hover,
+   article#work .button.primary:hover,
+   article#about-us .button.primary:hover,
+   article#demo .button.primary:hover,
+   article#contact .button.primary:hover,
+   article#elements .button.primary:hover,
+   article#portfolio .button.primary:hover {
+       background-color: #00ccff;
+   }
+   
+   article#demo .feature pre.code,
+   article#about-us .feature pre.code,
+   article#portfolio .feature pre.code {
+       background: rgba(255, 255, 255, 0.1);
+       border: 1px solid rgba(255, 255, 255, 0.3);
+       border-radius: 4px;
+       padding: 1rem;
+       overflow-x: auto;
+       font-size: 0.9rem;
+       color: #e0e0e0;
+       margin: 1rem 0;
+   }
+   
+   article#demo .feature iframe,
+   article#about-us .feature iframe,
+   article#portfolio .feature iframe {
+       width: 100%;
+       height: 200px;
+       border: none;
+       border-radius: 4px;
+   }
+   
+   /* Optional: Define style1 if needed (if Why Choose Us has unique styling) */
+   .style1 {
+       background: rgba(255, 255, 255, 0.05); /* Match feature background for subtle contrast */
+   }
+   
+   @media screen and (max-width: 736px) {
+       article#intro,
+       article#work,
+       article#about-us,
+       article#demo,
+       article#contact,
+       article#elements,
+       article#portfolio {
+           padding: 2rem 1rem 0.5rem 1rem; /* Reduced padding to widen content */
+           background-color: rgba(27, 31, 34, 0.9);
+           max-width: 95%; /* Wider than 40rem */
+           width: 100%;
+       }
+       article#intro h2.major,
+       article#work h2.major,
+       article#about-us h2.major,
+       article#demo h2.major,
+       article#contact h2.major,
+       article#elements h2.major,
+       article#portfolio h2.major {
+           font-size: 1.2rem;
+           letter-spacing: 0.3rem;
+           width: 100%;
+           text-align: center;
+       }
+       article#intro .feature,
+       article#work .feature,
+       article#about-us .feature,
+       article#demo .feature,
+       article#contact .feature,
+       article#elements .feature,
+       article#portfolio .feature {
+           padding: 1rem;
+           margin: 1rem 0;
+           width: 100%; /* Ensure cards use full available width */
+           box-sizing: border-box;
+       }
+       article#portfolio .feature i {
+           font-size: 1.5em;
+       }
+       article#portfolio .feature iframe {
+           height: 150px; /* Adjust for smaller screens */
+       }
+   }
+   
+   @media screen and (max-width: 480px) {
+       article#intro,
+       article#work,
+       article#about-us,
+       article#demo,
+       article#contact,
+       article#elements,
+       article#portfolio {
+           padding: 1.5rem 0.5rem 0.5rem 0.5rem; /* Further reduced padding */
+           max-width: 100%; /* Full width on smallest screens */
+           width: 100%;
+       }
+       article#intro .feature,
+       article#work .feature,
+       article#about-us .feature,
+       article#demo .feature,
+       article#contact .feature,
+       article#elements .feature,
+       article#portfolio .feature {
+           padding: 0.75rem;
+           margin: 0.75rem 0;
+           width: 100%;
+       }
+       article#portfolio .feature i {
+           font-size: 1.5em;
+       }
+       article#portfolio .feature iframe {
+           height: 120px; /* Smaller for very small screens */
+       }
+   }
