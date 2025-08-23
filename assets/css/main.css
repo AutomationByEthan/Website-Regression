@@ -1231,7 +1231,7 @@ body.is-article-visible #wrapper {
     #header .content .inner p {
         font-size: 0.8rem;
         line-height: 1.6;
-        color: #d0d0d0;
+        color: #e0e0e0;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
     }
     #header .content .inner .button.primary {
@@ -1252,7 +1252,7 @@ body.is-article-visible #wrapper {
     }
     #header .content .inner p {
         font-size: 0.75rem;
-        color: #b0b0b0;
+        color: #e0e0e0;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
     }
 
@@ -1766,6 +1766,7 @@ body.is-preload #footer {
            height: 120px;
        }
    }
+
 
 
 
