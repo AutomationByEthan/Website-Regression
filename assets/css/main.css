@@ -1687,12 +1687,17 @@ body.is-preload #footer {
        article#about-us,
        article#demo,
        article#contact,
-       article#elements,
-       article#portfolio {
-           padding: 2rem 1rem 0.5rem 1rem; /* Reduced padding to widen content */
+       article#elements {
+           padding: 2rem 1rem 0.5rem 1rem;
            background-color: rgba(27, 31, 34, 0.9);
-           max-width: 95%; /* Wider than 40rem */
+           max-width: 95%;
            width: 100%;
+       }
+       article#portfolio {
+           padding: 2rem 0.5rem 0.5rem 0.5rem !important; /* Reduced padding for wider cards */
+           background-color: rgba(27, 31, 34, 0.9);
+           max-width: 98% !important; /* Near full width */
+           width: 100% !important;
        }
        article#intro h2.major,
        article#work h2.major,
@@ -1715,14 +1720,14 @@ body.is-preload #footer {
        article#portfolio .feature {
            padding: 1rem;
            margin: 1rem 0;
-           width: 100%; /* Ensure cards use full available width */
+           width: 100% !important;
            box-sizing: border-box;
        }
        article#portfolio .feature i {
            font-size: 1.5em;
        }
        article#portfolio .feature iframe {
-           height: 150px; /* Adjust for smaller screens */
+           height: 150px;
        }
    }
    
@@ -1732,11 +1737,15 @@ body.is-preload #footer {
        article#about-us,
        article#demo,
        article#contact,
-       article#elements,
-       article#portfolio {
-           padding: 1.5rem 0.5rem 0.5rem 0.5rem; /* Further reduced padding */
-           max-width: 100%; /* Full width on smallest screens */
+       article#elements {
+           padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+           max-width: 100%;
            width: 100%;
+       }
+       article#portfolio {
+           padding: 1.5rem 0.25rem 0.5rem 0.25rem !important; /* Minimal padding */
+           max-width: 100% !important;
+           width: 100% !important;
        }
        article#intro .feature,
        article#work .feature,
@@ -1747,12 +1756,14 @@ body.is-preload #footer {
        article#portfolio .feature {
            padding: 0.75rem;
            margin: 0.75rem 0;
-           width: 100%;
+           width: 100% !important;
+           box-sizing: border-box;
        }
        article#portfolio .feature i {
            font-size: 1.5em;
        }
        article#portfolio .feature iframe {
-           height: 120px; /* Smaller for very small screens */
+           height: 120px;
        }
    }
+
