@@ -1147,7 +1147,7 @@ body.is-preload #header .logo {
         line-height: 4.75rem;
     }
     #header .logo .icon:before {
-        font-size: 3.5em;
+        font-size: 4.5em;
     }
 }
 
@@ -1856,6 +1856,7 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
 
 
