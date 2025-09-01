@@ -875,7 +875,7 @@ button,
     outline: 0;
     padding: 0 1.25rem;
     text-align: center;
-    text-decoration: none; !important;
+    text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -1559,318 +1559,253 @@ body.is-preload #footer {
 }
 
 /* Article Sections */
-   article#intro,
-   article#work,
-   article#about-us,
-   article#demo,
-   article#contact,
-   article#elements,
-   article#portfolio {
-       padding: 3.5rem 3rem 1rem 3rem;
-       background-color: rgba(27, 31, 34, 0.85);
-       border-radius: 4px;
-       max-width: 40rem;
-       width: 100%;
-       margin: 0 auto;
-   }
-   
-   article#intro h2.major,
-   article#work h2.major,
-   article#about-us h2.major,
-   article#demo h2.major,
-   article#contact h2.major,
-   article#elements h2.major,
-   article#portfolio h2.major {
-       border-bottom: solid 1px #ffffff;
-       width: max-content;
-       padding-bottom: 0.5rem;
-       margin: 0 auto 2rem auto;
-   }
-   
-   article#intro .feature,
-   article#work .feature,
-   article#about-us .feature,
-   article#demo .feature,
-   article#contact .feature,
-   article#elements .feature,
-   article#portfolio .feature {
-       margin: 1.5rem 0;
-       padding: 1.5rem;
-       border: 1px solid rgba(255, 255, 255, 0.25);
-       border-radius: 4px;
-       background: rgba(255, 255, 255, 0.05);
-       text-align: left;
-   }
-   
-   article#intro .feature h3,
-   article#work .feature h3,
-   article#about-us .feature h3,
-   article#demo .feature h3,
-   article#contact .feature h3,
-   article#elements .feature h3,
-   article#portfolio .feature h3 {
-       margin: 0 0 0.5rem 0;
-       color: #b0b0b0;
-   }
-   
-   article#intro .feature p,
-   article#work .feature p,
-   article#about-us p,
-   article#demo .feature p,
-   article#contact p,
-   article#elements p,
-   article#portfolio .feature p {
-       color: #b0b0b0;
-       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-       margin: 0.5rem 0;
-       font-weight: 400;
-   }
-   
-   article#demo .feature a,
-   article#about-us a,
-   article#portfolio .feature a {
-       color: #00bfff;
-       text-decoration: underline;
-   }
-   
-   article#demo .feature a:hover,
-   article#about-us a:hover,
-   article#portfolio .feature a:hover {
-       color: #00ccff;
-   }
-   
-   article#work .feature i,
-   article#intro .feature i,
-   article#portfolio .feature i {
-       font-size: 2em;
-       color: #b0b0b0;
-       margin-bottom: 10px;
-       display: block;
-   }
-   
-   article#intro .button.primary,
-   article#work .button.primary,
-   article#about-us .button.primary,
-   article#demo .button.primary,
-   article#contact .button.primary,
-   article#elements .button.primary,
-   article#portfolio .button.primary {
-       display: block;
-       margin: 2rem auto 1rem auto;
-       max-width: 12rem;
-       text-decoration: none !important;
-   }
-   
-   article#intro .button.primary:hover,
-   article#work .button.primary:hover,
-   article#about-us .button.primary:hover,
-   article#demo .button.primary:hover,
-   article#contact .button.primary:hover,
-   article#elements .button.primary:hover,
-   article#portfolio .button.primary:hover {
-       background-color: #00ccff;
-   }
-   
-   article#demo .feature pre.code,
-   article#about-us .feature pre.code,
-   article#portfolio .feature pre.code {
-       background: rgba(255, 255, 255, 0.1);
-       border: 1px solid rgba(255, 255, 255, 0.3);
-       border-radius: 4px;
-       padding: 1rem;
-       overflow-x: auto;
-       font-size: 0.9rem;
-       color: #e0e0e0;
-       margin: 1rem 0;
-   }
-   
-   article#demo .feature iframe,
-   article#about-us .feature iframe,
-   article#portfolio .feature iframe {
-       width: 100%;
-       height: 200px;
-       border: none;
-       border-radius: 4px;
-   }
-   
-   /* Optional: Define style1 if needed (if Why Choose Us has unique styling) */
-   .style1 {
-       background: rgba(255, 255, 255, 0.05); /* Match feature background for subtle contrast */
-   }
-   
-   @media screen and (max-width: 736px) {
-       article#intro,
-       article#work,
-       article#about-us,
-       article#demo,
-       article#contact,
-       article#elements {
-           padding: 2rem 1rem 0.5rem 1rem;
-           background-color: rgba(27, 31, 34, 0.9);
-           max-width: 95%;
-           width: 100%;
-       }
-       article#portfolio {
-           padding: 2rem 0.5rem 0.5rem 0.5rem !important; /* Reduced padding for wider cards */
-           background-color: rgba(27, 31, 34, 0.9);
-           max-width: 98% !important; /* Near full width */
-           width: 100% !important;
-       }
-       article#intro h2.major,
-       article#work h2.major,
-       article#about-us h2.major,
-       article#demo h2.major,
-       article#contact h2.major,
-       article#elements h2.major,
-       article#portfolio h2.major {
-           font-size: 1.2rem;
-           letter-spacing: 0.3rem;
-           width: 100%;
-           text-align: center;
-       }
-       article#intro .feature,
-       article#work .feature,
-       article#about-us .feature,
-       article#demo .feature,
-       article#contact .feature,
-       article#elements .feature,
-       article#portfolio .feature {
-           padding: 0.8rem !important;
-           margin: 1rem 0;
-           width: 95% !important;
-           box-sizing: border-box;
-       }
-       article#portfolio .feature i {
-           font-size: 1.5em;
-       }
-       article#portfolio .feature iframe {
-           height: 150px;
-       }
+article#services,
+article#about-us,
+article#portfolio,
+article#testimonials,
+article#contact {
+    padding: 3.5rem 3rem 1rem 3rem;
+    background-color: rgba(27, 31, 34, 0.85);
+    border-radius: 4px;
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
+}
 
-      article#testimonials {
-         padding: 2rem 0.5rem 0.5rem 0.5rem !important;
-         background-color: rgba(27, 31, 34, 0.9);
-         max-width: 98% !important;
-         width: 100% !important;
-         }
-         article#testimonials .feature {
-         padding: 0.8rem !important;
-         margin: 1rem auto;
-         width: 95% !important;
-         box-sizing: border-box;
-         }
-         article#testimonials .feature i {
-         font-size: 1.5em;
-         }
-   }
-   
-   @media screen and (max-width: 480px) {
-       article#intro,
-       article#work,
-       article#about-us,
-       article#demo,
-       article#contact,
-       article#elements {
-           padding: 1.5rem 0.5rem 0.5rem 0.5rem;
-           max-width: 100%;
-           width: 100%;
-       }
-       article#portfolio {
-           padding: 1.5rem 0.25rem 0.5rem 0.25rem !important; /* Minimal padding */
-           max-width: 100% !important;
-           width: 100% !important;
-       }
-       article#intro .feature,
-       article#work .feature,
-       article#about-us .feature,
-       article#demo .feature,
-       article#contact .feature,
-       article#elements .feature,
-       article#portfolio .feature {
-           padding: 0.75rem;
-           margin: 0.75rem 0;
-           width: 100% !important;
-           box-sizing: border-box;
-       }
-       article#portfolio .feature i {
-           font-size: 1.5em;
-       }
-       article#portfolio .feature iframe {
-           height: 120px;
-       }
+article#services h2.major,
+article#about-us h2.major,
+article#portfolio h2.major,
+article#testimonials h2.major,
+article#contact h2.major {
+    border-bottom: solid 1px #ffffff;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 auto 2rem auto;
+}
 
-      article#testimonials {
-         padding: 1.5rem 0.25rem 0.5rem 0.25rem !important;
-         max-width: 100% !important;
-         width: 100% !important;
-         }
-         article#testimonials .feature {
-         padding: 0.6rem !important;
-         margin: 0.75rem auto;
-         width: 90% !important;
-         box-sizing: border-box;
-         }
-         article#testimonials .feature i {
-         font-size: 1.5em;
-         }
-   }
+article#services .feature,
+article#about-us .feature,
+article#portfolio .feature,
+article#testimonials .feature,
+article#contact .feature {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: left;
+    transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
 
-      article#testimonials {
-       padding: 3.5rem 3rem 1rem 3rem;
-       background-color: rgba(27, 31, 34, 0.85);
-       border-radius: 4px;
-       max-width: 40rem;
-       width: 100%;
-       margin: 0 auto;
-      }
-      
-      article#testimonials h2.major {
-       border-bottom: solid 1px #ffffff;
-       width: max-content;
-       padding-bottom: 0.5rem;
-       margin: 0 auto 2rem auto;
-      }
-      
-      article#testimonials .feature {
-       margin: 1.5rem 0;
-       padding: 1.5rem;
-       border: 1px solid rgba(255, 255, 255, 0.25);
-       border-radius: 4px;
-       background: rgba(255, 255, 255, 0.05);
-       text-align: left;
-      }
-      
-      article#testimonials .feature h3 {
-       margin: 0 0 0.5rem 0;
-       color: #b0b0b0;
-      }
-      
-      article#testimonials .feature p {
-       color: #b0b0b0;
-       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-       margin: 0.5rem 0;
-       font-weight: 400;
-      }
-      
-      article#testimonials .feature i {
-       font-size: 2em;
-       color: #b0b0b0;
-       margin-bottom: 10px;
-       display: block;
-      }
-      
-      article#testimonials .button.primary {
-       display: block;
-       margin: 2rem auto 1rem auto;
-       max-width: 12rem;
-      }
-      
-      article#testimonials .button.primary:hover {
-       background-color: #00ccff;
-      }
+article#services .feature:hover,
+article#portfolio .feature:hover,
+article#testimonials .feature:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #00bfff;
+}
 
+article#services .feature h3,
+article#about-us .feature h3,
+article#portfolio .feature h3,
+article#testimonials .feature h3,
+article#contact .feature h3 {
+    margin: 0 0 0.5rem 0;
+    color: #b0b0b0;
+}
 
+article#services .feature p,
+article#about-us p,
+article#portfolio .feature p,
+article#testimonials .feature p,
+article#contact p {
+    color: #b0b0b0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    margin: 0.5rem 0;
+    font-weight: 400;
+}
 
+article#about-us a,
+article#portfolio .feature a,
+article#testimonials .feature a {
+    color: #00bfff;
+    text-decoration: underline;
+}
 
+article#about-us a:hover,
+article#portfolio .feature a:hover,
+article#testimonials .feature a:hover {
+    color: #00ccff;
+}
 
+article#services .feature i,
+article#about-us .feature i,
+article#portfolio .feature i,
+article#testimonials .feature i {
+    font-size: 2em;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+    display: block;
+}
 
+article#services .button.primary,
+article#about-us .button.primary,
+article#portfolio .button.primary,
+article#testimonials .button.primary,
+article#contact .button.primary {
+    display: block;
+    margin: 2rem auto 1rem auto;
+    max-width: 12rem;
+    text-decoration: none !important;
+}
+
+article#services .button.primary:hover,
+article#about-us .button.primary:hover,
+article#portfolio .button.primary:hover,
+article#testimonials .button.primary:hover,
+article#contact .button.primary:hover {
+    background-color: #00ccff;
+}
+
+article#portfolio .feature pre.code,
+article#testimonials .feature pre.code {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin: 1rem 0;
+}
+
+article#portfolio .feature iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 4px;
+}
+
+ /* Optional: Define style1 if needed (if Why Choose Us has unique styling) */
+.style1 {
+    background: rgba(255, 255, 255, 0.05); /* Match feature background for subtle contrast */
+}
+
+@media screen and (max-width: 736px) {
+    article#services,
+    article#about-us,
+    article#portfolio,
+    article#testimonials,
+    article#contact {
+        padding: 2rem 0.5rem 0.5rem 0.5rem !important;
+        background-color: rgba(27, 31, 34, 0.9);
+        max-width: 98% !important;
+        width: 100% !important;
+    }
+    article#services h2.major,
+    article#about-us h2.major,
+    article#portfolio h2.major,
+    article#testimonials h2.major,
+    article#contact h2.major {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+        width: 100%;
+        text-align: center;
+    }
+    article#services .feature,
+    article#about-us .feature,
+    article#portfolio .feature,
+    article#testimonials .feature,
+    article#contact .feature {
+        padding: 0.8rem !important;
+        margin: 1rem 0;
+        width: 95% !important;
+        box-sizing: border-box;
+    }
+    article#services .feature i,
+    article#about-us .feature i,
+    article#portfolio .feature i,
+    article#testimonials .feature i {
+        font-size: 1.5em;
+    }
+    article#portfolio .feature iframe {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    article#services,
+    article#about-us,
+    article#portfolio,
+    article#testimonials,
+    article#contact {
+        padding: 1.5rem 0.25rem 0.5rem 0.25rem !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    article#services .feature,
+    article#about-us .feature,
+    article#portfolio .feature,
+    article#testimonials .feature,
+    article#contact .feature {
+        padding: 0.6rem !important;
+        margin: 0.75rem 0;
+        width: 90% !important;
+        box-sizing: border-box;
+    }
+    article#portfolio .feature iframe {
+        height: 120px;
+    }
+}
+
+/* Background (unchanged) */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#bg:before {
+    background-image: linear-gradient(
+        45deg,
+        rgba(19, 21, 25, 0.95),
+        rgba(0, 191, 255, 0.05),
+        rgba(19, 21, 25, 0.95)
+    ), url("../../images/overlay.png");
+    background-size: auto, 256px 256px;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    z-index: 2;
+}
+
+#bg:after {
+    background-image: url("../../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    filter: brightness(0.4);
+}
+
+body.is-article-visible #bg:after {
+    filter: brightness(0.3);
+}
+
+@media screen and (max-width: 736px) {
+    #bg:before {
+        background-image: linear-gradient(
+            45deg,
+            rgba(19, 21, 25, 0.98),
+            rgba(0, 191, 255, 0.02),
+            rgba(19, 21, 25, 0.98)
+        ), url("../../images/overlay.png");
+    }
+    #bg:after {
+        filter: brightness(0.35);
+    }
+    body.is-article-visible #bg:after {
+        filter: brightness(0.25);
+    }
+}
