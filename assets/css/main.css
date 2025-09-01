@@ -1292,6 +1292,11 @@ body.is-article-visible #header {
     opacity: 0;
 }
 
+body:not(.is-preload):not(.is-article-visible) #header {
+    opacity: 1 !important; /* Ensure header visible when returning to main view */
+    display: flex !important;
+}
+
 /* Navigation */
 #header nav ul {
     display: flex;
@@ -1857,4 +1862,5 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
