@@ -1112,7 +1112,7 @@ body.is-article-visible #wrapper {
     border: solid 1px #ffffff;
     border-radius: 100%;
     opacity: 0;
-    animation: logoFadeIn 1s ease-out 0.2s forwards;
+    animation: logoFadeIn 2s ease-out 0.2s forwards;
 }
 
 body.is-preload #header .logo {
@@ -1856,6 +1856,7 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
 
 
