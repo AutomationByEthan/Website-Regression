@@ -1588,13 +1588,10 @@ article#about-us .feature,
 article#portfolio .feature,
 article#testimonials .feature,
 article#contact .feature {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.05);
-    text-align: left;
-    transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+     padding: 0.6rem 0.05rem !important;
+    margin: 0.75rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 article#services .feature:hover,
@@ -1812,6 +1809,7 @@ body.is-article-visible #bg:after {
         filter: brightness(0.25);
     }
 }
+
 
 
 
