@@ -875,7 +875,7 @@ button,
     outline: 0;
     padding: 0 1.25rem;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none; !important;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -1856,17 +1856,3 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
