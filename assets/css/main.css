@@ -1126,7 +1126,7 @@ body.is-article-visible #wrapper {
 #header .logo .icon:before {
     transition: color 0.3s ease-in-out;
     font-family: 'Font Awesome 5 Brands';
-    font-weight: 400;
+    font-weight: 600;
     font-size: 2.5em;
     color: #ffffff;
 }
@@ -1851,4 +1851,5 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
