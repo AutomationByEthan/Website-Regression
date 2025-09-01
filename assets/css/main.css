@@ -1718,7 +1718,7 @@ article#portfolio .feature iframe {
     article#testimonials .feature,
     article#contact .feature {
         padding: 0.8rem 0.15rem !important;
-        margin: 1rem 0;
+        margin: 1rem 0 !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box;
@@ -1811,5 +1811,6 @@ body.is-article-visible #bg:after {
         filter: brightness(0.25);
     }
 }
+
 
 
