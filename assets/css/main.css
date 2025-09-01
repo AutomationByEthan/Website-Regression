@@ -1140,18 +1140,6 @@ body.is-preload #header .logo {
     color: #00bfff;
 }
 
-body.is-preload #header .logo, body.is-preload #header .logo * {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    display: none !important;
-}
-
-body.is-article-visible #header .logo {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    display: none !important;
-}
-
 body:not(.is-preload):not(.is-article-visible) #header .logo {
     opacity: 1 !important; /* Ensure logo visible when returning to main view */
     display: block !important;
@@ -1880,6 +1868,7 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
 
 
