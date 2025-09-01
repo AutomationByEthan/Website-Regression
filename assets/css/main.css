@@ -1647,6 +1647,7 @@ body.is-preload #footer {
        display: block;
        margin: 2rem auto 1rem auto;
        max-width: 12rem;
+       text-decoration: none !important;
    }
    
    article#intro .button.primary:hover,
@@ -1856,3 +1857,4 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
