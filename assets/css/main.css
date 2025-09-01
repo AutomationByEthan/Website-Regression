@@ -1111,7 +1111,17 @@ body.is-article-visible #wrapper {
     line-height: 5.5rem;
     border: solid 1px #ffffff;
     border-radius: 100%;
+    opacity: 0;
     animation: logoFadeIn 1s ease-out 0.2s forwards;
+}
+
+body.is-preload #header .logo {
+    opacity: 0 !important; /* Ensure logo is hidden during preload */
+    visibility: hidden; /* Prevent rendering before animation */
+}
+
+body.is-preload #header .logo * {
+    visibility: hidden; /* Hide child elements (icon) */
 }
 
 @keyframes logoFadeIn {
@@ -1127,7 +1137,7 @@ body.is-article-visible #wrapper {
     transition: color 0.3s ease-in-out;
     font-family: 'Font Awesome 5 Brands';
     font-weight: 400;
-    font-size: 3.5em;
+    font-size: 4em;
     color: #ffffff;
 }
 
@@ -1142,7 +1152,7 @@ body.is-article-visible #wrapper {
         line-height: 4.75rem;
     }
     #header .logo .icon:before {
-        font-size: 1.8em;
+        font-size: 3.8em;
     }
 }
 
@@ -1851,6 +1861,7 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
 
 
