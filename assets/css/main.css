@@ -1111,7 +1111,12 @@ body.is-article-visible #wrapper {
     line-height: 5.5rem;
     border: solid 1px #ffffff;
     border-radius: 100%;
+    opacity: 0;
     animation: logoFadeIn 1s ease-out 0.2s forwards;
+}
+
+body.is-preload #header .logo {
+    opacity: 0; /* Ensure logo is hidden during preload */
 }
 
 @keyframes logoFadeIn {
@@ -1851,6 +1856,7 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
 
 
