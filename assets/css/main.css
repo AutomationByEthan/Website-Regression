@@ -1696,7 +1696,7 @@ article#portfolio .feature iframe {
     article#portfolio,
     article#testimonials,
     article#contact {
-        padding: 2rem 0.5rem 0.5rem 0.5rem !important;
+        padding: 2rem 0.1rem 0.5rem 0.1rem !important;
         background-color: rgba(27, 31, 34, 0.9);
         max-width: 98% !important;
         width: 100% !important;
@@ -1717,11 +1717,12 @@ article#portfolio .feature iframe {
     article#portfolio .feature,
     article#testimonials .feature,
     article#contact .feature {
-        padding: 0.8rem 0.15rem !important;
+        padding: 0.8rem 0.1rem !important;
         margin: 1rem 0 !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box;
+        border-radius: 4px;
     }
     article#services .feature i,
     article#about-us .feature i,
@@ -1811,6 +1812,7 @@ body.is-article-visible #bg:after {
         filter: brightness(0.25);
     }
 }
+
 
 
 
