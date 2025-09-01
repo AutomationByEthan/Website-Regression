@@ -1079,7 +1079,11 @@ body.is-article-visible #wrapper {
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
-    opacity: 1 !important;
+    opacity: 0 !important;
+    animation: headerFadeIn 1s ease-out 0.1s forwards;
+    will-change: opacity;
+    -webkit-transform: translateZ(0); /* Optimize rendering */
+    transform: translateZ(0);
 }
 
 #header > * {
@@ -1861,6 +1865,7 @@ body.is-preload #footer {
       article#testimonials .button.primary:hover {
        background-color: #00ccff;
       }
+
 
 
 
