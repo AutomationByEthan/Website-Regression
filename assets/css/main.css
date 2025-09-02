@@ -1009,21 +1009,11 @@ body.is-preload #bg:before {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    min-height: 100vh; /* Ensure consistent height to prevent jump */
+    min-height: auto; /* Ensure consistent height to prevent jump */
     width: 100%;
     padding: 1.5rem;
     gap: 1.5rem;
     z-index: 3;
-}
-
-body.is-article-visible #wrapper {
-    min-height: 100vh;
-    gap: 0;
-}
-
-body.is-preload #wrapper {
-    opacity: 1; /* Avoid opacity transition to prevent jump */
-    padding: 1.5rem; /* Consistent padding during preload */
 }
 
 @media screen and (max-width: 1680px) {
@@ -1062,10 +1052,6 @@ body.is-preload #wrapper {
     text-align: center;
 }
 
-body.is-preload #header {
-    opacity: 1; /* Avoid opacity transition to prevent jump */
-}
-
 #header > * {
     transition: opacity 0.325s ease-in-out;
     position: relative;
@@ -1097,10 +1083,6 @@ body.is-preload #header {
     border-radius: 100%;
     opacity: 0;
     animation: logoFadeIn 2s ease-out 0.2s forwards;
-}
-
-body.is-preload #header .logo {
-    display: none; /* Completely hide logo during preload */
 }
 
 @keyframes logoFadeIn {
@@ -1725,5 +1707,6 @@ body.is-article-visible .about-us {
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
+
 
 
