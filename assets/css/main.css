@@ -1131,12 +1131,32 @@ body:not(.is-preload):not(.is-article-visible) #header .logo {
 
 @media screen and (max-width: 736px) {
     #header .logo {
+        visibility: hidden; /* Reinforce global rule */
+        opacity: 0;
+        animation: logoFadeIn 1.2s ease-out 0.3s forwards; /* Optional: Shorter animation/delay for mobile performance */
         width: 4.75rem;
         height: 4.75rem;
         line-height: 4.75rem;
     }
     #header .logo .icon:before {
         font-size: 4.5em;
+    }
+
+    body.is-preload #header .logo {
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header .logo {
+        visibility: hidden; /* Reinforce for smaller mobiles */
+        opacity: 0;
+        animation: logoFadeIn 1s ease-out 0.2s forwards; /* Optional: Even shorter for very small screens */
+    }
+    body.is-preload #header .logo {
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
 }
 
@@ -1724,4 +1744,5 @@ body.is-article-visible .about-us {
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
+
 
