@@ -1009,11 +1009,16 @@ body.is-preload #bg:before {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    min-height: auto; /* Ensure consistent height to prevent jump */
+    min-height: auto;
     width: 100%;
     padding: 1.5rem;
     gap: 1.5rem;
     z-index: 3;
+}
+
+body.is-article-visible #wrapper {
+    min-height: 100vh;
+    gap: 0;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1707,6 +1712,3 @@ body.is-article-visible .about-us {
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
-
-
-
