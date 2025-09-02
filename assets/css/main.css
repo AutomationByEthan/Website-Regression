@@ -1090,6 +1090,10 @@ body.is-article-visible #wrapper {
     animation: logoFadeIn 2s ease-out 0.2s forwards;
 }
 
+body.is-preload #header .logo {
+    display: none; /* Completely hide logo during preload */
+}
+
 @keyframes logoFadeIn {
     0% { opacity: 0; transform: scale(0.8); }
     100% { opacity: 1; transform: scale(1); }
@@ -1712,3 +1716,4 @@ body.is-article-visible .about-us {
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
+
