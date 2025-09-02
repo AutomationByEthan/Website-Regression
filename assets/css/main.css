@@ -1009,7 +1009,7 @@ body.is-preload #bg:before {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    min-height: auto;
+    min-height: 100vh; /* Ensure consistent height to prevent jump */
     width: 100%;
     padding: 1.5rem;
     gap: 1.5rem;
@@ -1019,6 +1019,11 @@ body.is-preload #bg:before {
 body.is-article-visible #wrapper {
     min-height: 100vh;
     gap: 0;
+}
+
+body.is-preload #wrapper {
+    opacity: 1; /* Avoid opacity transition to prevent jump */
+    padding: 1.5rem; /* Consistent padding during preload */
 }
 
 @media screen and (max-width: 1680px) {
@@ -1055,6 +1060,10 @@ body.is-article-visible #wrapper {
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
+}
+
+body.is-preload #header {
+    opacity: 1; /* Avoid opacity transition to prevent jump */
 }
 
 #header > * {
@@ -1716,4 +1725,5 @@ body.is-article-visible .about-us {
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
+
 
