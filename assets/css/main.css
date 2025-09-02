@@ -1080,6 +1080,7 @@ body.is-article-visible #wrapper {
 }
 
 #header .logo {
+    visibility: hidden;
     transition: transform 0.3s ease-in-out;
     width: 5.5rem;
     height: 5.5rem;
@@ -1087,12 +1088,23 @@ body.is-article-visible #wrapper {
     border: solid 1px #ffffff;
     border-radius: 100%;
     opacity: 0;
-    animation: logoFadeIn 2s ease-out 0.2s forwards;
+    animation: logoFadeIn 2s ease-out 0.5s forwards;
 }
 
 @keyframes logoFadeIn {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+body.is-preload #header .logo {
+    visibility: hidden;
+    opacity: 0;
 }
 
 #header .logo:hover {
@@ -1712,3 +1724,4 @@ body.is-article-visible .about-us {
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
+
