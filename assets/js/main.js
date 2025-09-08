@@ -172,6 +172,10 @@
         event.preventDefault();
         event.stopPropagation();
         $main._show(id);
+        // Google Analytics: Track virtual page view
+        gtag('event', 'page_view', {
+            'page_path': '/' + id
+        });
     });
 
     $window.on('hashchange', (event) => {
@@ -185,6 +189,10 @@
                 event.preventDefault();
                 event.stopPropagation();
                 $main._show(location.hash.substr(1));
+                // Google Analytics: Track virtual page view on hash change
+                gtag('event', 'page_view', {
+                    'page_path': '/' + location.hash.substr(1)
+                });
             }
         }
     });
@@ -222,4 +230,3 @@
     }
 
 })(jQuery);
-
