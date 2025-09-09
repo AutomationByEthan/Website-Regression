@@ -102,7 +102,7 @@
                     <a href="#contact" class="button primary" aria-label="Contact Kyperian Automation for a demo">Schedule a Demo</a>
                 </article>
 
-        <!-- Demo -->
+        <!-- Portfolio -->
             <article id="portfolio" class="style1" role="region" aria-labelledby="portfolio-title">
                 <div class="close">Close</div>
                 <h2 id="portfolio-title" class="major">Portfolio: Proven Automation Success</h2>
@@ -117,7 +117,8 @@
                     <p><strong>Solution:</strong> Developed a Katalon Studio test suite with robust XPath locators and modular Groovy scripts for stability.</p>
                     <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
                     <p><strong>Example:</strong> A snippit from one of our scripts with stable XPaths tested across Chrome and Firefox with zero breaks over 6 months.</p>
-                    <pre class="code"><code>// Sample Katalon Studio script excerptWebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Login.jpg')
+                    <pre class="code"><code>Sample Katalon Studio script excerpt:
+WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Login.jpg')
 myFile << "\n============================== [ Automation Execution of ${GlobalVariable.Scenario} ] ==============================\n"myFile << "\n\tScript Purpose: Identify specific test data, edit the task, and validate that the edit was made correctly.\n"// Login
 WebUI.setText(findTestObject('Object Repository/02_LoginPage/fld_UserName'), GlobalVariable.AdminUser)
 WebUI.setEncryptedText(findTestObject('Object Repository/02_LoginPage/fld_Password'), GlobalVariable.Password)
@@ -128,7 +129,12 @@ WebUI.delay(5)WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (
 WebUI.click(findTestObject('Object Repository/03_HomePage/btn_AccountDropdown'))
 String loginUserName = WebUI.getText(findTestObject('Object Repository/03_HomePage/ddl_UserName'))
 myFile << '\n\tUser: ' + loginUserName + '\n'
-                     </code></pre>                <pre class="code"><code>// Sample Katalon Studio script excerptXPath Exapmle 1: //div[@aria-label="Task name"]XPath Exapmle 2: //button[@type="submit"]]
+                     </code></pre><pre class="code"><code>Sample Katalon Studio script excerpt
+XPath Exapmle 1: line item for a task
+//div[@aria-label="Task name"]
+
+XPath Exapmle 2: A submit button
+//button[@type="submit"]
                     </code></pre>
                         <p><a href="https://github.com/automationbyethan/sample-script" target="_blank" aria-label="View sample XPath script on GitHub">View Full Script</a>.</p>
                     </div>                <!-- Case Study 2: Transparent Validation -->
@@ -265,6 +271,7 @@ myFile << '\n\tUser: ' + loginUserName + '\n'
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script></body>
 </html>
+
 
 
 
