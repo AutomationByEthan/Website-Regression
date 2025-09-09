@@ -117,6 +117,7 @@
                     <p><strong>Solution:</strong> Developed a Katalon Studio test suite with robust XPath locators and modular Groovy scripts for stability.</p>
                     <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
                     <p><strong>Example:</strong> A snippit from one of our scripts with stable XPaths tested across Chrome and Firefox with zero breaks over 6 months.</p>
+                    <p><strong>Script Exapmle:</strong> A sample Katalon Studio script excerpt:</p>
                     <pre class="code"><code>Sample Katalon Studio script excerpt:
 WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Login.jpg')
 myFile << "\n============================== [ Automation Execution of ${GlobalVariable.Scenario} ] ==============================\n"myFile << "\n\tScript Purpose: Identify specific test data, edit the task, and validate that the edit was made correctly.\n"// Login
@@ -131,11 +132,11 @@ String loginUserName = WebUI.getText(findTestObject('Object Repository/03_HomePa
 myFile << '\n\tUser: ' + loginUserName + '\n'
                     </code></pre>
                     <p><strong>XPath Exapmle 1:</strong> An object locator for a particular task line item</p>
-                    <pre class="code"><code>Sample Katalon Studio script excerpt
+                    <pre class="code"><code>
 //div[@aria-label="Task name"]
                     </code></pre>
                     <p><strong>XPath Exapmle 2:</strong> An object locator for a submit button</p>
-                    <pre class="code"><code>Sample Katalon Studio script excerp
+                    <pre class="code"><code>
 //button[@type="submit"]
                     </code></pre>
                         <p><a href="https://github.com/automationbyethan/sample-script" class="button primary" aria-label="View sample XPath script on GitHub">View Full Script</a>.</p>
@@ -274,6 +275,7 @@ myFile << '\n\tUser: ' + loginUserName + '\n'
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script></body>
 </html>
+
 
 
 
