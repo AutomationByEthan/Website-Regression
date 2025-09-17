@@ -221,7 +221,7 @@ myFile << '\n\tUser: ' + loginUserName + '\n'
             <div class="close">Close</div>
             <h2 id="contact-title" class="major">Contact</h2>
             <p>Ready to streamline your testing with robust automation and clear reporting? Contact us to schedule a demo or request a sample Katalon Studio script showcasing our clean coding and stable designs!</p>
-            <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title">
+            <form method="post" action="https://formspree.io/f/xeoknper" aria-labelledby="contact-title" onsubmit="gtag('event', 'form_submission', { 'event_category': 'Contact', 'event_label': 'Contact Form' });">
                 <div class="fields">
                     <div class="field half">
                         <label for="name">Name</label>
@@ -270,5 +270,6 @@ myFile << '\n\tUser: ' + loginUserName + '\n'
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script></body>
 </html>
+
 
 
