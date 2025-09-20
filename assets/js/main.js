@@ -21,6 +21,9 @@
     $window.on('load', function() {
         window.setTimeout(function() {
             $body.removeClass('is-preload');
+            // Initialize article visibility: hide all articles on load.
+            $main_articles.css({ opacity: 0, visibility: 'hidden' });
+            $main_articles.removeClass('active');
         }, 100);
     });
 
@@ -49,23 +52,34 @@
             // External link? Bail.
             if ($this.attr('href').charAt(0) != '#')
                 return;
-            // Deactivate all links.
-            $nav_a.removeClass('active');
-            // Activate link *and* lock it (so Scrolly doesn't try to activate other links as we're scrolling to this one's section).
-            $this.addClass('active').addClass('active-locked');
+            // Deactivate all links and articles.
+            $nav_a.removeClass('active active-locked');
+            $main_articles.removeClass('active').css({ opacity: 0, visibility: 'hidden' });
+            // Activate clicked link and corresponding article.
+            $this.addClass('active active-locked');
+            var id = $this.attr('href');
+            var $section = $(id);
+            if ($section.length > 0) {
+                $section.addClass('active').css({ opacity: 1, visibility: 'visible' });
+                $body.addClass('is-article-visible');
+            }
+            // Track navigation event in GA4.
+            gtag('event', 'navigate_section', {
+                'event_category': 'Navigation',
+                'event_label': 'Open ' + id.replace('#', '')
+            });
         })
         .each(function() {
             var $this = $(this),
                 id = $this.attr('href'),
                 $section = $(id);
-            // No section for this link? Bail.
+            // No section? Bail.
             if ($section.length < 1)
                 return;
             // Scrolly.
             $this.scrolly({
                 speed: 1000,
                 offset: function() {
-                    // If we're in a small viewport, use a smaller offset.
                     if (breakpoints.active('<=medium'))
                         return $header.outerHeight() - 10;
                     return 0;
@@ -76,28 +90,45 @@
     // Close button handler.
     $main_articles.each(function() {
         var $this = $(this);
-        // Already active? Skip.
-        if ($this.hasClass('active'))
-            return;
-        // Find close button.
         var $close = $this.find('.close');
         $close.on('click', function() {
-            // Remove active class from article.
-            $this.removeClass('active');
+            // Remove active class and hide article.
+            $this.removeClass('active').css({ opacity: 0, visibility: 'hidden' });
             // Remove article-visible from body.
             $body.removeClass('is-article-visible');
-            // Reset hash to return to main view.
+            // Reset hash to homepage.
             window.location.hash = '';
             // Ensure header content is visible.
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
-            // Reset all articles to hidden.
-            $main_articles.not($this).css({ opacity: 0, visibility: 'hidden' });
+            // Hide all other articles.
+            $main_articles.not($this).css({ opacity: 0, visibility: 'hidden' }).removeClass('active');
             // Track close event in GA4.
-            gtag('event', 'close_section', {
-                'event_category': 'Navigation',
-                'event_label': 'Close ' + $this.attr('id')
-            });
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'close_section', {
+                    'event_category': 'Navigation',
+                    'event_label': 'Close ' + $this.attr('id')
+                });
+            }
         });
+    });
+
+    // Handle initial hash on load.
+    $window.on('load hashchange', function() {
+        var hash = window.location.hash;
+        if (hash && hash !== '#') {
+            var $section = $(hash);
+            if ($section.length > 0) {
+                $main_articles.removeClass('active').css({ opacity: 0, visibility: 'hidden' });
+                $section.addClass('active').css({ opacity: 1, visibility: 'visible' });
+                $body.addClass('is-article-visible');
+                $nav_a.removeClass('active active-locked');
+                $nav_a.filter('[href="' + hash + '"]').addClass('active active-locked');
+            }
+        } else {
+            $main_articles.removeClass('active').css({ opacity: 0, visibility: 'hidden' });
+            $body.removeClass('is-article-visible');
+            $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+        }
     });
 
     // Scrolly.
