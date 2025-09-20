@@ -1748,6 +1748,7 @@ body.is-article-visible .about-us {
 /* Fade-in animations for header and main sections */
 .fade-in {
     opacity: 0;
+    visibility: hidden;
     animation: fadeIn 0.5s ease-in forwards;
 }
 
@@ -1758,38 +1759,72 @@ body.is-article-visible .about-us {
 .fade-in[data-delay="1s"] { animation-delay: 1s; }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; visibility: hidden; transform: translateY(10px); }
+    to { opacity: 1; visibility: visible; transform: translateY(0); }
 }
 
 #main article {
     opacity: 0;
+    visibility: hidden;
     animation: fadeInSection 0.5s ease-in forwards;
     animation-delay: 0.3s;
 }
 
 @keyframes fadeInSection {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; visibility: hidden; transform: translateY(20px); }
+    to { opacity: 1; visibility: visible; transform: translateY(0); }
 }
 
-/* Prevent conflicts with preload and article-visible states */
+/* Fade-in animations for header and main sections */
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-in[data-delay="0.2s"] { animation-delay: 0.2s; }
+.fade-in[data-delay="0.4s"] { animation-delay: 0.4s; }
+.fade-in[data-delay="0.6s"] { animation-delay: 0.6s; }
+.fade-in[data-delay="0.8s"] { animation-delay: 0.8s; }
+.fade-in[data-delay="1s"] { animation-delay: 1s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; visibility: hidden; transform: translateY(10px); }
+    to { opacity: 1; visibility: visible; transform: translateY(0); }
+}
+
+#main article {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeInSection 0.5s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; visibility: hidden; transform: translateY(20px); }
+    to { opacity: 1; visibility: visible; transform: translateY(0); }
+}
+
+/* Prevent flash during preload */
 body.is-preload .fade-in,
 body.is-preload #main article {
-    opacity: 1;
-    transform: translateY(0);
-    animation: none;
+    opacity: 0;
+    visibility: hidden;
+    animation: none !important;
 }
 
+/* Ensure smooth transitions for active sections */
 body.is-article-visible #main article:not(.active) {
     opacity: 0;
+    visibility: hidden;
     transform: translateY(0.25rem);
     animation: none;
 }
 
 body.is-article-visible #main article.active {
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
     animation: fadeInSection 0.5s ease-in forwards;
 }
+
 
