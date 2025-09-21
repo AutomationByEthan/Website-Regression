@@ -1779,6 +1779,10 @@ body.is-article-visible .about-us {
 .fade-in {
     opacity: 0;
     visibility: hidden;
+    animation: none; /* Reset to allow retriggering */
+}
+
+.fade-in.active {
     animation: fadeIn 0.5s ease-in forwards;
 }
 
@@ -1796,6 +1800,10 @@ body.is-article-visible .about-us {
 #main article {
     opacity: 0;
     visibility: hidden;
+    animation: none;
+}
+
+#main article.active {
     animation: fadeInSection 0.5s ease-in forwards;
     animation-delay: 0.3s;
 }
@@ -1817,29 +1825,40 @@ body.is-preload #main article {
 body.is-article-visible #main article:not(.active) {
     opacity: 0 !important;
     visibility: hidden !important;
+    display: none !important;
     animation: none !important;
 }
 
 body.is-article-visible #main article.active {
     opacity: 1 !important;
     visibility: visible !important;
-    animation: fadeInSection 0.5s ease-in forwards;
+    display: block !important;
+    animation: fadeInSection 0.5s ease-in forwards !important;
 }
 
 /* Ensure header content visibility on homepage, including children */
 body:not(.is-article-visible) #header .content,
-body:not(.is-article-visible) #header nav,
+body:not(.is-article-visible) #header .content .inner,
 body:not(.is-article-visible) #header .content h1,
 body:not(.is-article-visible) #header .content .highlight-main,
-body:not(.is-article-visible) #header .content .button.primary {
+body:not(.is-article-visible) #header .content .button.primary,
+body:not(.is-article-visible) #header nav {
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
+}
+
+/* Force fade-in animation on homepage */
+body:not(.is-article-visible) #header .content .fade-in,
+body:not(.is-article-visible) #header nav .fade-in {
     animation: fadeIn 0.5s ease-in forwards !important;
 }
 
-/* Mobile-specific header content fix */
+/* Mobile-specific fix for header content */
 @media screen and (max-width: 980px) {
+    body:not(.is-article-visible) #header,
     body:not(.is-article-visible) #header .content,
+    body:not(.is-article-visible) #header .content .inner,
     body:not(.is-article-visible) #header .content h1,
     body:not(.is-article-visible) #header .content .highlight-main,
     body:not(.is-article-visible) #header .content .button.primary,
@@ -1847,6 +1866,9 @@ body:not(.is-article-visible) #header .content .button.primary {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+    }
+    body:not(.is-article-visible) #header .content .fade-in,
+    body:not(.is-article-visible) #header nav .fade-in {
         animation: fadeIn 0.5s ease-in forwards !important;
     }
 }
