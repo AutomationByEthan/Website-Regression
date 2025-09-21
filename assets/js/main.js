@@ -114,6 +114,10 @@
             $main.hide();
             $header.show();
             $footer.show();
+            // Ensure header content is visible on mobile
+            if (breakpoints.active('<=medium')) {
+                $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+            }
             $body.removeClass('is-article-visible');
             locked = false;
             $body.removeClass('is-switching');
@@ -128,6 +132,10 @@
             $main.hide();
             $header.show();
             $footer.show();
+            // Ensure header content is visible on mobile
+            if (breakpoints.active('<=medium')) {
+                $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+            }
             setTimeout(() => {
                 $body.removeClass('is-article-visible');
                 $window.scrollTop(0).trigger('resize.flexbox-fix');
@@ -157,39 +165,43 @@
         }
     });
 
-   // Navigation: Handle Hash Changes
-$nav_a.addClass('scrolly').on('click', function(event) {
-    const $this = $(this);
-    const id = $this.attr('href').substr(1);
-    const $article = $main_articles.filter(`#${id}`);
-    if ($article.length === 0) return;
-    event.preventDefault();
-    event.stopPropagation();
-    $main._show(id);
-    // Google Analytics: Track virtual page view
-    gtag('event', 'page_view', {
-        'page_path': '/' + id
-    });
-});
-
-$window.on('hashchange', (event) => {
-    if (location.hash === '' || location.hash === '#') {
+    // Navigation: Handle Hash Changes
+    $nav_a.addClass('scrolly').on('click', function(event) {
+        const $this = $(this);
+        const id = $this.attr('href').substr(1);
+        const $article = $main_articles.filter(`#${id}`);
+        if ($article.length === 0) return;
         event.preventDefault();
         event.stopPropagation();
-        $main._hide();
-    } else {
-        const $article = $main_articles.filter(location.hash);
-        if ($article.length > 0) {
-            event.preventDefault();
-            event.stopPropagation();
-            $main._show(location.hash.substr(1));
-            // Google Analytics: Track virtual page view on hash change
+        $main._show(id);
+        // Google Analytics: Track virtual page view
+        if (typeof gtag !== 'undefined') {
             gtag('event', 'page_view', {
-                'page_path': '/' + location.hash.substr(1)
+                'page_path': '/' + id
             });
         }
-    }
-});
+    });
+
+    $window.on('hashchange', (event) => {
+        if (location.hash === '' || location.hash === '#') {
+            event.preventDefault();
+            event.stopPropagation();
+            $main._hide();
+        } else {
+            const $article = $main_articles.filter(location.hash);
+            if ($article.length > 0) {
+                event.preventDefault();
+                event.stopPropagation();
+                $main._show(location.hash.substr(1));
+                // Google Analytics: Track virtual page view on hash change
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'page_view', {
+                        'page_path': '/' + location.hash.substr(1)
+                    });
+                }
+            }
+        }
+    });
 
     // Scroll: Reveal and Parallax Effects
     $window.on('scroll', () => {
