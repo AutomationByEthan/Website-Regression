@@ -1813,18 +1813,25 @@ body.is-preload #main article {
     animation: none !important;
 }
 
-/* Ensure smooth transitions for active sections */
+/* Ensure only active article is visible */
 body.is-article-visible #main article:not(.active) {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(0.25rem);
-    animation: none;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    animation: none !important;
 }
 
 body.is-article-visible #main article.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     animation: fadeInSection 0.5s ease-in forwards;
 }
+
+/* Ensure header content visibility on homepage */
+body:not(.is-article-visible) #header .content,
+body:not(.is-article-visible) #header nav {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 
 
