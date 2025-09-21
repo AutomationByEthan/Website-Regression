@@ -1826,12 +1826,27 @@ body.is-article-visible #main article.active {
     animation: fadeInSection 0.5s ease-in forwards;
 }
 
-/* Ensure header content visibility on homepage */
+/* Ensure header content visibility on homepage, including children */
 body:not(.is-article-visible) #header .content,
-body:not(.is-article-visible) #header nav {
+body:not(.is-article-visible) #header nav,
+body:not(.is-article-visible) #header .content h1,
+body:not(.is-article-visible) #header .content .highlight-main,
+body:not(.is-article-visible) #header .content .button.primary {
     opacity: 1 !important;
     visibility: visible !important;
+    animation: fadeIn 0.5s ease-in forwards !important;
 }
 
-
-
+/* Mobile-specific header content fix */
+@media screen and (max-width: 980px) {
+    body:not(.is-article-visible) #header .content,
+    body:not(.is-article-visible) #header .content h1,
+    body:not(.is-article-visible) #header .content .highlight-main,
+    body:not(.is-article-visible) #header .content .button.primary,
+    body:not(.is-article-visible) #header nav {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation: fadeIn 0.5s ease-in forwards !important;
+    }
+}
