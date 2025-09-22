@@ -102,47 +102,61 @@
     };
 
     $main._hide = function(addState = false) {
-        const $article = $main_articles.filter('.active');
-        if (!$body.hasClass('is-article-visible')) return;
+    const $article = $main_articles.filter('.active');
+    if (!$body.hasClass('is-article-visible')) return;
 
-        if (addState) history.pushState(null, null, '#');
+    if (addState) history.pushState(null, null, '#');
 
-        if (locked) {
-            $body.addClass('is-switching');
-            $article.removeClass('active');
-            $article.hide();
-            $main.hide();
-            $header.show();
-            $footer.show();
-            // Ensure header content is visible on mobile
-            if (breakpoints.active('<=medium')) {
-                $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
-            }
-            $body.removeClass('is-article-visible');
-            locked = false;
-            $body.removeClass('is-switching');
-            $window.scrollTop(0).trigger('resize.flexbox-fix');
-            return;
-        }
-
-        locked = true;
+    if (locked) {
+        $body.addClass('is-switching');
         $article.removeClass('active');
-        setTimeout(() => {
-            $article.hide();
-            $main.hide();
-            $header.show();
-            $footer.show();
-            // Ensure header content is visible on mobile
-            if (breakpoints.active('<=medium')) {
-                $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
-            }
+        $article.hide();
+        $main.hide();
+        $header.show();
+        $footer.show();
+        // Reset and retrigger fade-in animations for header elements
+        if (breakpoints.active('<=medium')) {
+            const $fadeElements = $header.find('.fade-in');
+            $fadeElements.css({ opacity: 0, visibility: 'hidden' }); // Reset to initial state
+            $fadeElements.removeClass('fade-in'); // Remove animation class
             setTimeout(() => {
-                $body.removeClass('is-article-visible');
-                $window.scrollTop(0).trigger('resize.flexbox-fix');
-                setTimeout(() => { locked = false; }, delay);
-            }, 25);
-        }, delay);
-    };
+                $fadeElements.addClass('fade-in'); // Re-add to trigger animation
+            }, 50); // Small delay to ensure reset
+        } else {
+            $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+        }
+        $body.removeClass('is-article-visible');
+        locked = false;
+        $body.removeClass('is-switching');
+        $window.scrollTop(0).trigger('resize.flexbox-fix');
+        return;
+    }
+
+    locked = true;
+    $article.removeClass('active');
+    setTimeout(() => {
+        $article.hide();
+        $main.hide();
+        $header.show();
+        $footer.show();
+        // Reset and retrigger fade-in animations for header elements
+        if (breakpoints.active('<=medium')) {
+            const $fadeElements = $header.find('.fade-in');
+            $fadeElements.css({ opacity: 0, visibility: 'hidden' }); // Reset to initial state
+            $fadeElements.removeClass('fade-in'); // Remove animation class
+            setTimeout(() => {
+                $fadeElements.addClass('fade-in'); // Re-add to trigger animation
+            }, 50); // Small delay to ensure reset
+        } else {
+            $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+        }
+        setTimeout(() => {
+            $body.removeClass('is-article-visible');
+            $window.scrollTop(0).trigger('resize.flexbox-fix');
+            setTimeout(() => { locked = false; }, delay);
+        }, 25);
+    }, delay);
+};
 
     // Articles: Add Close Buttons and Prevent Click Bubbling
     $main_articles.each(function() {
@@ -236,3 +250,4 @@
     }
 
 })(jQuery);
+
