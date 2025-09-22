@@ -1313,6 +1313,18 @@ body:not(.is-preload):not(.is-article-visible) #header {
     padding: 0 0.5rem;
 }
 
+#header nav ul li {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: calc(attr(data-delay, 1s) + (0.1s * var(--index)));
+}
+
+#header nav ul li:nth-child(1) { --index: 1; }
+#header nav ul li:nth-child(2) { --index: 2; }
+#header nav ul li:nth-child(3) { --index: 3; }
+#header nav ul li:nth-child(4) { --index: 4; }
+#header nav ul li:nth-child(5) { --index: 5; }
+
 #header nav ul li a {
     display: block;
     min-width: 9rem;
@@ -1784,3 +1796,4 @@ body.is-preload #header nav {
     opacity: 0 !important;
     animation: none !important;
 }
+
