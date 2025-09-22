@@ -114,14 +114,17 @@
         $main.hide();
         $header.show();
         $footer.show();
-        // Reset and retrigger fade-in animations for header elements
+        // Ensure header elements are visible on mobile
         if (breakpoints.active('<=medium')) {
-            const $fadeElements = $header.find('.fade-in');
+            console.log('Hiding article, restoring header on mobile');
+            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary, nav');
             $fadeElements.css({ opacity: 0, visibility: 'hidden' }); // Reset to initial state
-            $fadeElements.removeClass('fade-in'); // Remove animation class
             setTimeout(() => {
-                $fadeElements.addClass('fade-in'); // Re-add to trigger animation
-            }, 50); // Small delay to ensure reset
+                console.log('Restoring header elements visibility');
+                $fadeElements.css({ opacity: 1, visibility: 'visible' }); // Force visibility
+                // Optionally re-add fade-in class to ensure animation
+                $fadeElements.removeClass('fade-in').addClass('fade-in');
+            }, 50);
         } else {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
         }
@@ -139,14 +142,17 @@
         $main.hide();
         $header.show();
         $footer.show();
-        // Reset and retrigger fade-in animations for header elements
+        // Ensure header elements are visible on mobile
         if (breakpoints.active('<=medium')) {
-            const $fadeElements = $header.find('.fade-in');
+            console.log('Hiding article, restoring header on mobile');
+            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary, nav');
             $fadeElements.css({ opacity: 0, visibility: 'hidden' }); // Reset to initial state
-            $fadeElements.removeClass('fade-in'); // Remove animation class
             setTimeout(() => {
-                $fadeElements.addClass('fade-in'); // Re-add to trigger animation
-            }, 50); // Small delay to ensure reset
+                console.log('Restoring header elements visibility');
+                $fadeElements.css({ opacity: 1, visibility: 'visible' }); // Force visibility
+                // Optionally re-add fade-in class to ensure animation
+                $fadeElements.removeClass('fade-in').addClass('fade-in');
+            }, 50);
         } else {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
         }
@@ -250,4 +256,5 @@
     }
 
 })(jQuery);
+
 
