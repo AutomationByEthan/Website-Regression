@@ -1350,11 +1350,18 @@ body:not(.is-preload):not(.is-article-visible) #header {
 
 @media screen and (max-width: 480px) {
     #header nav ul {
+        display: flex !important; /* Ensure nav is displayed */
         flex-direction: column;
         max-width: 100%;
     }
     #header nav ul li {
+        display: block !important; /* Ensure list items are visible */
         padding: 0.25rem 0;
+    }
+    #header nav ul li a {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     #header nav ul li a {
         min-width: 0;
@@ -1796,4 +1803,5 @@ body.is-preload #header nav {
     opacity: 0 !important;
     animation: none !important;
 }
+
 
