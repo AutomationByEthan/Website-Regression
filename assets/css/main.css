@@ -1745,3 +1745,42 @@ body.is-article-visible .about-us {
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 }
 
+/* Fade-in animation for header elements */
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: attr(data-delay, 0s); /* Use data-delay attribute for delay */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px); /* Slight upward movement for effect */
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure header elements don't override the animation */
+body:not(.is-preload) #header .content,
+body:not(.is-preload) #header .content .inner h1,
+body:not(.is-preload) #header .content .inner p,
+body:not(.is-preload) #header nav {
+    opacity: 0; /* Start hidden to allow animation */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: attr(data-delay, 0s);
+}
+
+/* Prevent animation during preload state */
+body.is-preload #header .content,
+body.is-preload #header .content .inner h1,
+body.is-preload #header .content .inner p,
+body.is-preload #header nav {
+    opacity: 0 !important;
+    animation: none !important;
+}
