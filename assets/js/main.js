@@ -101,7 +101,7 @@
         }
     };
 
-    $main._hide = function(addState = false) {
+   $main._hide = function(addState = false) {
     const $article = $main_articles.filter('.active');
     if (!$body.hasClass('is-article-visible')) return;
 
@@ -117,13 +117,15 @@
         // Ensure header elements, including nav and its children, are visible on mobile
         if (breakpoints.active('<=medium')) {
             console.log('Hiding article, restoring header on mobile');
-            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary, nav, nav ul, nav ul li, nav ul li a');
-            $fadeElements.css({ opacity: 0, visibility: 'hidden', display: '' }); // Reset to initial state, clear any display overrides
+            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary');
+            const $navElements = $header.find('nav, nav ul, nav ul li, nav ul li a');
+            $fadeElements.css({ opacity: 0, visibility: 'hidden', display: '' });
+            $navElements.css({ opacity: 0, visibility: 'hidden', display: '' });
             setTimeout(() => {
                 console.log('Restoring header elements visibility, including nav');
-                $fadeElements.css({ opacity: 1, visibility: 'visible', display: '' }); // Force visibility
-                // Re-add fade-in class to trigger animation
-                $fadeElements.removeClass('fade-in').addClass('fade-in');
+                $fadeElements.css({ opacity: 1, visibility: 'visible', display: '' });
+                $fadeElements.removeClass('fade-in').addClass('fade-in'); // Animation for content
+                $navElements.css({ opacity: 1, visibility: 'visible', display: '' }); // No animation for nav
             }, 50);
         } else {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
@@ -145,13 +147,15 @@
         // Ensure header elements, including nav and its children, are visible on mobile
         if (breakpoints.active('<=medium')) {
             console.log('Hiding article, restoring header on mobile');
-            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary, nav, nav ul, nav ul li, nav ul li a');
-            $fadeElements.css({ opacity: 0, visibility: 'hidden', display: '' }); // Reset to initial state, clear any display overrides
+            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary');
+            const $navElements = $header.find('nav, nav ul, nav ul li, nav ul li a');
+            $fadeElements.css({ opacity: 0, visibility: 'hidden', display: '' });
+            $navElements.css({ opacity: 0, visibility: 'hidden', display: '' });
             setTimeout(() => {
                 console.log('Restoring header elements visibility, including nav');
-                $fadeElements.css({ opacity: 1, visibility: 'visible', display: '' }); // Force visibility
-                // Re-add fade-in class to trigger animation
-                $fadeElements.removeClass('fade-in').addClass('fade-in');
+                $fadeElements.css({ opacity: 1, visibility: 'visible', display: '' });
+                $fadeElements.removeClass('fade-in').addClass('fade-in'); // Animation for content
+                $navElements.css({ opacity: 1, visibility: 'visible', display: '' }); // No animation for nav
             }, 50);
         } else {
             $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
@@ -162,6 +166,7 @@
             setTimeout(() => { locked = false; }, delay);
         }, 25);
     }, delay);
+};
 };
 
     // Articles: Add Close Buttons and Prevent Click Bubbling
@@ -256,6 +261,7 @@
     }
 
 })(jQuery);
+
 
 
 
