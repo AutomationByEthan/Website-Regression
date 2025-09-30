@@ -101,73 +101,48 @@
         }
     };
 
-   $main._hide = function(addState = false) {
-    const $article = $main_articles.filter('.active');
-    if (!$body.hasClass('is-article-visible')) return;
+    $main._hide = function(addState = false) {
+        const $article = $main_articles.filter('.active');
+        if (!$body.hasClass('is-article-visible')) return;
 
-    if (addState) history.pushState(null, null, '#');
+        if (addState) history.pushState(null, null, '#');
 
-    if (locked) {
-        $body.addClass('is-switching');
-        $article.removeClass('active');
-        $article.hide();
-        $main.hide();
-        $header.show();
-        $footer.show();
-        // Ensure header elements, including nav and its children, are visible on mobile
-        if (breakpoints.active('<=medium')) {
-            console.log('Hiding article, restoring header on mobile');
-            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary');
-            const $navElements = $header.find('nav, nav ul, nav ul li, nav ul li a');
-            $fadeElements.css({ opacity: 0, visibility: 'hidden', display: '' });
-            $navElements.css({ opacity: 0, visibility: 'hidden', display: '' });
-            setTimeout(() => {
-                console.log('Restoring header elements visibility, including nav');
-                $fadeElements.css({ opacity: 1, visibility: 'visible', display: '' });
-                $fadeElements.removeClass('fade-in').addClass('fade-in'); // Animation for content
-                $navElements.css({ opacity: 1, visibility: 'visible', display: '' }); // No animation for nav
-            }, 50);
-        } else {
-            $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
-        }
-        $body.removeClass('is-article-visible');
-        locked = false;
-        $body.removeClass('is-switching');
-        $window.scrollTop(0).trigger('resize.flexbox-fix');
-        return;
-    }
-
-    locked = true;
-    $article.removeClass('active');
-    setTimeout(() => {
-        $article.hide();
-        $main.hide();
-        $header.show();
-        $footer.show();
-        // Ensure header elements, including nav and its children, are visible on mobile
-        if (breakpoints.active('<=medium')) {
-            console.log('Hiding article, restoring header on mobile');
-            const $fadeElements = $header.find('.content, .content .inner h1, .content .inner p, .content .inner .button.primary');
-            const $navElements = $header.find('nav, nav ul, nav ul li, nav ul li a');
-            $fadeElements.css({ opacity: 0, visibility: 'hidden', display: '' });
-            $navElements.css({ opacity: 0, visibility: 'hidden', display: '' });
-            setTimeout(() => {
-                console.log('Restoring header elements visibility, including nav');
-                $fadeElements.css({ opacity: 1, visibility: 'visible', display: '' });
-                $fadeElements.removeClass('fade-in').addClass('fade-in'); // Animation for content
-                $navElements.css({ opacity: 1, visibility: 'visible', display: '' }); // No animation for nav
-            }, 50);
-        } else {
-            $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
-        }
-        setTimeout(() => {
+        if (locked) {
+            $body.addClass('is-switching');
+            $article.removeClass('active');
+            $article.hide();
+            $main.hide();
+            $header.show();
+            $footer.show();
+            // Ensure header content is visible on mobile
+            if (breakpoints.active('<=medium')) {
+                $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+            }
             $body.removeClass('is-article-visible');
+            locked = false;
+            $body.removeClass('is-switching');
             $window.scrollTop(0).trigger('resize.flexbox-fix');
-            setTimeout(() => { locked = false; }, delay);
-        }, 25);
-    }, delay);
-};
-};
+            return;
+        }
+
+        locked = true;
+        $article.removeClass('active');
+        setTimeout(() => {
+            $article.hide();
+            $main.hide();
+            $header.show();
+            $footer.show();
+            // Ensure header content is visible on mobile
+            if (breakpoints.active('<=medium')) {
+                $header.find('.content, nav').css({ opacity: 1, visibility: 'visible' });
+            }
+            setTimeout(() => {
+                $body.removeClass('is-article-visible');
+                $window.scrollTop(0).trigger('resize.flexbox-fix');
+                setTimeout(() => { locked = false; }, delay);
+            }, 25);
+        }, delay);
+    };
 
     // Articles: Add Close Buttons and Prevent Click Bubbling
     $main_articles.each(function() {
@@ -261,7 +236,3 @@
     }
 
 })(jQuery);
-
-
-
-
