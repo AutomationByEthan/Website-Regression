@@ -1847,3 +1847,15 @@ body.is-preload #header nav {
     }
 }
 
+@media screen and (max-width: 980px) {
+    body:not(.is-article-visible) #header nav,
+    body:not(.is-article-visible) #header nav ul,
+    body:not(.is-article-visible) #header nav ul li,
+    body:not(.is-article-visible) #header nav ul li a {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
