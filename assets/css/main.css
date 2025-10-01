@@ -1313,18 +1313,6 @@ body:not(.is-preload):not(.is-article-visible) #header {
     padding: 0 0.5rem;
 }
 
-#header nav ul li {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: calc(attr(data-delay, 1s) + (0.1s * var(--index)));
-}
-
-#header nav ul li:nth-child(1) { --index: 1; }
-#header nav ul li:nth-child(2) { --index: 2; }
-#header nav ul li:nth-child(3) { --index: 3; }
-#header nav ul li:nth-child(4) { --index: 4; }
-#header nav ul li:nth-child(5) { --index: 5; }
-
 #header nav ul li a {
     display: block;
     min-width: 9rem;
@@ -1350,18 +1338,11 @@ body:not(.is-preload):not(.is-article-visible) #header {
 
 @media screen and (max-width: 480px) {
     #header nav ul {
-        display: flex !important; /* Ensure nav is displayed */
         flex-direction: column;
         max-width: 100%;
     }
     #header nav ul li {
-        display: block !important; /* Ensure list items are visible */
         padding: 0.25rem 0;
-    }
-    #header nav ul li a {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
     }
     #header nav ul li a {
         min-width: 0;
@@ -1762,25 +1743,4 @@ body.is-article-visible .about-us {
     opacity: 0;
     transform: scale(0.95);
     transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-}
-
-/* Fade-in animation for header elements */
-.fade-in {
-    opacity: 0;
-    visibility: hidden;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: attr(data-delay, 0s); /* Use data-delay attribute for delay */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px); /* Slight upward movement for effect */
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
 }
