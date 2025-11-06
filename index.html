@@ -201,25 +201,56 @@
                       </div>
                     </details>
             
-                <!-- STATIC SAMPLES (Small Cards) -->
-                <h3 style="margin-top: 3rem;">Sample Outputs</h3>
-                <div class="sample-grid">
-                    <div class="sample-card">
-                        <img src="images/demo-katalon-passed.jpg" alt="Katalon passed run" />
+                <!-- SAMPLE OUTPUTS – CLICK TO ENLARGE -->
+                    <h3 class="section-title">Sample Outputs (Click to Enlarge)</h3>
+                    
+                    <div class="sample-grid">
+                      <!-- Image 1 -->
+                      <a href="#" class="sample-card" data-modal="modal-1">
+                        <img src="images/demo-katalon-passed.jpg" alt="Katalon Studio run" />
                         <p>Katalon Studio Run</p>
-                    </div>
-                    <div class="sample-card">
+                      </a>
+                    
+                      <!-- Image 2 -->
+                      <a href="#" class="sample-card" data-modal="modal-2">
                         <img src="images/demo-html-report.jpg" alt="HTML report" />
                         <p>HTML Summary</p>
-                    </div>
-                    <div class="sample-card">
+                      </a>
+                    
+                      <!-- Image 3 -->
+                      <a href="#" class="sample-card" data-modal="modal-3">
                         <img src="images/demo-file-path.jpg" alt="File organization" />
                         <p>Organized Outputs</p>
+                      </a>
                     </div>
-                </div>
+                    
+                    <!-- MODALS (hidden by default) -->
+                    <div id="modal-1" class="image-modal">
+                      <div class="modal-content">
+                        <span class="modal-close">×</span>
+                        <img src="images/demo-katalon-passed.jpg" alt="Katalon Studio run – full size" />
+                        <p class="modal-caption">Katalon Studio Run – Successful execution</p>
+                      </div>
+                    </div>
+                    
+                    <div id="modal-2" class="image-modal">
+                      <div class="modal-content">
+                        <span class="modal-close">×</span>
+                        <img src="images/demo-html-report.jpg" alt="HTML report – full size" />
+                        <p class="modal-caption">HTML Report Summary – Pass/Fail overview</p>
+                      </div>
+                    </div>
+                    
+                    <div id="modal-3" class="image-modal">
+                      <div class="modal-content">
+                        <span class="modal-close">×</span>
+                        <img src="images/demo-file-path.jpg" alt="File organization – full size" />
+                        <p class="modal-caption">Organized Test Outputs – CSV + Screenshots</p>
+                      </div>
+                    </div>
             
                 <!-- CTA -->
-                <div style="text-align:center; margin: 3rem 0;">
+                <div style="text-align:center; margin: 5rem 0;">
                     <a href="#contact" class="button primary large" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Watch Demo CTA' });">
                         Book a 15-Min Script Review (Free)
                     </a>
@@ -326,6 +357,7 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
