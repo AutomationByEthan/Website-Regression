@@ -1875,7 +1875,7 @@ summary::after {
   font-size: 1rem;            /* Smaller font */
   line-height: 1.4;
   height: auto;
-  max-width: 85%;
+  max-width: 100%;
   border-radius: 6px;
   font-weight: 600;
   text-transform: none;
@@ -1907,3 +1907,4 @@ summary::after {
   margin-top: 1rem !important; 
   padding-top: 1rem;
 }
+
