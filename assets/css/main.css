@@ -1860,3 +1860,44 @@ summary::after {
     padding: 0.8rem 1rem !important;
   }
 }
+
+/* ==== CTA BUTTON – CLEAN & RESPONSIVE ==== */
+.cta-wrapper {
+  text-align: center;
+  margin: 4rem 0 3rem;
+  padding: 0 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  white-space: normal;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  height: auto;
+  max-width: 90%;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.05rem;
+}
+
+@media (max-width: 736px) {
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Prevent giant footer gap */
+#footer {
+  margin-top: 0 !important;
+}
+
