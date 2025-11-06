@@ -1791,3 +1791,46 @@ details[open] summary::after { content: "↑"; }
 
 /* Subtitle */
 .subtitle { font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto 2rem; text-align: center; }
+
+/* === DARK THEME FIXES + PORTFOLIO CLEANUP === */
+
+/* Fix light colors */
+details.case-study { 
+    border: 1px solid rgba(255,255,255,0.15) !important; 
+    background: rgba(255,255,255,0.03);
+}
+summary { 
+    background: rgba(255,255,255,0.08) !important; 
+    color: #e0e0e0 !important;
+}
+summary::after { 
+    color: #00bfff !important; 
+    font-size: 1.2em;
+}
+.video-card p, .sample-card p, .case-content { 
+    color: #b0b0b0 !important; 
+}
+.case-content img.fit { 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+}
+
+/* Keep .feature for case studies only */
+#portfolio .feature {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
+}
+
+/* Remove .feature styling from video cards */
+#portfolio .video-card {
+    all: unset;
+    display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 736px) {
+    .video-grid { gap: 1rem; }
+    .video-card h3 { font-size: 1rem; }
+}
