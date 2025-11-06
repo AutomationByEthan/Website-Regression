@@ -1906,3 +1906,29 @@ summary::after {
   transition: background .2s;
 }
 .modal-close:hover { background: rgba(0,0,0,.8); }
+
+/* ==== RESPONSIVE CTA BUTTON ==== */
+.cta-button {
+  white-space: normal !important;
+  padding: 1rem 1.5rem !important;
+  line-height: 1.4 !important;
+  height: auto !important;
+  font-size: 1rem !important;
+  max-width: 90%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+@media (max-width: 736px) {
+  .cta-button {
+    font-size: 0.95rem !important;
+    padding: 0.9rem 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    font-size: 0.9rem !important;
+    padding: 0.8rem 1rem !important;
+  }
+}
