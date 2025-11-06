@@ -150,19 +150,23 @@
                 </div>
             
                 <!-- COLLAPSIBLE CASE STUDIES -->
-                <h3 style="margin-top: 3rem;">Deep-Dive Case Studies (Click to Expand)</h3>
-            
-                <details class="case-study">
-                    <summary>
+                    <h3 class="section-title">Deep-Dive Case Studies (Click to Expand)</h3>
+                    
+                    <!-- CASE STUDY 1 -->
+                    <details class="case-study">
+                      <summary>
                         <strong>Case Study: Low-Maintenance CI/CD Pipeline</strong>
                         <span class="badge">Katalon · Selenium</span>
-                    </summary>
-                    <div class="case-content">
+                      </summary>
+                    
+                      <div class="case-content">
                         <img src="images/Maintenance-CICD.jpg" alt="CI/CD pipeline diagram" class="fit" />
+                    
                         <p><strong>Problem:</strong> Scripts broke weekly in CI/CD.</p>
                         <p><strong>Solution:</strong> Modular Groovy + robust XPaths.</p>
                         <p><strong>Outcome:</strong> 1 hr/month maintenance, 80% faster regression.</p>
-                        <pre><code>// Define robust XPath for username field
+                    
+                        <pre class="code-block"><code>// Define robust XPath for username field
 TestObject usernameField = new TestObject('Username Field')
 usernameField.addProperty('xpath', ConditionType.EQUALS, '//input[@type="email"]')
 WebUI.setText(usernameField, 'testuser@example.com')
@@ -176,21 +180,25 @@ WebUI.waitForPageLoad(10)
 
 // Capture screenshot for reporting
 WebUI.takeScreenshot('LoginSuccess.jpg')</code></pre>
-                        <a href="https://github.com/automationbyethan/sample-script" class="button small">View Full Script</a>
-                    </div>
-                </details>
-            
-                <details class="case-study">
-                    <summary>
-                        <strong>Case Study: 100% Transparent CSV Reporting</strong>
-                        <span class="badge">Reporting</span>
-                    </summary>
-                    <div class="case-content">
-                        <img src="images/demo-csv-report.jpg" alt="CSV report with screenshots" class="fit" />
-                        <p><strong>Outcome:</strong> 15+ defects caught per cycle, 50% faster reviews.</p>
-                        <a href="#contact" class="button small">Request Sample CSV</a>
-                    </div>
-                </details>
+                    
+                        <div class="case-actions">
+                          <a href="https://github.com/automationbyethan/sample-script"
+                             class="button small primary"
+                             target="_blank"
+                             onclick="gtag('event','github_click',{event_category:'Engagement',event_label:'View Full Script'});">
+                            View Full Script
+                          </a>
+                    
+                          <a href="https://github.com/automationbyethan/sample-script/blob/main/OBJECT-LOCATORS.md"
+                             class="button small"
+                             target="_blank"
+                             style="background:#00bfff;color:#fff;border:none;box-shadow:none;"
+                             onclick="gtag('event','locators_click',{event_category:'Engagement',event_label:'View Object Locators'});">
+                            <i class="fas fa-code-branch" style="margin-right:0.5rem;"></i> View Object Locators
+                          </a>
+                        </div>
+                      </div>
+                    </details>
             
                 <!-- STATIC SAMPLES (Small Cards) -->
                 <h3 style="margin-top: 3rem;">Sample Outputs</h3>
@@ -317,5 +325,6 @@ WebUI.takeScreenshot('LoginSuccess.jpg')</code></pre>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
