@@ -166,23 +166,25 @@
                         <p><strong>Solution:</strong> Modular Groovy + robust XPaths.</p>
                         <p><strong>Outcome:</strong> 1 hr/month maintenance, 80% faster regression.</p>
                     
-                        <pre class="code-block"><code>// Define robust XPath for username field
-TestObject usernameField = new TestObject('Username Field')
-usernameField.addProperty('xpath', ConditionType.EQUALS, '//input[@type="email"]')
-WebUI.setText(usernameField, 'testuser@example.com')
-
-// Define robust XPath for password field
-TestObject passwordField = new TestObject('Password Field')
-passwordField.addProperty('xpath', ConditionType.EQUALS, '//input[@type="password"]')
-WebUI.setEncryptedText(passwordField, 'encrypted-placeholder') // Placeholder for demo
-WebUI.sendKeys(passwordField, Keys.chord(Keys.ENTER))
-WebUI.waitForPageLoad(10)
-
-// Capture screenshot for reporting
-WebUI.takeScreenshot('LoginSuccess.jpg')</code></pre>
+                        <pre class="code-block"><code>// @Test
+    public void loginAndValidate() throws Exception {
+        driver.get("https://todoist.com/login");
+        Thread.sleep(2000);
+        takeScreenshot(driver, "Login Page");
+    
+        // Invalid login using XPaths
+        driver.findElement(By.xpath("//input[@type=\"email\"]")).sendKeys("LetsCreateAnErrorMessage@gmail.com");
+        driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("LetsCreateAnErrorMessage");
+        driver.findElement(By.cssSelector("button[type='submit']")).click(); // Keep CSS for button (or use XPath if needed)
+    
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()=\"Wrong email or password.\"]")));
+        String errorText = errorElement.getText().trim();
+        takeScreenshot(driver, "Invalid Login Error Message");
+        assertTrue(errorText.equals("Wrong email or password."), "Invalid login message mismatch");</code></pre>
                     
                         <div class="case-actions">
-                          <a href="https://github.com/AutomationByEthan/script-originals/blob/main/sample-login-script.groovy"
+                          <a href="https://github.com/AutomationByEthan/sample-script/blob/main/src/test/java/LoginValidationTest.java"
                              class="button small primary"
                              target="_blank"
                              onclick="gtag('event','github_click',{event_category:'Engagement',event_label:'View Full Script'});">
@@ -324,6 +326,7 @@ WebUI.takeScreenshot('LoginSuccess.jpg')</code></pre>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
