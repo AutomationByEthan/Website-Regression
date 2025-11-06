@@ -162,7 +162,20 @@
                         <p><strong>Problem:</strong> Scripts broke weekly in CI/CD.</p>
                         <p><strong>Solution:</strong> Modular Groovy + robust XPaths.</p>
                         <p><strong>Outcome:</strong> 1 hr/month maintenance, 80% faster regression.</p>
-                        <pre><code>WebUI.takeScreenshot(...)</code></pre>
+                        <pre><code>// Define robust XPath for username field
+TestObject usernameField = new TestObject('Username Field')
+usernameField.addProperty('xpath', ConditionType.EQUALS, '//input[@type="email"]')
+WebUI.setText(usernameField, 'testuser@example.com')
+
+// Define robust XPath for password field
+TestObject passwordField = new TestObject('Password Field')
+passwordField.addProperty('xpath', ConditionType.EQUALS, '//input[@type="password"]')
+WebUI.setEncryptedText(passwordField, 'encrypted-placeholder') // Placeholder for demo
+WebUI.sendKeys(passwordField, Keys.chord(Keys.ENTER))
+WebUI.waitForPageLoad(10)
+
+// Capture screenshot for reporting
+WebUI.takeScreenshot('LoginSuccess.jpg')</code></pre>
                         <a href="https://github.com/automationbyethan/sample-script" class="button small">View Full Script</a>
                     </div>
                 </details>
@@ -304,4 +317,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
