@@ -228,6 +228,44 @@
         });
     }
 
+    // === IMAGE MODAL SYSTEM ===
+    (function() {
+      const $modals = $('.image-modal');
+      const $cards = $('.sample-card');
+
+      // Open modal
+      $cards.on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const modalId = $(this).data('modal');
+        $(`#${modalId}`).addClass('active');
+        $body.addClass('modal-open'); // Optional: prevent background scroll
+      });
+
+      // Close: X button
+      $('.modal-close').on('click', function(e) {
+        e.stopPropagation();
+        $(this).closest('.image-modal').removeClass('active');
+        $body.removeClass('modal-open');
+      });
+
+      // Close: Click outside image
+      $modals.on('click', function(e) {
+        if (e.target === this) {
+          $(this).removeClass('active');
+          $body.removeClass('modal-open');
+        }
+      });
+
+      // Close: ESC key
+      $window.on('keyup.modal', function(e) {
+        if (e.key === 'Escape' && $('.image-modal.active').length) {
+          $('.image-modal.active').removeClass('active');
+          $body.removeClass('modal-open');
+        }
+      });
+    })();
+
     // Initialize
     $main.hide();
     $main_articles.hide();
@@ -236,3 +274,4 @@
     }
 
 })(jQuery);
+
