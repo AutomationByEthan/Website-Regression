@@ -103,105 +103,105 @@
             <!-- Portfolio -->
             <article id="portfolio" class="style1" role="region" aria-labelledby="portfolio-title">
                 <div class="close">Close</div>
-                <h2 id="portfolio-title" class="major">Portfolio: Proven Automation Success</h2>
-                <p>Due to client confidentiality, case studies are anonymized but reflect real project outcomes using Katalon Studio and Selenium.</p>
-                <!-- Case Study 1: Low-Maintenance UI Automation in CI/CD -->
-                <div class="feature">
-                    <i class="fas fa-cogs" aria-label="CI/CD Automation icon"></i>
-                    <h3>Case Study: Low-Maintenance UI Automation in CI/CD</h3>
-                    <span class="image fit"><img src="images/Maintenance-CICD.jpg" alt="Diagram of CI/CD pipeline with UI automation" /></span>
-                    <p><strong>Problem:</strong> A web-based enterprise system required frequent UI automation script updates in a CI/CD pipeline, risking delays.</p>
-                    <p><strong>Solution:</strong> Developed a Katalon Studio test suite with robust XPath locators and modular Groovy scripts for stability.</p>
-                    <p><strong>Outcome:</strong> Reduced maintenance to 1 hour/month (90% less than typical scripts), sustained 80% regression testing time savings, and ensured seamless CI/CD integration.</p>
-                    <p><strong>Script Example:</strong> A snippet from one of our scripts with stable XPaths tested across Chrome and Firefox with zero breaks over 6 months.</p>
-                    <pre class="code"><code>Sample Katalon Studio script excerpt:
-WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Login.jpg')
-myFile << "\n============================== [ Automation Execution of ${GlobalVariable.Scenario} ] ==============================\n"
-myFile << "\n\tScript Purpose: Identify specific test data, edit the task, and validate that the edit was made correctly.\n"
-// Login
-WebUI.setText(findTestObject('Object Repository/02_LoginPage/fld_UserName'), GlobalVariable.AdminUser)
-WebUI.setEncryptedText(findTestObject('Object Repository/02_LoginPage/fld_Password'), GlobalVariable.Password)
-WebUI.delay(3)
-WebUI.sendKeys(findTestObject('Object Repository/02_LoginPage/fld_Password'), Keys.chord(Keys.ENTER))
-WebUI.waitForPageLoad(10)
-WebUI.delay(5)
-WebUI.takeScreenshot(((filePath + '/Pic ') + (GlobalVariable.P = (GlobalVariable.P + 1))) + ' - Home Page.jpg')
-WebUI.click(findTestObject('Object Repository/03_HomePage/btn_AccountDropdown'))
-String loginUserName = WebUI.getText(findTestObject('Object Repository/03_HomePage/ddl_UserName'))
-myFile << '\n\tUser: ' + loginUserName + '\n'
-                    </code></pre>
-                    <p><strong>XPath Example 1:</strong> An object locator for a particular task line item</p>
-                    <pre class="code"><code>
-//div[@aria-label="Task name"]
-                    </code></pre>
-                    <p><strong>XPath Example 2:</strong> An object locator for a submit button</p>
-                    <pre class="code"><code>
-//button[@type="submit"]
-                    </code></pre>
-                    <p><a href="https://github.com/automationbyethan/sample-script" class="button primary" onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'View Full Script - Portfolio' });" aria-label="View sample XPath script on GitHub">View Full Script</a></p>
-                </div>  
-                <!-- Case Study 2: Transparent Validation CSV -->
-                <div class="feature">
-                    <i class="fas fa-file-csv" aria-label="Transparent Reporting icon"></i>
-                    <h3>Case Study: Transparent Validation with Detailed Reporting</h3>
-                    <p><strong>Problem:</strong> A business-critical application needed reliable UI automation but lacked trust in automated validations.</p>
-                    <p><strong>Solution:</strong> Built a Selenium-driven test suite with Katalon Studio, generating CSV reports with all validations and linked screenshot evidence.</p>
-                    <p><strong>Outcome:</strong> Provided 100% transparent results, caught 15+ defects per cycle, and cut validation review time by 50%.</p>
-                    <p><strong>Example:</strong> A CSV file listing test case IDs, validation types, results, and screenshot paths.</p>
-                    <span class="image fit"><img src="images/demo-csv-report.jpg" alt="Sample CSV report with validation details and screenshot evidence" /></span>
-                    <a href="#contact" class="button primary" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Request Sample Button - Portfolio' });" aria-label="Request a custom automation demo">Request Sample</a>
+                <h2 id="portfolio-title" class="major">Watch Automation in Action</h2>
+                <p class="subtitle">60-second demos — no setup, real Selenium & Katalon scripts running live.</p>
+            
+                <!-- VIDEO GRID: 4 YouTube Demos -->
+                <div class="video-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/DxKdM-yGPms" title="Free Selenium Login Test – Runs in 60 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <h3>Free Selenium Login Test (60s)</h3>
+                        <p>No setup. Real browser. Instant proof.</p>
+                        <span class="badge">Selenium</span>
+                    </div>
+            
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/YA9p_Kg1xzw" title="Selenium in Action: Brief Intro to UI Automation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <h3>Selenium in Action (6 min)</h3>
+                        <p>How UI automation actually works.</p>
+                        <span class="badge">Tutorial</span>
+                    </div>
+            
+                    <!-- Video 3 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/pD11sgv68jg" title="Selenium vs Katalon Studio: Which Wins in 2025?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <h3>Selenium vs Katalon (2025)</h3>
+                        <p>Side-by-side tool comparison.</p>
+                        <span class="badge">Katalon</span>
+                    </div>
+            
+                    <!-- Video 4 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/FG2dLPII58g" title="Is UI Automation a Maintenance Nightmare?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <h3>Maintenance Nightmare?</h3>
+                        <p>Top 3 script killers — and fixes.</p>
+                        <span class="badge">Best Practices</span>
+                    </div>
                 </div>
-                <!-- Demo: Free Selenium Login Test – Runs in 60 Seconds (No Setup) -->
-                <div class="feature">
-                    <i class="fas fa-video" aria-label="Demo Video icon"></i>
-                    <h3>Free Selenium Login Test – Runs in 60 Seconds (No Setup)</h3>
-                    <span class="image fit"><iframe width="100%" height="200" src="https://www.youtube.com/embed/DxKdM-yGPms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
-                    <p>Free Selenium Login Test – Runs in 60 Seconds</p>
+            
+                <!-- COLLAPSIBLE CASE STUDIES -->
+                <h3 style="margin-top: 3rem;">Deep-Dive Case Studies (Click to Expand)</h3>
+            
+                <details class="case-study">
+                    <summary>
+                        <strong>Case Study: Low-Maintenance CI/CD Pipeline</strong>
+                        <span class="badge">Katalon · Selenium</span>
+                    </summary>
+                    <div class="case-content">
+                        <img src="images/Maintenance-CICD.jpg" alt="CI/CD pipeline diagram" class="fit" />
+                        <p><strong>Problem:</strong> Scripts broke weekly in CI/CD.</p>
+                        <p><strong>Solution:</strong> Modular Groovy + robust XPaths.</p>
+                        <p><strong>Outcome:</strong> 1 hr/month maintenance, 80% faster regression.</p>
+                        <pre><code>WebUI.takeScreenshot(...)</code></pre>
+                        <a href="https://github.com/automationbyethan/sample-script" class="button small">View Full Script</a>
+                    </div>
+                </details>
+            
+                <details class="case-study">
+                    <summary>
+                        <strong>Case Study: 100% Transparent CSV Reporting</strong>
+                        <span class="badge">Reporting</span>
+                    </summary>
+                    <div class="case-content">
+                        <img src="images/demo-csv-report.jpg" alt="CSV report with screenshots" class="fit" />
+                        <p><strong>Outcome:</strong> 15+ defects caught per cycle, 50% faster reviews.</p>
+                        <a href="#contact" class="button small">Request Sample CSV</a>
+                    </div>
+                </details>
+            
+                <!-- STATIC SAMPLES (Small Cards) -->
+                <h3 style="margin-top: 3rem;">Sample Outputs</h3>
+                <div class="sample-grid">
+                    <div class="sample-card">
+                        <img src="images/demo-katalon-passed.jpg" alt="Katalon passed run" />
+                        <p>Katalon Studio Run</p>
+                    </div>
+                    <div class="sample-card">
+                        <img src="images/demo-html-report.jpg" alt="HTML report" />
+                        <p>HTML Summary</p>
+                    </div>
+                    <div class="sample-card">
+                        <img src="images/demo-file-path.jpg" alt="File organization" />
+                        <p>Organized Outputs</p>
+                    </div>
                 </div>
-                <!-- Demo: Brief Intro to UI Automation -->
-                <div class="feature">
-                    <i class="fas fa-video" aria-label="Demo Video icon"></i>
-                    <h3>Selenium in Action: Brief Intro to UI Automation</h3>
-                    <span class="image fit"><iframe width="100%" height="200" src="https://www.youtube.com/embed/YA9p_Kg1xzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
-                    <p>Learn how Selenium automates web browsers — and cuts manual testing time in 6 minutes</p>
+            
+                <!-- CTA -->
+                <div style="text-align:center; margin: 3rem 0;">
+                    <a href="#contact" class="button primary large" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Watch Demo CTA' });">
+                        Book a 15-Min Script Review (Free)
+                    </a>
                 </div>
-                <!-- Demo: Video on Selenium vs Katalon -->
-                <div class="feature">
-                    <i class="fas fa-video" aria-label="Demo Video icon"></i>
-                    <h3>Selenium vs Katalon Studio: Which Wins in 2025?</h3>
-                    <span class="image fit"><iframe width="100%" height="200" src="https://www.youtube.com/embed/pD11sgv68jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
-                    <p>Break down two leading UI automation tools to help your team choose the right one.</p>
-                </div>
-                 <!-- Demo: UI Automation Maintenance Nightmare -->
-                <div class="feature">
-                    <i class="fas fa-video" aria-label="Demo Video icon"></i>
-                    <h3>Is UI Automation a Maintenance Nightmare?</h3>
-                    <span class="image fit"><iframe width="100%" height="200" src="https://www.youtube.com/embed/FG2dLPII58g" title="Is UI Automation a Maintenance Nightmare? (Top 3 Killers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
-                    <p>Discover the <strong>Top 3 reasons</strong> your test automation breaks — and how to fix them fast.</p>
-                </div>
-                <!-- Sample Script -->
-                <div class="feature">
-                    <i class="fas fa-code" aria-label="Sample Script icon"></i>
-                    <h3>Automation Sample: Test Output Script</h3>
-                    <span class="image fit"><img src="images/demo-katalon-passed.jpg" alt="Screenshot of Katalon Studio after a successful script run" /></span>
-                    <p>Explore our clean Katalon Studio scripts designed for cross-browser testing and maintainability.</p>
-                    <p><a href="https://github.com/automationbyethan/sample-script" class="button primary" onclick="gtag('event', 'github_click', { 'event_category': 'Engagement', 'event_label': 'View on GitHub - Portfolio' });" aria-label="View sample automation script on GitHub">View on GitHub</a></p>
-                </div>
-                <!-- Sample HTML Report -->
-                <div class="feature">
-                    <i class="fas fa-chart-bar" aria-label="HTML Report icon"></i>
-                    <h3>Automation Sample: HTML Report Summary</h3>
-                    <span class="image fit"><img src="images/demo-html-report.jpg" alt="Screenshot of an HTML report summarizing test case results" /></span>
-                    <p>View a consolidated HTML report summarizing test case results for a clear overview of pass/fail metrics.</p>
-                </div>
-                <!-- Sample: File Organization -->
-                <div class="feature">
-                    <i class="fas fa-folder" aria-label="File Organization icon"></i>
-                    <h3>Automation Sample: Organized Test Outputs</h3>
-                    <span class="image fit"><img src="images/demo-file-path.jpg" alt="Screenshot of a folder with CSV file and test run images" /></span>
-                    <p>Post-script execution, files are saved in an organized folder containing CSV reports and screenshot evidence.</p>
-                </div>                    
-                <a href="#contact" class="button primary" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Schedule Demo Button - Portfolio' });" aria-label="Contact Kyperian Automation for a demo">Schedule a Demo</a>
             </article>
 
             <!-- Testimonials -->
@@ -304,16 +304,3 @@ myFile << '\n\tUser: ' + loginUserName + '\n'
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
