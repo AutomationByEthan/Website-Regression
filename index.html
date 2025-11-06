@@ -313,7 +313,11 @@ public void loginAndValidate() throws Exception {
                 <a href="#contact" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Contact Us Footer Link' });" aria-label="Contact Kyperian Automation">Contact Us</a> | 
                 Follow us: 
                 <a href="https://github.com/automationbyethan" class="icon brands fa-github" aria-label="Follow Kyperian Automation on GitHub"><span class="label">GitHub</span></a>
-                <a href="https://www.linkedin.com/in/elginethan/" target="_blank" class="icon brands fa-linkedin-in" aria-label="Connect with Ethan Elgin on LinkedIn"><span class="label">LinkedIn</span></a>
+                <a href="https://www.linkedin.com/in/elginethan/" target="_blank" 
+   onclick="gtag('event', 'social_click', { 'event_category': 'Engagement', 'event_label': 'LinkedIn Footer' });" 
+                   class="icon brands fa-linkedin-in" aria-label="Connect with Ethan Elgin on LinkedIn">
+                   <span class="label">LinkedIn</span>
+                </a>
             </p>
         </footer>
     </div>
@@ -328,6 +332,7 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
