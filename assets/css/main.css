@@ -1861,43 +1861,49 @@ summary::after {
   }
 }
 
-/* ==== CTA BUTTON – CLEAN & RESPONSIVE ==== */
+/* ==== CTA – TIGHT, RESPONSIVE, NO BLOB ==== */
 .cta-wrapper {
   text-align: center;
-  margin: 4rem 0 3rem;
+  margin: 3rem 0 2rem; /* Reduced from 4rem/3rem */
   padding: 0 1rem;
 }
 
 .cta-button {
   display: inline-block;
   white-space: normal;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  padding: 0.8rem 1.8rem;     /* Smaller padding */
+  font-size: 1rem;            /* Smaller font */
+  line-height: 1.4;
   height: auto;
-  max-width: 90%;
-  border-radius: 8px;
+  max-width: 85%;
+  border-radius: 6px;
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.05rem;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
 }
 
 @media (max-width: 736px) {
   .cta-button {
-    font-size: 1rem;
-    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.4rem;
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
   .cta-button {
-    font-size: 0.95rem;
-    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    max-width: 95%;
   }
 }
 
-/* Prevent giant footer gap */
-#footer {
-  margin-top: 0 !important;
+/* ELIMINATE FOOTER GAP */
+#wrapper { 
+  gap: 0 !important; 
 }
-
+#footer { 
+  margin-top: 1rem !important; 
+  padding-top: 1rem;
+}
