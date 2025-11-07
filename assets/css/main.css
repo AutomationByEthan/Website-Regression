@@ -1859,8 +1859,6 @@ summary::after {
   overflow: hidden;
 }
 
-#portfolio .button.primary,
-#portfolio a.button.primary,
 #about-us .button.primary,
 #about-us a.button.primary {
   display: inline-block !important;
@@ -1873,3 +1871,17 @@ summary::after {
   border-radius: 8px !important;
   box-sizing: border-box !important;
 }
+
+#portfolio .button.primary,
+#portfolio a.button.primary {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  min-width: 650 px !important;
+  padding: 14px 24px !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+}
+
