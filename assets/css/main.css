@@ -1858,39 +1858,13 @@ summary::after {
   border-radius: 12px;
   overflow: hidden;
 }
-/*ut-us .button.primary,
-#about-us a.button.primary {
-  display: inline-block !important;
-  white-space: nowrap !important;
-  min-width: 350px !important;
-  padding: 14px 24px !important;
-  font-size: 1rem !important;
-  line-height: 1.4 !important;
-  text-align: center !important;
-  border-radius: 8px !important;
-  box-sizing: border-box !important;
-}
 
-#portfolio .button.primary,
-#portfolio a.button.primary {
-  display: inline-block !important;
-  white-space: nowrap !important;
-  min-width: 650 px !important;
-  padding: 14px 24px !important;
-  font-size: 1rem !important;
-  line-height: 1.4 !important;
-  text-align: center !important;
-  border-radius: 8px !important;
-  box-sizing: border-box !important;
-}*/
-
-/* === CTA BUTTON FIX — ABOUT + PORTFOLIO (LARGE ONLY) === */
 #about-us .cta-wrapper .button.primary,
 #portfolio .cta-wrapper .button.primary,
 .button.primary.large {
   display: inline-block !important;
   white-space: nowrap !important;
-  min-width: 350px !important;     /* Perfect for mobile & desktop */
+  min-width: 350px !important; 
   padding: 14px 24px !important;
   font-size: 1.1rem !important;
   line-height: 1.4 !important;
@@ -1900,7 +1874,6 @@ summary::after {
   max-width: 100% !important;
 }
 
-/* === SMALL BUTTONS — PROTECT FROM OVERRIDE === */
 .button.small {
   min-width: auto !important;
   padding: 8px 16px !important;
@@ -1912,3 +1885,4 @@ summary::after {
   text-align: center;
   margin: 3rem 0;
 }
+
