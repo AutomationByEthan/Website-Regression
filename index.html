@@ -78,45 +78,83 @@
             <!-- Services -->
             <article id="services" class="style1" role="region" aria-labelledby="services-title">
                 <div class="close">Close</div>
-                <h2 id="services-title" class="major">Our Services</h2>
-                <p>At Kyperian Automation, we deliver scalable UI automation solutions using Selenium or Katalon Studio, tailored to your business needs. Our services streamline regression and user acceptance testing, cutting manual efforts by up to 50%. Here’s what we offer and why we’re the right choice.</p>
-                <div class="feature">
-                    <i class="fas fa-code" aria-label="Customized Automation icon"></i>
-                    <h3>Customized Automation</h3>
-                    <p>We craft Selenium-based test suites for UI, API, and mobile platforms, supporting diverse browsers and user roles. Our scripts are tailored to your specific requirements, ensuring seamless integration and precise validations.</p>
+            
+                <!-- H1 for SEO (hidden visually) -->
+                <h1 id="services-title" class="visually-hidden">Kyperian Automation Services</h1>
+            
+                <!-- HERO -->
+                <div class="services-hero">
+                    <h2>UI Automation That Never Breaks</h2>
+                    <p class="metric">80% faster regression • Zero flaky tests • Selenium or Katalon Studio</p>
+                    <a href="#contact" 
+                       class="button primary lg" 
+                       onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Hero Demo CTA' });">
+                       Book Free 15-Min Demo
+                    </a>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-file-alt" aria-label="Clear Reporting icon"></i>
-                    <h3>Clear Reporting</h3>
-                    <p>Our detailed CSV and HTML reports, complete with screenshots and pass/fail metrics, provide actionable insights. This transparency empowers your team to make informed decisions and optimize testing workflows.</p>
+            
+                <!-- Intro -->
+                <p>At Kyperian Automation, we deliver scalable UI automation solutions using Selenium or Katalon Studio, tailored to your business needs. Our services streamline regression and user acceptance testing, <strong>cutting manual efforts by up to 80%</strong>. Here’s what we offer and why we’re the right choice.</p>
+            
+                <!-- 3-COLUMN GRID (Replace 6 features) -->
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-code-branch" aria-hidden="true"></i>
+                        <h3>Modular Scripts</h3>
+                        <p>Reusable Groovy objects → <strong>1 hr/month maintenance</strong></p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <h3>80% Time Savings</h3>
+                        <p>Full regression suite runs in a lunch break</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <h3>Flake-Proof Locators</h3>
+                        <p>Robust XPaths + CSS fallback → zero breaks</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-rocket" aria-label="Fast Results icon"></i>
-                    <h3>Fast Results</h3>
-                    <p>Achieve up to 50% reduction in manual testing with our cross-browser test suites. Our automation delivers reliable results from day one, accelerating your QA process and deployment cycles.</p>
+            
+                <!-- PRICING CARD -->
+                <div class="pricing-card">
+                    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                    <h3>Transparent Pricing</h3>
+                    <ul class="price-list">
+                        <li><strong>$100/hr</strong> – Consulting & script reviews</li>
+                        <li><strong>$5,000</strong> – Starter suite (10 scripts)</li>
+                        <li><strong>Enterprise</strong> – SLAs, CI/CD, training</li>
+                    </ul>
+                    <a href="#contact" 
+                       class="button" 
+                       onclick="gtag('event', 'quote_request', { 'event_category': 'Engagement', 'event_label': 'Get Quote CTA' });">
+                       Get Quote in 24 hrs
+                    </a>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-cogs" aria-label="Reliable Tools icon"></i>
-                    <h3>Reliable Tools</h3>
-                    <p>Our Katalon Studio scripts, written in Groovy, are user-friendly and low-maintenance, featuring reusable objects for easy updates. This ensures long-term scalability and minimal upkeep for your team.</p>
+            
+                <!-- ONBOARDING TIMELINE -->
+                <h3 class="section-title">Your 5-Step Onboarding</h3>
+                <div class="timeline">
+                    <div class="step"><span>1</span> Free 15-min Script Review</div>
+                    <div class="step"><span>2</span> Requirements & Goals</div>
+                    <div class="step"><span>3</span> Script Development</div>
+                    <div class="step"><span>4</span> Testing & Reporting</div>
+                    <div class="step"><span>5</span> Handover + Training</div>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-dollar-sign" aria-label="Pricing icon"></i>
-                    <h3>What We Charge</h3>
-                    <p>Our pricing is tailored to your project’s scope. Standard rates start at $100/hour for consulting and $5,000 for custom test suite development. <a href="#contact" class="button" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Contact Us - What We Charge' });" aria-label="Contact Kyperian Automation for a pricing quote">Contact us</a> for a detailed quote or to discuss enterprise solutions.</p>
+            
+                <!-- MICRO-TESTIMONIAL -->
+                <blockquote class="testimonial-mini">
+                    <p>“Saved us 3 days per sprint. Scripts still running 18 months later.”</p>
+                    <cite>— QA Lead, Federal Agency</cite>
+                </blockquote>
+            
+                <!-- FINAL CTA -->
+                <div class="cta-final">
+                    <a href="#contact" 
+                       class="button primary lg" 
+                       onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Final Demo CTA' });">
+                       Schedule Your Free Demo
+                    </a>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-list-ol" aria-label="Onboarding Process icon"></i>
-                    <h3>Onboarding Process</h3>
-                    <p>Our streamlined onboarding process ensures seamless automation integration:<br>
-                    1. <strong>Free Consultation</strong>: 30-minute call to discuss your needs.<br>
-                    2. <strong>Requirements Analysis</strong>: Define systems and automation goals.<br>
-                    3. <strong>Script Development</strong>: Create Katalon/Selenium scripts with robust locators.<br>
-                    4. <strong>Testing & Reporting</strong>: Deliver CSV/HTML reports and refine scripts.<br>
-                    5. <strong>Handover</strong>: Provide scripts and training for your team.<br>                    
-                </div>
-                <a href="#portfolio" class="button primary" aria-label="View Kyperian Automation's portfolio">See Our Work</a>
-                <a href="#contact" class="button primary" onclick="gtag('event', 'demo_request', { 'event_category': 'Engagement', 'event_label': 'Schedule Demo Button - Services' });" aria-label="Schedule a free demo with Kyperian Automation">Schedule a Demo</a>
             </article>
 
             <!-- Portfolio -->
@@ -379,6 +417,7 @@ public void loginAndValidate() throws Exception {
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
