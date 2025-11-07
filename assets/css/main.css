@@ -1864,8 +1864,8 @@ summary::after {
 .button.primary.large {
   display: inline-block !important;
   white-space: nowrap !important;
-  min-width: 350px !important; 
-  padding: 14px 24px !important;
+  min-width: 320 px !important; 
+  padding: 14px 20px !important;
   font-size: 1.1rem !important;
   line-height: 1.4 !important;
   text-align: center !important;
@@ -1885,4 +1885,5 @@ summary::after {
   text-align: center;
   margin: 3rem 0;
 }
+
 
