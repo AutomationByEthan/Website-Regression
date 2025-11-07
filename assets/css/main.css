@@ -2168,3 +2168,31 @@ summary::after {
     filter: grayscale(0%) opacity(1);
     transform: scale(1.05);
 }
+
+/* === CASE STUDY BUTTON FIX (Prevent overflow on mobile) === */
+.case-actions .button {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    min-width: 180px !important;     /* Smaller than CTAs — fits side-by-side */
+    max-width: 100% !important;
+    padding: 8px 12px !important;    /* Matches .button.small */
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    margin: 0.25rem !important;      /* Prevents squishing */
+}
+
+/* Optional: Stack buttons vertically on very small screens */
+@media screen and (max-width: 480px) {
+    .case-actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .case-actions .button {
+        min-width: auto !important;
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+    }
+}
