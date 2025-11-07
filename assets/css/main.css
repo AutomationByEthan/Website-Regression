@@ -1831,3 +1831,32 @@ summary::after {
     .video-card h3 { font-size: 1rem; }
 }
 
+#about-us .about-block {
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid #0077b5;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+#about-us .about-block h3 {
+  margin: 0 0 0.5rem;
+  color: #0077b5;
+  font-size: 1.4rem;
+}
+#about-us .about-block p {
+  margin: 0;
+  line-height: 1.6;
+}
+#about-us .cta {
+  text-align: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+#about-us .image.main {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
