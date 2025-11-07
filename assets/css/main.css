@@ -1858,7 +1858,7 @@ summary::after {
   border-radius: 12px;
   overflow: hidden;
 }
-/*
+
 #about-us .cta-wrapper .button.primary,
 #portfolio .cta-wrapper .button.primary,
 .button.primary.large {
@@ -1885,65 +1885,3 @@ summary::after {
   text-align: center;
   margin: 3rem 0;
 }
-*/
-
-/* === ALL CTA BUTTONS — CONSISTENT, ARROW OUTSIDE === */
-.cta-wrapper .button.primary,
-.about-block.cta .button.primary {
-  display: inline-block !important;
-  white-space: nowrap !important;
-  min-width: 320px !important;     /* Fixed typo */
-  padding: 14px 20px !important;
-  font-size: 1.1rem !important;
-  line-height: 1.4 !important;
-  text-align: center !important;
-  border-radius: 8px !important;
-  box-sizing: border-box !important;
-  max-width: 100% !important;
-  position: relative !important;
-}
-
-/* ARROW OUTSIDE BOX */
-.cta-wrapper .button.primary::after,
-.about-block.cta .button.primary::after {
-  content: " →";
-  position: absolute;
-  right: -24px;  /* Outside the box */
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  color: #ffffff;  /* Match theme */
-}
-
-/* HOVER MOVE ARROW */
-.cta-wrapper .button.primary:hover::after,
-.about-block.cta .button.primary:hover::after {
-  right: -28px;
-  transition: right 0.2s ease;
-}
-
-/* SMALL BUTTONS — PROTECT FROM OVERRIDE */
-.button.small {
-  min-width: auto !important;
-  padding: 8px 16px !important;
-  font-size: 0.9rem !important;
-}
-
-/* WRAPPERS — CONSISTENT CENTERING */
-.cta-wrapper,
-.about-block.cta {
-  text-align: center;
-  margin: 3rem 0;
-}
-
-/* RESPONSIVE — SHRINK ON MOBILE */
-@media (max-width: 736px) {
-  .cta-wrapper .button.primary,
-  .about-block.cta .button.primary {
-    min-width: 280px !important;
-    font-size: 1rem !important;
-    padding: 12px 18px !important;
-  }
-}
-
-
