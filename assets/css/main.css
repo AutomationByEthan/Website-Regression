@@ -1885,3 +1885,96 @@ summary::after {
   text-align: center;
   margin: 3rem 0;
 }
+
+/* Services Hero */
+.services-hero {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+.services-hero h2 { margin: 0 0 0.5rem; font-size: 2.2rem; }
+.metric { font-weight: 600; color: #00d1b2; margin-bottom: 1rem; }
+
+/* 3-Column Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.features-grid .feature { text-align: center; padding: 1.5rem; background: rgba(0,0,0,0.03); border-radius: 8px; }
+
+/* Pricing Card */
+.pricing-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2rem 0;
+}
+.price-list { list-style: none; padding: 0; margin: 1rem 0; }
+.price-list li { margin: 0.5rem 0; font-size: 1.1rem; }
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    text-align: center;
+}
+.step {
+    flex: 1;
+    min-width: 140px;
+    padding: 1rem;
+    background: #fff;
+    border: 2px solid #00d1b2;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.step span {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #00d1b2;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    line-height: 32px;
+    font-size: 1.1rem;
+}
+
+/* Mini Testimonial */
+.testimonial-mini {
+    background: #f0f8ff;
+    padding: 1.5rem;
+    border-left: 4px solid #00d1b2;
+    margin: 2rem 0;
+    font-style: italic;
+}
+.testimonial-mini cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-style: normal;
+    color: #00d1b2;
+}
+
+/* Final CTA */
+.cta-final { text-align: center; margin: 3rem 0; }
+
+/* Hidden H1 */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
